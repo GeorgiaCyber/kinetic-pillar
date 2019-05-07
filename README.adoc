@@ -1,0 +1,2 @@
+# kinetic-pillar
+Production pillar data for GCC kinetic deployment

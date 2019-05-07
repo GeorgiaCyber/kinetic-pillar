@@ -1,0 +1,26 @@
+types:
+  controller: physical
+  controllerv2: physical
+  compute: physical
+  computev2: physical
+  storage: physical
+  storagev2: physical
+  cache: physical
+  container: physical
+  containerv2: physical
+  cephmon: virtual
+  haproxy: virtual
+  mysql: virtual
+  rabbitmq: virtual
+  memcached: virtual
+  keystone: virtual
+  glance: virtual
+  nova: virtual
+  neutron: virtual
+  horizon: virtual
+  heat: virtual
+  cinder: virtual
+  designate: virtual
+  swift: virtual
+  zun: virtual
+  some_other_thing: container

@@ -1,0 +1,161 @@
+#!yaml|gpg
+
+gitfs_remote_configuration:
+  url: https://github.com/georgiacyber/kinetic.git
+  branch: v0.9-alpha
+
+gitfs_pillar_configuration:
+  url: https://github.com/georgiacyber/kinetic-pillar.git
+  branch: master
+
+gitfs_stig_remote_configuration:
+  url: https://git.cybbh.space/vta/kinetic-stigs.git
+  branch: master
+
+## Specify your timezone
+## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.timezone.html
+timezone: America/New_York
+
+## Specify your endpoint URLs for openstack
+endpoints:
+  public: fix.me.please
+  internal: internal.fix.me.please
+  admin: internal.fix.me.please
+
+## Specify your ldap configuration
+common_ldap_configuration:
+  address: directory.fix.me.please
+  bind_user: uid=bind,cn=users,cn=accounts,dc=cybbh,dc=space
+  base_dn: dc=cybbh,dc=space
+  user_dn: cn=users,cn=accounts,dc=cybbh,dc=space
+  group_dn: cn=groups,cn=accounts,dc=cybbh,dc=space
+
+keystone_ldap_configuration:
+  user_filter: (memberOf=cn=vta_user_filter,cn=groups,cn=accounts,dc=cybbh,dc=space)
+  group_filter: (memberOf=cn=vta_group_filter,cn=groups,cn=accounts,dc=cybbh,dc=space)
+  keystone_domain: ipa
+
+## Specify your haproxy TLS options
+haproxy:
+  tls_domains:
+    - fix.me.please
+    - fix.me.please
+  tls_email: testing12345678@somefakedomain.website
+  dashboard_domain: fix.me.please
+  console_domain: fix.me.please
+
+## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
+## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
+authorized_keys:
+  AAAAC3NzaC1lZDI1NTE5AAAAIIKw+cBx9BBKcoXKLxMLVoGCD7znZqBjnMkaIipAikQJ:
+    encoding: ed25519
+
+## Specify the URL to your syslog server
+syslog_url: fix.me.please:5514
+
+## Specify your subnets.  The number of addresses for private, sfe, sbe, and oob should be
+## equivalent to the number of addresses in management (and management should be at least a /24)
+## The public subnet should be the already-existing network that you will utilize to grant
+## external access to your instances.  You must choose a single IP address that will be assigned
+## to your cache for the purpose of providing package caching services to your instances.
+## Your start and end addresses are the addresses from your provider network that will be made
+## available to your hosts
+
+subnets:
+  management: 10.10.4.0/22
+  public: 10.50.0.0/16
+  private: 10.60.4.0/22
+  sfe: 10.30.4.0/22
+  sbe: 10.40.4.0/22
+  oob: 10.10.0.0/22
+  float_start: 10.50.20.0
+  float_end: 10.50.255.100
+  float_gateway: 10.50.255.254
+  float_dns: 10.50.255.254
+  cache_public_ip: 10.50.7.250/16
+  dns_public_ip: 10.10.50.7.250
+
+cephconf:
+  vms_pgs: 8192
+  volumes_pgs: 2048
+  images_pgs: 2048
+
+## Assorted salt master configuration options.  Each entry will be written to a separate file in /etc/salt/master.d
+## https://docs.saltstack.com/en/latest/ref/configuration/master.html
+master-config:
+  default_top: |
+    default_top: base
+
+  file_roots: |
+    file_roots:
+      base:
+        - /srv/salt/
+
+  fileserver_backend: |
+    fileserver_backend:
+      - git
+      - roots
+
+  gitfs_update_interval: |
+    gitfs_update_interval: 3
+
+  hash_type: |
+    hash_type: sha512
+
+  interface: |
+    interface: 0.0.0.0
+
+  loop_interval: |
+    loop_interval: 10
+
+  ping_on_rotate: |
+    ping_on_rotate: True
+
+  state_output: |
+    state_output: changes
+
+  top_file_merging_strategy: |
+    top_file_merging_strategy: same
+
+  pillar_roots: |
+    pillar_roots:
+      base:
+        - /srv/dynamic_pillar
+
+  reactor: |
+    reactor:
+      - 'salt/beacon/pxe/inotify//var/www/html/pending_hosts/*':
+        - salt://reactor/publish_pending_minion_id.sls
+      - cache/mine/address/update:
+        - salt://reactor/highstate_pxe.sls
+      - keystone/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
+      - glance/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
+      - nova/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
+      - neutron/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
+      - heat/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
+      - horizon/mine/address/update:
+        - salt://reactor/highstate_haproxy.sls
+      - cinder/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
+      - designate/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
+      - swift/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
+        - salt://reactor/highstate_cephmon.sls
+        - salt://reactor/highstate_storage.sls
+      - zun/mine/address/update:
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_haproxy.sls
