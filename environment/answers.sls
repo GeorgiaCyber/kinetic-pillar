@@ -8,7 +8,7 @@ gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
   branch: master
 
-other_gitfs_configuration:
+gitfs_other_configurations:
   stigs:
     url: https://git.cybbh.space/vta/kinetic-stigs.git
     branch: master
