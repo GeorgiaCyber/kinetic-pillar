@@ -1,13 +1,11 @@
+
+
 types:
   controller: physical
-  controllerv2: physical
   compute: physical
-  computev2: physical
   storage: physical
-  storagev2: physical
   cache: physical
   container: physical
-  containerv2: physical
   cephmon: virtual
   haproxy: virtual
   mysql: virtual
