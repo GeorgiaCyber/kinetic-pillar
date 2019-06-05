@@ -2,7 +2,7 @@
 
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: v0.9-alpha
+  branch: master
 
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git

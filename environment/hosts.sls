@@ -9,25 +9,26 @@ hosts:
     macs:
       - ac:1f:6b:65:ad:ec
       - ac:1f:6b:65:ae:15
-    interface: ens2f0np0
+    interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
-    disk: /dev/sda
+    disk: /dev/nvme0n1
     ipmi_addresses:
       - 10.100.0.22
       - 10.100.0.23
     kvm_disk_config:
-      type: raid10
+      type: raid1
       members:
-        - /dev/sdc
+        - /dev/nvme2n1
+        - /dev/nvme3n1
     networks:
       bridge: true
       bindings:
-        - management: ens2f0np0
-        - sfe: ens2f1np1
-        - private: ens2f2np2
-        - public: ens2f3np3
+        - management: enp97s0f0
+        - sfe: enp97s0f1
+        - public: enp113s0f0
+        - public: enp113s0f1
   storage:
     role: storage
     macs:
@@ -39,11 +40,11 @@ hosts:
       - ac:1f:6b:b6:df:24
       - ac:1f:6b:b6:df:4e
       - ac:1f:6b:b6:df:1a
-    interface: ens5f0
+    interface: enp94s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
-    disk: /dev/sdy
+    disk: /dev/nvme0n1
     ipmi_addresses:
       - 10.100.0.20
       - 10.100.0.21
@@ -56,7 +57,9 @@ hosts:
     networks:
       bridge: false
       bindings:
-        - management: ens5f0
+        - management: enp94s0f0
+        - sfe: enp94s0f1
+        - sbe: enp175s0f0
   compute:
     role: compute
     macs:
@@ -68,11 +71,11 @@ hosts:
       - ac:1f:6b:64:4a:b2
       - ac:1f:6b:64:4a:94
       - ac:1f:6b:64:4a:35
-    interface: ens2f0np0
+    interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
-    disk: /dev/sda
+    disk: /dev/nvme0n1
     ipmi_addresses:
       - 10.100.0.24
       - 10.100.0.25
@@ -85,7 +88,7 @@ hosts:
     networks:
       bridge: false
       bindings:
-        - management: ens2f0np0
-        - sfe: ens2f1np1
-        - private: ens2f2np2
-        - public: ens2f3np3
+        - management: enp97s0f0
+        - sfe: enp97s0f1
+        - public: enp113s0f0
+        - public: enp113s0f1
