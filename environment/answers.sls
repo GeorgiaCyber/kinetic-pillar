@@ -8,9 +8,10 @@ gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
   branch: master
 
-gitfs_stig_remote_configuration:
-  url: https://git.cybbh.space/vta/kinetic-stigs.git
-  branch: master
+other_gitfs_configuration:
+  stigs:
+    url: https://git.cybbh.space/vta/kinetic-stigs.git
+    branch: master
 
 ## Specify your timezone
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.timezone.html
@@ -62,18 +63,18 @@ syslog_url: fix.me.please:5514
 ## available to your hosts
 
 subnets:
-  management: 10.10.4.0/22
-  public: 10.50.0.0/16
-  private: 10.60.4.0/22
-  sfe: 10.30.4.0/22
-  sbe: 10.40.4.0/22
-  oob: 10.10.0.0/22
-  float_start: 10.50.20.0
-  float_end: 10.50.255.100
-  float_gateway: 10.50.255.254
+  management: 10.100.4.0/22
+  public: 10.101.0.0/16
+  private: 10.110.4.0/22
+  sfe: 10.120.4.0/22
+  sbe: 10.130.4.0/22
+  oob: 10.100.0.0/22
+  float_start: 10.101.20.0
+  float_end: 10.101.255.100
+  float_gateway: 10.101.255.254
   float_dns: 10.50.255.254
-  cache_public_ip: 10.50.7.250/16
-  dns_public_ip: 10.10.50.7.250
+  cache_public_ip: 10.101.7.250/16
+  dns_public_ip: 10.101.7.250
 
 cephconf:
   vms_pgs: 8192
@@ -85,38 +86,28 @@ cephconf:
 master-config:
   default_top: |
     default_top: base
-
   file_roots: |
     file_roots:
       base:
         - /srv/salt/
-
   fileserver_backend: |
     fileserver_backend:
       - git
       - roots
-
   gitfs_update_interval: |
     gitfs_update_interval: 3
-
   hash_type: |
     hash_type: sha512
-
   interface: |
     interface: 0.0.0.0
-
   loop_interval: |
     loop_interval: 10
-
   ping_on_rotate: |
     ping_on_rotate: True
-
   state_output: |
     state_output: changes
-
   top_file_merging_strategy: |
     top_file_merging_strategy: same
-
   pillar_roots: |
     pillar_roots:
       base:
