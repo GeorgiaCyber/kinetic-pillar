@@ -72,7 +72,7 @@ subnets:
   float_start: 10.101.20.0
   float_end: 10.101.255.100
   float_gateway: 10.101.255.254
-  float_dns: 10.50.255.254
+  float_dns: 10.101.255.254
   cache_public_ip: 10.101.7.250/16
   dns_public_ip: 10.101.7.250
 
