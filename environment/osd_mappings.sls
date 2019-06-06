@@ -14,4 +14,4 @@ osd_mappings:
       - /dev/sdk
       - /dev/sdl
     journal:
-      - /dev/nvme0n2
+      - /dev/nvme1n1
