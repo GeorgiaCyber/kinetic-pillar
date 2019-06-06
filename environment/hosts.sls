@@ -7,8 +7,8 @@ hosts:
   controller:
     role: controller
     macs:
-      - ac:1f:6b:65:ad:ec
-      - ac:1f:6b:65:ae:15
+      - 0c:c4:7a:fb:f3:ac
+      - 0c:c4:7a:fb:f0:f0
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
