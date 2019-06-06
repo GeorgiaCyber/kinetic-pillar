@@ -31,14 +31,14 @@ hosts:
   storage:
     role: storage
     macs:
-      - ac:1f:6b:b6:df:3a
-      - ac:1f:6b:b6:df:29
-      - ac:1f:6b:b6:df:26
-      - ac:1f:6b:b6:df:4f
-      - ac:1f:6b:b6:df:49
-      - ac:1f:6b:b6:df:24
-      - ac:1f:6b:b6:df:4e
-      - ac:1f:6b:b6:df:1a
+      - 00:25:90:5f:5f:7a
+      - 00:25:90:5f:5f:2e
+      - 00:25:90:5f:5e:d6
+      - 00:25:90:5f:5e:7e
+      - 00:25:90:5f:5e:00
+      - 00:25:90:5f:5e:c2
+      - 00:25:90:5f:5f:02
+      - 00:25:90:5f:5f:c8
     interface: enp94s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
