@@ -18,10 +18,9 @@ hosts:
       - 10.100.0.22
       - 10.100.0.23
     kvm_disk_config:
-      type: raid1
+      type: standard
       members:
-        - /dev/nvme2n1
-        - /dev/nvme3n1
+        - rootfs
     networks:
       bridge: true
       bindings:
