@@ -1,4 +1,6 @@
 map:
+  phase1:
+    - controller
   phase2:
     - cache
   phase3:
