@@ -4,7 +4,7 @@ types:
   controller: physical
   compute: physical
   storage: physical
-  cache: physical
+  cache: virtual
   container: physical
   cephmon: virtual
   haproxy: virtual
