@@ -11,6 +11,7 @@ base:
     - environment/map
     - environment/types
   'cache*':
+    - environment/virtual
     - environment/hosts
     - environment/images
     - environment/mine_configs/cache
