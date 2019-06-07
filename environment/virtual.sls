@@ -1,4 +1,14 @@
 virtual:
+  cache:
+    count: 1
+    ram: 8192000
+    cpu: 2
+    os: ubuntu1804
+    disk: 512G
+    networks:
+      bridge: false
+      bindings:
+        - management: ens3
   cephmon:
     count: 3
     ram: 8192000
