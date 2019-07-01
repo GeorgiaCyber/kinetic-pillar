@@ -19,9 +19,9 @@ timezone: America/New_York
 
 ## Specify your endpoint URLs for openstack
 endpoints:
-  public: fix.me.please
-  internal: internal.fix.me.please
-  admin: internal.fix.me.please
+  public: dashboard.gacyberrange.org
+  internal: internal.dashboard.gacyberrange.org
+  admin: internal.dashboard.gacyberrange.org
 
 ## Specify your ldap configuration
 common_ldap_configuration:
@@ -39,11 +39,11 @@ keystone_ldap_configuration:
 ## Specify your haproxy TLS options
 haproxy:
   tls_domains:
-    - fix.me.please
-    - fix.me.please
+    - dashboard.gacyberrange.org
+    - console.gacyberrange.org
   tls_email: testing12345678@somefakedomain.website
-  dashboard_domain: fix.me.please
-  console_domain: fix.me.please
+  dashboard_domain: dashboard.gacyberrange.org
+  console_domain: console.gacyberrange.org
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
