@@ -65,7 +65,6 @@ base:
     - environment/bind_password
     - environment/ldap_ca
     - environment/openstack_services
-    - environment/classes
   'glance*':
     - environment/virtual
     - environment/openstack_services
