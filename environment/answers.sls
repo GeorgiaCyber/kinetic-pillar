@@ -52,7 +52,7 @@ authorized_keys:
     encoding: ed25519
 
 ## Specify the URL to your syslog server
-syslog_url: fix.me.please:5514
+syslog_url: fix.me.please.com:5514
 
 ## Specify your subnets.  The number of addresses for private, sfe, sbe, and oob should be
 ## equivalent to the number of addresses in management (and management should be at least a /24)
