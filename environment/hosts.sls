@@ -13,7 +13,7 @@ hosts:
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
-    disk: /dev/disk/by-id/nvme-Micron_9200_MTFDHAL6T4TCU_18261EF70985
+    disk: /dev/nvme0n1
     ipmi_addresses:
       - 10.100.0.22
       - 10.100.0.23
