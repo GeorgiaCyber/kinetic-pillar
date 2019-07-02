@@ -73,7 +73,7 @@ virtual:
         - management: ens3
         - public: ens4
   glance:
-    count: 5
+    count: 2
     ram: 8192000
     cpu: 4
     os: ubuntu1804
@@ -85,7 +85,7 @@ virtual:
         - public: ens4
         - sfe: ens5
   nova:
-    count: 5
+    count: 2
     ram: 16384000
     cpu: 8
     os: ubuntu1804
@@ -96,7 +96,7 @@ virtual:
         - management: ens3
         - public: ens4
   neutron:
-    count: 6
+    count: 2
     ram: 16384000
     cpu: 12
     os: ubuntu1804
@@ -108,7 +108,7 @@ virtual:
         - public: ens4
         - private: ens5
   horizon:
-    count: 4
+    count: 2
     ram: 16384000
     cpu: 8
     os: ubuntu1804
@@ -119,7 +119,7 @@ virtual:
         - management: ens3
         - public: ens4
   heat:
-    count: 3
+    count: 2
     ram: 16384000
     cpu: 8
     os: ubuntu1804
