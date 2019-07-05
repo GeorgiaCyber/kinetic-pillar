@@ -1,2 +1,2 @@
 mine_functions:
-  network.ip_addrs: [ens3]
+  network.ip_addrs: []
