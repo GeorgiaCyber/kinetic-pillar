@@ -90,4 +90,4 @@ hosts:
         - management: enp97s0f0
         - sfe: enp97s0f1
         - public: enp113s0f0
-        - public: enp113s0f1
+        - private: enp113s0f1
