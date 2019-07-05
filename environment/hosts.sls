@@ -62,14 +62,14 @@ hosts:
   compute:
     role: compute
     macs:
-      - ac:1f:6b:64:4a:9d
-      - ac:1f:6b:64:4a:9f
-      - ac:1f:6b:64:49:a4
-      - ac:1f:6b:65:ae:1f
-      - ac:1f:6b:64:4a:a7
-      - ac:1f:6b:64:4a:b2
-      - ac:1f:6b:64:4a:94
-      - ac:1f:6b:64:4a:35
+      - 0c:c4:7a:fb:f3:d0
+      - 0c:c4:7a:fb:f2:80
+      - 0c:c4:7a:fb:f1:a8
+      - 0c:c4:7a:fb:f2:fc
+      - 0c:c4:7a:fb:f2:84
+      - 0c:c4:7a:fb:f2:1c
+      - 0c:c4:7a:fb:f1:0c
+      - 0c:c4:7a:fb:f3:e4
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
