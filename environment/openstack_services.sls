@@ -143,15 +143,15 @@ openstack_services:
       internal_endpoint:
         protocol: "http://"
         port: ":7480"
-        path: /v1/AUTH_%\(project_id\)s
+        path: /v1/swift/AUTH_%\(project_id\)s
       admin_endpoint:
         protocol: "http://"
         port: ":7480"
-        path: /v1
+        path: /v1/swift
       public_endpoint:
         protocol: "https://"
         port: ":7480"
-        path: /v1/AUTH_%\(project_id\)s
+        path: /v1/swift/AUTH_%\(project_id\)s
   zun:
     configuration:
       dbs:
