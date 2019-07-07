@@ -7,3 +7,23 @@ map:
     - cephmon
   phase4:
     - storage
+  phase5:
+    - haproxy
+    - mysql
+    - memcached
+    - rabbitmq
+  phase6:
+    - keystone
+  phase7:
+    - glance
+    - nova
+    - neutron
+    - horizon
+    - heat
+    - cinder
+    - designate
+    - swift
+    - zun
+  phase8:
+    - compute
+    
