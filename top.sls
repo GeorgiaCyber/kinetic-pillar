@@ -51,6 +51,7 @@ base:
     - environment/virtual
   'antora*':
     - environment/mine_configs/antora
+    - environment/virtual
   'mysql*':
     - environment/virtual
     - environment/mine_configs/mysql
