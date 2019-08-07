@@ -146,6 +146,8 @@ master-config:
       - designate/mine/address/update:
         - salt://reactor/highstate_mysql.sls
         - salt://reactor/highstate_haproxy.sls
+      - antora/mine/address/update:
+        - salt://reactor/highstate_haproxy.sls
       - swift/mine/address/update:
         - salt://reactor/highstate_mysql.sls
         - salt://reactor/highstate_haproxy.sls
