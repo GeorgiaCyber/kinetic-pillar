@@ -31,6 +31,17 @@ virtual:
       bindings:
         - management: ens3
         - public: ens4
+  antora:
+    count: 1
+    ram: 4096000
+    cpu: 2
+    os: ubuntu1804
+    disk: 16G
+    networks:
+      bridge: false
+      bindings:
+        - management: ens3
+        - public: ens4
   mysql:
     count: 1
     ram: 16384000

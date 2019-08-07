@@ -14,6 +14,7 @@ map:
     - rabbitmq
   phase6:
     - keystone
+    - antora
   phase7:
     - glance
     - nova
