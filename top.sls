@@ -49,6 +49,8 @@ base:
     - environment/openstack_services
   'haproxy*':
     - environment/virtual
+  'antora*':
+    - environment/mine_configs/antora
   'mysql*':
     - environment/virtual
     - environment/mine_configs/mysql
