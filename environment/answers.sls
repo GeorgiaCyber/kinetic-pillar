@@ -81,9 +81,9 @@ subnets:
   dns_public_ip: 10.101.7.250
 
 cephconf:
-  vms_pgs: 4096
-  volumes_pgs: 1024
-  images_pgs: 1024
+  vms_pgs: 2048
+  volumes_pgs: 512
+  images_pgs: 512
 
 ## Assorted salt master configuration options.  Each entry will be written to a separate file in /etc/salt/master.d
 ## https://docs.saltstack.com/en/latest/ref/configuration/master.html
