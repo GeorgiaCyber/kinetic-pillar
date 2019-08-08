@@ -121,6 +121,12 @@ master-config:
     reactor:
       - 'salt/beacon/pxe/inotify//var/www/html/pending_hosts/*':
         - salt://reactor/publish_pending_minion_id.sls
+      - create/glance/pool:
+        - salt://reactor/create_glance_pool.sls
+      - create/nova/pool:
+        - salt://reactor/create_nova_pool.sls
+      - create/cinder/pool:
+        - salt://reactor/create_cinder_pool.sls
       - cache/mine/address/update:
         - salt://reactor/highstate_pxe.sls
       - keystone/mine/address/update:
