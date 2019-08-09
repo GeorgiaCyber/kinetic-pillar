@@ -39,9 +39,16 @@ virtual:
     disk: 16G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          bridge: false
+          vlan: false
   mysql:
     count: 1
     ram: 16384000
