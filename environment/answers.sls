@@ -66,19 +66,21 @@ syslog_url: fix.me.please.com:5514
 ## Your start and end addresses are the addresses from your provider network that will be made
 ## available to your hosts
 
-subnets:
-  management: 10.100.4.0/22
-  public: 10.101.0.0/16
-  private: 10.110.4.0/22
-  sfe: 10.120.4.0/22
-  sbe: 10.130.4.0/22
-  oob: 10.100.0.0/22
-  float_start: 10.101.20.0
-  float_end: 10.101.255.100
-  float_gateway: 10.101.255.254
-  float_dns: 10.101.255.254
-  cache_public_ip: 10.101.7.250/16
-  dns_public_ip: 10.101.7.250
+networking:
+  subnets:
+    management: 10.100.4.0/22
+    public: 10.101.0.0/16
+    private: 10.110.4.0/22
+    sfe: 10.120.4.0/22
+    sbe: 10.130.4.0/22
+    oob: 10.100.0.0/22
+  addresses:
+    float_start: 10.101.20.0
+    float_end: 10.101.255.100
+    float_gateway: 10.101.255.254
+    float_dns: 10.101.255.254
+    cache_public_ip: 10.101.7.250
+    dns_public_ip: 10.101.7.250
 
 cephconf:
   vms_pgs: 2048
