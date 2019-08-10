@@ -28,9 +28,18 @@ virtual:
     disk: 32G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: false
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: true
+          bridge: false
+          vlan: false
   antora:
     count: 1
     ram: 4096000
