@@ -23,11 +23,28 @@ hosts:
         - rootfs
     networks:
       bridge: true
-      bindings:
-        - management: enp97s0f0
-        - sfe: enp97s0f1
-        - public: enp113s0f0
-        - private: enp113s0f1
+      vlan: false
+      interfaces:
+        enp97s0f0:
+          network: management
+          primary: true
+          bridge: true
+          vlan: false
+        enp97s0f1:
+          network: sfe
+          primary: false
+          bridge: true
+          vlan: false
+        enp113s0f0:
+          network: public
+          primary: false
+          bridge: true
+          vlan: false
+        enp113s0f1:
+          network: private
+          primary: false
+          bridge: true
+          vlan: false
   storage:
     role: storage
     macs:
