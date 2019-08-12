@@ -46,12 +46,12 @@ virtual:
       interfaces:
         ens3:
           network: management
-          primary: false
+          primary: true
           bridge: false
           vlan: false
         ens4:
           network: public
-          primary: true
+          primary: false
           bridge: false
           vlan: false
   antora:
@@ -82,8 +82,13 @@ virtual:
     disk: 128G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
   rabbitmq:
     count: 1
     ram: 32768000
@@ -92,8 +97,13 @@ virtual:
     disk: 128G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
   memcached:
     count: 1
     ram: 32768000
@@ -102,8 +112,13 @@ virtual:
     disk: 128G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
   keystone:
     count: 1
     ram: 16384000
@@ -112,9 +127,18 @@ virtual:
     disk: 64G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
   glance:
     count: 2
     ram: 8192000
@@ -123,10 +147,23 @@ virtual:
     disk: 64G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
-        - sfe: ens5
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
+        ens5:
+          network: sfe
+          primary: false
+          bridge: false
+          vlan: false
   nova:
     count: 2
     ram: 16384000
@@ -135,9 +172,18 @@ virtual:
     disk: 128G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
   neutron:
     count: 2
     ram: 16384000
@@ -146,10 +192,23 @@ virtual:
     disk: 128G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
-        - private: ens5
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
+        ens5:
+          network: private
+          primary: false
+          bridge: false
+          vlan: false
   horizon:
     count: 2
     ram: 16384000
@@ -158,9 +217,18 @@ virtual:
     disk: 128G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
   heat:
     count: 2
     ram: 16384000
@@ -169,9 +237,18 @@ virtual:
     disk: 128G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
   cinder:
     count: 1
     ram: 8192000
@@ -180,10 +257,23 @@ virtual:
     disk: 64G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
-        - sfe: ens5
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
+        ens5:
+          network: sfe
+          primary: false
+          bridge: false
+          vlan: false
   designate:
     count: 1
     ram: 16384000
@@ -192,9 +282,18 @@ virtual:
     disk: 64G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
   swift:
     count: 1
     ram: 8192000
@@ -204,9 +303,25 @@ virtual:
     networks:
       bridge: false
       bindings:
-        - management: ens3
-        - public: ens4
-        - sfe: ens5
+    networks:
+      bridge: false
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
+        ens5:
+          network: sfe
+          primary: false
+          bridge: false
+          vlan: false
   zun:
     count: 1
     ram: 8192000
@@ -215,6 +330,15 @@ virtual:
     disk: 64G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - public: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
