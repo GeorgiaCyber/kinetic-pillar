@@ -17,9 +17,18 @@ virtual:
     disk: 32G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
-        - sfe: ens4
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: sfe
+          primary: false
+          bridge: false
+          vlan: false
   haproxy:
     count: 1
     ram: 8192000
