@@ -7,8 +7,13 @@ virtual:
     disk: 512G
     networks:
       bridge: false
-      bindings:
-        - management: ens3
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
   cephmon:
     count: 3
     ram: 8192000
