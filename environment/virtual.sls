@@ -200,12 +200,12 @@ virtual:
           bridge: false
           vlan: false
         ens4:
-          network: public
+          network: private
           primary: false
           bridge: false
           vlan: false
         ens5:
-          network: private
+          network: public
           primary: false
           bridge: false
           vlan: false
