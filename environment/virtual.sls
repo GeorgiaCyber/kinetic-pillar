@@ -199,12 +199,12 @@ virtual:
           primary: true
           bridge: false
           vlan: false
-        ens4:
+        ens5:
           network: private
           primary: false
           bridge: false
           vlan: false
-        ens5:
+        ens4:
           network: public
           primary: false
           bridge: false
