@@ -302,9 +302,6 @@ virtual:
     disk: 64G
     networks:
       bridge: false
-      bindings:
-    networks:
-      bridge: false
       vlan: false
       interfaces:
         ens3:
