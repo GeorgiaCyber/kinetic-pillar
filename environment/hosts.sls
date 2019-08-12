@@ -72,10 +72,23 @@ hosts:
       - 10.100.0.38
     networks:
       bridge: false
-      bindings:
-        - management: enp94s0f0
-        - sfe: enp94s0f1
-        - sbe: enp175s0f0
+      vlan: false
+      interfaces:
+        enp94s0f0:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        enp94s0f1:
+          network: sfe
+          primary: false
+          bridge: false
+          vlan: false
+        enp175s0f0:
+          network: sbe
+          primary: false
+          bridge: false
+          vlan: false
   compute:
     role: compute
     macs:
@@ -103,8 +116,25 @@ hosts:
       - 10.100.0.37
     networks:
       bridge: false
-      bindings:
-        - management: enp97s0f0
-        - sfe: enp97s0f1
-        - public: enp113s0f0
-        - private: enp113s0f1
+      vlan: false
+      interfaces:
+        enp97s0f0:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        enp97s0f1:
+          network: sfe
+          primary: false
+          bridge: false
+          vlan: false
+        enp113s0f0:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
+        enp113s0f1:
+          network: private
+          primary: false
+          bridge: false
+          vlan: false
