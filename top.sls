@@ -19,10 +19,6 @@ base:
     - environment/hosts
     - environment/images
     - environment/virtual
-  'controllerv2*':
-    - environment/hosts
-    - environment/images
-    - environment/virtual
   'cephmon*':
     - environment/virtual
     - environment/mine_configs/cephmon
@@ -31,20 +27,10 @@ base:
     - environment/hosts
     - environment/osd_mappings
     - environment/openstack_services
-  'storagev2*':
-    - environment/hosts
-    - environment/osd_mappings
-    - environment/openstack_services
   'compute*':
     - environment/hosts
     - environment/openstack_services
-  'computev2*':
-    - environment/hosts
-    - environment/openstack_services
   'container*':
-    - environment/hosts
-    - environment/openstack_services
-  'containerv2*':
     - environment/hosts
     - environment/openstack_services
   'haproxy*':
@@ -103,7 +89,7 @@ base:
     - environment/virtual
     - environment/openstack_services
     - environment/mine_configs/swift
-  'zun-*':
+  'zun*':
     - environment/virtual
     - environment/openstack_services
     - environment/mine_configs/zun
