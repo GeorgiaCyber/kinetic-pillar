@@ -1,4 +1,5 @@
-
+## This file keeps track of the implementation style for each service.
+## Currently supported styles are physical and virtual.  Container style is WIP.
 
 types:
   controller: physical

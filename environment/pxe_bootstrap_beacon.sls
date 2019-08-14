@@ -1,3 +1,7 @@
+## This file controls how the pxe server notifies the salt master
+## about new minions that will come online soon.  It generally
+## does not need to be edited
+
 beacons:
     inotify:
       - files:

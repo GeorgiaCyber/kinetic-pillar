@@ -1,3 +1,5 @@
+## Full certificate chain for your LDAP certificate authority
+
 ldap_ca: |
   -----BEGIN CERTIFICATE-----
   MIIDizCCAnOgAwIBAgIBATANBgkqhkiG9w0BAQsFADA2MRQwEgYDVQQKDAtDWUJC

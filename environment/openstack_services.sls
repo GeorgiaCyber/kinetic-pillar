@@ -1,3 +1,7 @@
+## Service definitions for the various openstack services.  Generally should not be touched.
+## If you feel like you need to change them, please reference the latest OpenStack installation
+## guide for that service before making any adjustments
+
 openstack_services:
   keystone:
     configuration:

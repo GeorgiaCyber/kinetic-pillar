@@ -1,3 +1,18 @@
+## Similar to hosts file.  Defines configuration for variousl virtual machines.
+## count: number of machines that should be deployed
+## ram: amount of ram each instance should have
+## cpu: number of CPU cores each instance should have
+## os: OS that instance should be deployed on
+## disk: root disk size
+## networks: specify how you want your final, post-deployment network to be configured.
+##   bridge: true if this host will be used as a hypervisor
+##   vlan: true if you will be tagging on this host
+##   interface entries: top level definition will be the name of the physical interface
+##     network: the network to which it will bind (must match answers.sls)
+##     primary: true if it will get DHCP, otherwise false
+##     bridge: true if a bridged interface, otherwise false
+##     vlan: vlanID if a vlan, otherwise false.
+
 virtual:
   cache:
     count: 1
