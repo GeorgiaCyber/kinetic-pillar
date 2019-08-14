@@ -1,18 +1,22 @@
 #!yaml|gpg
 
+## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
   branch: master
 
+## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
   branch: master
 
+## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
   stigs:
     url: https://git.cybbh.space/vta/kinetic-stigs.git
     branch: master
 
+## Repository for your documentation site
 antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
 
 ## Specify your timezone
@@ -33,6 +37,10 @@ common_ldap_configuration:
   user_dn: cn=users,cn=accounts,dc=cybbh,dc=space
   group_dn: cn=groups,cn=accounts,dc=cybbh,dc=space
 
+## keystone-specific LDAP config.  user_filter should be a group that all range users
+## are a member of.  group_filter should be a group that all range groups are a member
+## of.  Keystone_domain is the domain you want to use to access your LDAP accounts on
+## the horizon login page
 keystone_ldap_configuration:
   user_filter: (memberOf=cn=vta_user_filter,cn=groups,cn=accounts,dc=cybbh,dc=space)
   group_filter: (memberOf=cn=vta_group_filter,cn=groups,cn=accounts,dc=cybbh,dc=space)
@@ -61,10 +69,13 @@ syslog_url: fix.me.please.com:5514
 ## Specify your subnets.  The number of addresses for private, sfe, sbe, and oob should be
 ## equivalent to the number of addresses in management (and management should be at least a /24)
 ## The public subnet should be the already-existing network that you will utilize to grant
-## external access to your instances.  You must choose a single IP address that will be assigned
-## to your cache for the purpose of providing package caching services to your instances.
-## Your start and end addresses are the addresses from your provider network that will be made
-## available to your hosts
+## external access to your instances.
+
+## float_start - Where you want your DHCP leases for your public network to begin
+## float_end - Where you want your DHCP leases for your public network to end
+## float_gateway - Gateway for your public network
+## float_dns - DNS for your float network
+## cache/dns_public_IP - currently unparsed
 
 networking:
   subnets:
@@ -82,6 +93,8 @@ networking:
     cache_public_ip: 10.101.7.250
     dns_public_ip: 10.101.7.250
 
+## Number of placement groups for your ceph pools
+## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
 cephconf:
   vms_pgs: 2048
   volumes_pgs: 512
@@ -101,7 +114,7 @@ master-config:
       - git
       - roots
   gitfs_update_interval: |
-    gitfs_update_interval: 3
+    gitfs_update_interval: 10
   hash_type: |
     hash_type: sha512
   interface: |
@@ -118,7 +131,6 @@ master-config:
     pillar_roots:
       base:
         - /srv/dynamic_pillar
-
   reactor: |
     reactor:
       - 'salt/beacon/pxe/inotify//var/www/html/pending_hosts/*':
