@@ -1,7 +1,26 @@
-## kvm_disk_config
+## host definition file - where you specify the physical configuration for all of your various host types
+## role: the type of 'thing' it is, currently used options are controller, compute, storage, and container.
+## macs: python list of all the macs belonging to this type of host
+## interface: the interface that you want to use when PXE booting (should be DHCP enabled)
+## proxy: if you have a static, external proxy, place the address here.  Otherwise use pull_from_mine to use the internal one
+## root_password: preseeded password.  See mkpasswd.
+## ntp_server: the ntp server that you want to use for the preseed process
+## disk:  the disk you want to install the OS on to
+## ipmi_addresses: the addresses for the IPMI interfaces on these devices
+
+## kvm_disk_config - CONTROLLER ONLY
 ## type: raidX, where X is 1 or 10.  raid1 must have 2 members entries in the list.  raid10 must have a multiple of 2 members in the list
 ## type: standard.  May pass a device (e.g. /dev/sdb) as a single member, or pass the special value 'rootfs' as a single member, which will
 ## just create a directory on the root filesystem at /kvm
+
+## networks: specify how you want your final, post-deployment network to be configured.
+##   bridge: true if this host will be used as a hypervisor
+##   vlan: true if you will be tagging on this host
+##   interface entries: top level definition will be the name of the physical interface
+##     network: the network to which it will bind (must match answers.sls)
+##     primary: true if it will get DHCP, otherwise false
+##     bridge: true if a bridged interface, otherwise false
+##     vlan: vlanID if a vlan, otherwise false.
 
 hosts:
   controller:
