@@ -1,3 +1,12 @@
+## This file defines which hosts have access to which pillar data.
+## The only time you should have to edit this file is when you add/
+## remove a type of physical host or add a new openstack service.
+## In general, hosts will need access to:
+## 1. Their specification file (virtual if a VM, hosts if physical
+## 2. Their mine configuration (if any)
+## 3. Their OpenStack service definition
+## Other entries can be added/removed as needed.
+
 base:
   '*':
     - environment/answers
