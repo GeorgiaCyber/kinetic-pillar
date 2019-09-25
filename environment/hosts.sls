@@ -28,6 +28,7 @@ hosts:
     macs:
       - 0c:c4:7a:fb:f3:ac
       - 0c:c4:7a:fb:f0:f0
+      - 0c:c4:7a:fb:f1:04
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
@@ -76,6 +77,12 @@ hosts:
       - 00:25:90:5f:5e:c2
       - 00:25:90:5f:5f:02
       - 00:25:90:5f:5f:c8
+      - 00:25:90:5f:5f:10
+      - 00:25:90:5f:5f:12
+      - 00:25:90:5f:5e:ae
+      - 00:25:90:5f:5f:06
+      - 00:25:90:5f:60:0c
+      - 00:25:90:5f:5f:be
     interface: enp94s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
@@ -90,6 +97,7 @@ hosts:
       - 10.100.0.34
       - 10.100.0.35
       - 10.100.0.38
+#      - 10.100.0.39
       - 10.100.0.42
       - 10.100.0.47
       - 10.100.0.48
@@ -126,6 +134,13 @@ hosts:
       - 0c:c4:7a:fb:f2:1c
       - 0c:c4:7a:fb:f1:0c
       - 0c:c4:7a:fb:f3:e4
+      - 0c:c4:7a:fb:f3:cc
+      - 0c:c4:7a:fb:f1:10
+      - 0c:c4:7a:fb:f2:a8
+      - 0c:c4:7a:fb:f3:9c
+      - 0c:c4:7a:fb:f3:b4
+      - 0c:c4:7a:fb:f2:74
+      - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
