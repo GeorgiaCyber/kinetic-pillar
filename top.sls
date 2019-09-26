@@ -28,6 +28,7 @@ base:
     - environment/hosts
     - environment/images
     - environment/virtual
+    - environment/mine_configs/physical
   'cephmon*':
     - environment/virtual
     - environment/mine_configs/cephmon
