@@ -10,6 +10,7 @@
 base:
   '*':
     - environment/answers
+    - environment/types
   'pxe':
     - environment/hosts
   'salt*':
@@ -17,7 +18,6 @@ base:
     - environment/hosts
     - environment/virtual
     - environment/map
-    - environment/types
   'cache*':
     - environment/virtual
     - environment/hosts
