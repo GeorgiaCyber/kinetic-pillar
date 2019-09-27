@@ -4,6 +4,7 @@
 types:
   salt: virtual
   pxe: virtual
+  antora: virtual
   controller: physical
   compute: physical
   storage: physical
