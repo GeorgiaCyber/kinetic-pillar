@@ -66,6 +66,9 @@ authorized_keys:
 ## Specify the URL to your syslog server
 syslog_url: fix.me.please.com:5514
 
+## Specify the IPMI user that will be used to bootstrap physical devices
+api_user: ADMIN
+
 ## Specify your subnets.  The number of addresses for private, sfe, sbe, and oob should be
 ## equivalent to the number of addresses in management (and management should be at least a /24)
 ## The public subnet should be the already-existing network that you will utilize to grant
