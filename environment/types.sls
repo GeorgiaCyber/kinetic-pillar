@@ -2,6 +2,8 @@
 ## Currently supported styles are physical and virtual.  Container style is WIP.
 
 types:
+  salt: virtual
+  pxe: virtual
   controller: physical
   compute: physical
   storage: physical
