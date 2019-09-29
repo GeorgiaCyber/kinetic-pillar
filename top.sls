@@ -18,6 +18,7 @@ base:
     - environment/hosts
     - environment/virtual
     - environment/map
+    - environment/openstack_services
   'cache*':
     - environment/virtual
     - environment/hosts
