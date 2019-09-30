@@ -17,4 +17,4 @@ osd_mappings:
       - /dev/sdk
       - /dev/sdl
     journal:
-      - 259-0
+      - INTEL SSDPED1K750GA
