@@ -11,6 +11,8 @@ base:
   '*':
     - environment/answers
     - environment/types
+    - environment/mine_configs/networking
+    - environment/beacon_configs/address_notification
   'pxe':
     - environment/hosts
   'salt*':
@@ -23,7 +25,6 @@ base:
     - environment/virtual
     - environment/hosts
     - environment/images
-    - environment/mine_configs/cache
   'controller*':
     - environment/hosts
     - environment/images
@@ -31,7 +32,6 @@ base:
     - environment/mine_configs/physical
   'cephmon*':
     - environment/virtual
-    - environment/mine_configs/cephmon
     - environment/openstack_services
   'storage*':
     - environment/hosts
@@ -46,60 +46,46 @@ base:
   'haproxy*':
     - environment/virtual
   'antora*':
-    - environment/mine_configs/antora
     - environment/virtual
     - environment/antora_schedule
   'mysql*':
     - environment/virtual
-    - environment/mine_configs/mysql
     - environment/openstack_services
   'rabbitmq*':
     - environment/virtual
-    - environment/mine_configs/rabbitmq
   'memcached*':
     - environment/virtual
-    - environment/mine_configs/memcached
   'keystone*':
     - environment/virtual
-    - environment/mine_configs/keystone
     - environment/bind_password
     - environment/ldap_ca
     - environment/openstack_services
   'glance*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/glance
     - environment/images
   'nova*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/nova
     - environment/flavors
   'neutron*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/neutron
   'horizon*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/horizon
   'heat*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/heat
   'cinder*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/cinder
   'designate*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/designate
   'swift*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/swift
   'zun*':
     - environment/virtual
     - environment/openstack_services
-    - environment/mine_configs/zun
