@@ -136,8 +136,8 @@ master-config:
         - /srv/dynamic_pillar
   reactor: |
     reactor:
-      - 'salt/beacon/pxe/inotify//var/www/html/pending_hosts/*':
-        - salt://reactor/publish_pending_minion_id.sls
+      - 'salt/beacon/*/network_settings/*':
+        - salt://reactor/update_mine.sls
       - create/glance/pool:
         - salt://reactor/create_glance_pool.sls
       - create/nova/pool:
