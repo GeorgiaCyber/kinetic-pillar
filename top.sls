@@ -47,7 +47,7 @@ base:
     - environment/virtual
   'antora*':
     - environment/virtual
-    - environment/antora_schedule
+    - environment/schedule_configs/antora_schedule
   'mysql*':
     - environment/virtual
     - environment/openstack_services
