@@ -33,7 +33,7 @@ hosts:
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
-    disk: 259-0
+    disk: Micron_9200_MTFDHAL6T4TCU
     ipmi_addresses:
       - 10.100.0.22
       - 10.100.0.23
@@ -145,7 +145,7 @@ hosts:
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
-    disk: 259-0
+    disk: Micron_9200_MTFDHAL1T6TCU
     ipmi_addresses:
       - 10.100.0.24
       - 10.100.0.25
