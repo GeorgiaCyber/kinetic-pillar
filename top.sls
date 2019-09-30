@@ -7,7 +7,7 @@
 ## 3. Their OpenStack service definition
 ## Other entries can be added/removed as needed.
 
-base:
+dev:
   '*':
     - environment/answers
     - environment/types
