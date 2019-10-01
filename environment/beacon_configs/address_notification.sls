@@ -3,3 +3,4 @@ beacons:
     - coalesce: True
     - interfaces:
         \*:
+          ipaddr:
