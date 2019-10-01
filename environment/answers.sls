@@ -141,6 +141,7 @@ master-config:
         - salt://reactor/highstate_haproxy.sls
         - salt://reactor/highstate_mysql.sls
         - salt://reactor/update_ceph_conf.sls
+        - salt://reactor/highstate_pxe.sls
       - create/glance/pool:
         - salt://reactor/create_glance_pool.sls
       - create/nova/pool:
