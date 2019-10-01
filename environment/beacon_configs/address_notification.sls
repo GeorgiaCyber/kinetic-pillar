@@ -4,6 +4,6 @@ beacons:
     - coalesce: True
     - interfaces:
 {% for interface in grains['ip_interfaces'] %}
-        {{ address }}:
+        {{ interface }}:
           ipaddr:
 {% endfor %}
