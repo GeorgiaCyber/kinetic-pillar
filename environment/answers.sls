@@ -137,7 +137,7 @@ master-config:
   reactor: |
     reactor:
       - salt/beacon/*/network_settings/result:
-        - salt://reactor/update_mine.sls?saltenv=dev
+        - salt://reactor/update_mine.sls
         - salt://reactor/highstate_haproxy.sls
         - salt://reactor/highstate_mysql.sls
         - salt://reactor/highstate_cephmon.sls
