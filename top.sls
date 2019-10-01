@@ -45,6 +45,7 @@ base:
     - environment/openstack_services
   'haproxy*':
     - environment/virtual
+    - environment/openstack_services
   'antora*':
     - environment/virtual
     - environment/schedule_configs/antora_schedule
