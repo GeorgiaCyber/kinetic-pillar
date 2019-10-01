@@ -136,8 +136,8 @@ master-config:
         - /srv/dynamic_pillar
   reactor: |
     reactor:
-      - 'salt/beacon/*/network_settings/*':
-        - salt://reactor/update_mine.sls
+      - salt/beacon/*/network_settings/result:
+        - salt://reactor/update_mine.sls?saltenv=dev
       - create/glance/pool:
         - salt://reactor/create_glance_pool.sls
       - create/nova/pool:
