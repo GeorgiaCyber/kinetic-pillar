@@ -138,44 +138,14 @@ master-config:
     reactor:
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls?saltenv=dev
+        - salt://reactor/highstate_haproxy.sls
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_cephmon.sls
+        - salt://reactor/highstate_storage.sls
+        - salt://reactor/highstate_pxe.sls
       - create/glance/pool:
         - salt://reactor/create_glance_pool.sls
       - create/nova/pool:
         - salt://reactor/create_nova_pool.sls
       - create/cinder/pool:
         - salt://reactor/create_cinder_pool.sls
-      - cache/mine/address/update:
-        - salt://reactor/highstate_pxe.sls
-      - keystone/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
-      - glance/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
-      - nova/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
-      - neutron/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
-      - heat/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
-      - horizon/mine/address/update:
-        - salt://reactor/highstate_haproxy.sls
-      - cinder/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
-      - designate/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
-      - antora/mine/address/update:
-        - salt://reactor/highstate_haproxy.sls
-      - swift/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
-        - salt://reactor/highstate_cephmon.sls
-        - salt://reactor/highstate_storage.sls
-      - zun/mine/address/update:
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/highstate_haproxy.sls
