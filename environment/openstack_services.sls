@@ -82,7 +82,7 @@ openstack_services:
         port: ":9696"
         path: /
       public_endpoint:
-        protocol: "http://"
+        protocol: "https://"
         port: ":9696"
         path: /
   heat:
