@@ -98,7 +98,7 @@ openstack_services:
         port: ":8004"
         path: /v1/%\(tenant_id\)s
       public_endpoint:
-        protocol: "http://"
+        protocol: "https://"
         port: ":8004"
         path: /v1/%\(tenant_id\)s
       internal_endpoint_cfn:
