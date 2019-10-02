@@ -110,7 +110,7 @@ openstack_services:
         port: ":8000"
         path: /v1
       public_endpoint_cfn:
-        protocol: "http://"
+        protocol: "https://"
         port: ":8000"
         path: /v1
   cinder:
