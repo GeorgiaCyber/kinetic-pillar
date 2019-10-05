@@ -93,8 +93,12 @@ networking:
     float_end: 10.101.255.100
     float_gateway: 10.101.255.254
     float_dns: 10.101.255.254
-    cache_public_ip: 10.101.7.250
-    dns_public_ip: 10.101.7.250
+
+## neutron networking backend.  Valid values are networking-ovn
+## or linuxbridge
+
+neutron:
+  backend: linuxbridge
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
