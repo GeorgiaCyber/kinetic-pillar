@@ -69,6 +69,9 @@ base:
     - environment/virtual
     - environment/openstack_services
     - environment/flavors
+  'placement*':
+    - environment/virtual
+    - environment/openstack_services
   'neutron*':
     - environment/virtual
     - environment/openstack_services
