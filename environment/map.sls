@@ -19,6 +19,7 @@ map:
     - keystone
     - antora
   phase7:
+    - placement
     - glance
     - nova
     - neutron
@@ -30,4 +31,3 @@ map:
     - zun
   phase8:
     - compute
-    
