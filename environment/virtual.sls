@@ -354,3 +354,23 @@ virtual:
           primary: false
           bridge: false
           vlan: false
+  placement:
+    count: 1
+    ram: 8192000
+    cpu: 4
+    os: ubuntu1804
+    disk: 64G
+    networks:
+      bridge: false
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
