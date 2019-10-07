@@ -31,3 +31,4 @@ map:
     - zun
   phase8:
     - compute
+    - container
