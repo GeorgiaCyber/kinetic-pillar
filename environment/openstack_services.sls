@@ -172,3 +172,7 @@ openstack_services:
         protocol: "https://"
         port: ":9517"
         path: /v1
+  container:
+    configuration:
+      dbs:
+        - zun
