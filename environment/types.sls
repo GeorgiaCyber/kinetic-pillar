@@ -25,4 +25,5 @@ types:
   designate: virtual
   swift: virtual
   zun: virtual
+  placement: virtual
   some_other_thing: container
