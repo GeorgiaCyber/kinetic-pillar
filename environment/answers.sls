@@ -99,9 +99,9 @@ networking:
 neutron:
   backend: linuxbridge
 
-## relative path to the theme you wish to install in horizon (if any)
+## url to the theme you wish to install in horizon (if any)
 horizon:
-  theme: gcr.tar
+  theme: https://raw.githubusercontent.com/GeorgiaCyber/kinetic-pillar/environment/themes/gcr.tar
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
