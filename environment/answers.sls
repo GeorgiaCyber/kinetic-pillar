@@ -99,9 +99,17 @@ networking:
 neutron:
   backend: linuxbridge
 
-## url to the theme you wish to install in horizon (if any)
+## the theme you wish to install in horizon (if any).  URL should point to tarball
+## name should match the top-level extracted directory in the tarball
+## Site branding and site link should match appropriate values.
+## See https://docs.openstack.org/horizon/latest/configuration/customizing.html
 horizon:
-  theme: https://raw.githubusercontent.com/GeorgiaCyber/kinetic-pillar/environment/themes/gcr.tar
+  theme:
+    url: https://raw.githubusercontent.com/GeorgiaCyber/kinetic-pillar/environment/themes/gcr.tar
+    name: gcr
+    site_branding: Georgia Cyber Range
+    site_branding_link: https://www.gacybercenter.org/
+
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
