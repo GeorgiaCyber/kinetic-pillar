@@ -99,7 +99,7 @@ networking:
 neutron:
   backend: linuxbridge
 
-## the theme you wish to install in horizon (if any).  URL should point to tarball
+## the theme you wish to install in horizon (set url to false if none).  URL should point to tarball
 ## name should match the top-level extracted directory in the tarball
 ## Site branding and site link should match appropriate values.
 ## See https://docs.openstack.org/horizon/latest/configuration/customizing.html
