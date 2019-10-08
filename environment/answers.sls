@@ -106,6 +106,7 @@ neutron:
 horizon:
   theme:
     url: https://raw.githubusercontent.com/GeorgiaCyber/kinetic-pillar/environment/themes/gcr.tar
+    hash: aac149b02e4cba1c21144c65531c45c2b2e74cb304d6b73619738002c1e1fd8797105e889dc7f1e810f00fda43cf4d73e942f9aeb40e74a87089595912913167
     name: gcr
     site_branding: Georgia Cyber Range
     site_branding_link: https://www.gacybercenter.org/
