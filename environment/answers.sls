@@ -32,10 +32,10 @@ endpoints:
 ## Specify your ldap configuration
 common_ldap_configuration:
   address: directory.fix.me.please
-  bind_user: uid=bind,cn=users,cn=accounts,dc=cybbh,dc=space
-  base_dn: dc=cybbh,dc=space
-  user_dn: cn=users,cn=accounts,dc=cybbh,dc=space
-  group_dn: cn=groups,cn=accounts,dc=cybbh,dc=space
+  bind_user: uid=bind,cn=users,cn=accounts,dc=foo,dc=bar
+  base_dn: dc=foo,dc=bar
+  user_dn: cn=users,cn=accounts,dc=foo,dc=bar
+  group_dn: cn=groups,cn=accounts,dc=foo,dc=bar
 
 ## keystone-specific LDAP config.  user_filter should be a group that all range users
 ## are a member of.  group_filter should be a group that all range groups are a member
