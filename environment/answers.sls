@@ -106,6 +106,7 @@ neutron:
 horizon:
   theme:
     url: https://github.com/GeorgiaCyber/kinetic-theme.git
+    branch: master
     name: gcr
     site_branding: Georgia Cyber Range
     site_branding_link: https://www.gacybercenter.org/
