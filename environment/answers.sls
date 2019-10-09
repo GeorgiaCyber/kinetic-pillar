@@ -99,14 +99,13 @@ networking:
 neutron:
   backend: linuxbridge
 
-## the theme you wish to install in horizon (set url to false if none).  URL should point to tarball
-## name should match the top-level extracted directory in the tarball
+## the theme you wish to install in horizon (set url to false if none).  URL should point to git repo
+## name should be the top-level directory you wish to extract the theme to
 ## Site branding and site link should match appropriate values.
 ## See https://docs.openstack.org/horizon/latest/configuration/customizing.html
 horizon:
   theme:
-    url: https://github.com/GeorgiaCyber/kinetic-pillar/raw/train/environment/themes/gcr.tar
-    hash: aac149b02e4cba1c21144c65531c45c2b2e74cb304d6b73619738002c1e1fd8797105e889dc7f1e810f00fda43cf4d73e942f9aeb40e74a87089595912913167
+    url: https://github.com/GeorgiaCyber/kinetic-theme.git
     name: gcr
     site_branding: Georgia Cyber Range
     site_branding_link: https://www.gacybercenter.org/
