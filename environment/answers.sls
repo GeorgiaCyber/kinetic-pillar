@@ -26,8 +26,8 @@ timezone: America/New_York
 ## Specify your endpoint URLs for openstack
 endpoints:
   public: dashboard.gacyberrange.org
-  internal: internal.dashboard.gacyberrange.org
-  admin: internal.dashboard.gacyberrange.org
+  internal: dashboard.gacyberrange.org
+  admin: dashboard.gacyberrange.org
 
 ## Specify your ldap configuration
 common_ldap_configuration:
