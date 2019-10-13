@@ -147,11 +147,11 @@ openstack_services:
       internal_endpoint:
         protocol: "https://"
         port: ":7480"
-        path: swift/v1/AUTH_%\(project_id\)s
+        path: /swift/v1/AUTH_%\(project_id\)s
       admin_endpoint:
         protocol: "https://"
         port: ":7480"
-        path: /swift/v1
+        path: /swift/v1/AUTH_%\(project_id\)s
       public_endpoint:
         protocol: "https://"
         port: ":7480"
