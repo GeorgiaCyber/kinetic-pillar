@@ -64,11 +64,6 @@ virtual:
           primary: true
           bridge: false
           vlan: false
-        ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
   antora:
     count: 1
     ram: 4096000
