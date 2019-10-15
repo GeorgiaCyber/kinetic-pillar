@@ -64,7 +64,7 @@ authorized_keys:
     encoding: ed25519
 
 ## Specify the URL to your syslog server
-syslog_url: fix.me.please.com:5514
+syslog_url: 10.100.5.179:5514
 
 ## Specify the IPMI user that will be used to bootstrap physical devices
 api_user: ADMIN
