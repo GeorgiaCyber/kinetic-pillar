@@ -3,14 +3,7 @@ beacons:
     - coalesce: True
     - interfaces:
 {% for address in grains['ipv4'] %}
-{% set interface = salt['network.ifacestartswith'](address, 0) %}
+{% set interface = salt['network.ifacestartswith'](address) %}
         {{ address }}:
-          ipaddr: {{ interface }}
-{% endfor %}
-
-test: |
-{% for address in grains['ipv4'] %}
-{% set interface = salt['network.ifacestartswith'](address, 0) %}
-        {{ address }}:
-          ipaddr: {{ interface }}
+          ipaddr:
 {% endfor %}
