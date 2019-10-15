@@ -67,7 +67,7 @@ authorized_keys:
 ## This is *not* the built-in server, but rather an upstream one
 ## That you would like all events forwarded to
 ## if you have none, set to false.
-syslog_url: false
+syslog_url: False
 
 ## Specify the IPMI user that will be used to bootstrap physical devices
 api_user: ADMIN
