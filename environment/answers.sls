@@ -42,8 +42,8 @@ common_ldap_configuration:
 ## of.  Keystone_domain is the domain you want to use to access your LDAP accounts on
 ## the horizon login page
 keystone_ldap_configuration:
-  user_filter: (memberOf=cn=vta_user_filter,cn=groups,cn=accounts,dc=cybbh,dc=space)
-  group_filter: (memberOf=cn=vta_group_filter,cn=groups,cn=accounts,dc=cybbh,dc=space)
+  user_filter: (memberOf=cn=foo_user_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
+  group_filter: (memberOf=cn=foo_group_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
   keystone_domain: ipa
 
 ## Specify your haproxy TLS options
@@ -63,8 +63,11 @@ authorized_keys:
   AAAAC3NzaC1lZDI1NTE5AAAAIIKw+cBx9BBKcoXKLxMLVoGCD7znZqBjnMkaIipAikQJ:
     encoding: ed25519
 
-## Specify the URL to your syslog server
-syslog_url: 10.100.5.179:5514
+## Specify the perma-URL to your syslog server
+## This is *not* the built-in server, but rather an upstream one
+## That you would like all events forwarded to
+## if you have none, set to false.
+syslog_url: false
 
 ## Specify the IPMI user that will be used to bootstrap physical devices
 api_user: ADMIN
