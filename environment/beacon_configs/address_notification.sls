@@ -5,7 +5,7 @@ beacons:
 {% for address in grains['ipv4'] %}
   {% for interface in grains['ip_interfaces'] %}
     {% if address in interface %}
-        {{ address }}:
+        {{ interface }}:
           ipaddr:
     {% endif %}
   {% endfor %}
