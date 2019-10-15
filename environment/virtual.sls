@@ -369,3 +369,18 @@ virtual:
           primary: false
           bridge: false
           vlan: false
+  graylog:
+    count: 1
+    ram: 8192000
+    cpu: 4
+    os: ubuntu1804
+    disk: 512G
+    networks:
+      bridge: false
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false

@@ -15,6 +15,7 @@ map:
     - mysql
     - memcached
     - rabbitmq
+    - graylog
   phase6:
     - keystone
     - antora

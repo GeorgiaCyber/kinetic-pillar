@@ -54,6 +54,8 @@ base:
     - environment/openstack_services
   'rabbitmq*':
     - environment/virtual
+  'graylog*':
+    - environment/virtual
   'memcached*':
     - environment/virtual
   'keystone*':
