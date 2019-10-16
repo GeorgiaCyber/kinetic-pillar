@@ -140,7 +140,6 @@ hosts:
       - 0c:c4:7a:fb:f3:9c
       - 0c:c4:7a:fb:f3:b4
       - 0c:c4:7a:fb:f2:74
-      - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
@@ -161,6 +160,40 @@ hosts:
       - 10.100.0.46
 #      - 10.100.0.50
       - 10.100.0.53
+    networks:
+      bridge: false
+      vlan: false
+      interfaces:
+        enp97s0f0:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        enp97s0f1:
+          network: sfe
+          primary: false
+          bridge: false
+          vlan: false
+        enp113s0f0:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
+        enp113s0f1:
+          network: private
+          primary: false
+          bridge: false
+          vlan: false
+  container:
+    role: container
+    macs:
+      - 0c:c4:7a:fb:f2:68
+    interface: enp97s0f0
+    proxy: pull_from_mine
+    root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
+    ntp_server: 0.us.pool.ntp.org
+    disk: SAMSUNG MZ1LW960HMJP-00003
+    ipmi_addresses:
       - 10.100.0.54
     networks:
       bridge: false

@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: train
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: train
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -26,24 +26,24 @@ timezone: America/New_York
 ## Specify your endpoint URLs for openstack
 endpoints:
   public: dashboard.gacyberrange.org
-  internal: internal.dashboard.gacyberrange.org
-  admin: internal.dashboard.gacyberrange.org
+  internal: dashboard.gacyberrange.org
+  admin: dashboard.gacyberrange.org
 
 ## Specify your ldap configuration
 common_ldap_configuration:
   address: directory.fix.me.please
-  bind_user: uid=bind,cn=users,cn=accounts,dc=cybbh,dc=space
-  base_dn: dc=cybbh,dc=space
-  user_dn: cn=users,cn=accounts,dc=cybbh,dc=space
-  group_dn: cn=groups,cn=accounts,dc=cybbh,dc=space
+  bind_user: uid=bind,cn=users,cn=accounts,dc=foo,dc=bar
+  base_dn: dc=foo,dc=bar
+  user_dn: cn=users,cn=accounts,dc=foo,dc=bar
+  group_dn: cn=groups,cn=accounts,dc=foo,dc=bar
 
 ## keystone-specific LDAP config.  user_filter should be a group that all range users
 ## are a member of.  group_filter should be a group that all range groups are a member
 ## of.  Keystone_domain is the domain you want to use to access your LDAP accounts on
 ## the horizon login page
 keystone_ldap_configuration:
-  user_filter: (memberOf=cn=vta_user_filter,cn=groups,cn=accounts,dc=cybbh,dc=space)
-  group_filter: (memberOf=cn=vta_group_filter,cn=groups,cn=accounts,dc=cybbh,dc=space)
+  user_filter: (memberOf=cn=foo_user_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
+  group_filter: (memberOf=cn=foo_group_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
   keystone_domain: ipa
 
 ## Specify your haproxy TLS options
@@ -63,8 +63,11 @@ authorized_keys:
   AAAAC3NzaC1lZDI1NTE5AAAAIIKw+cBx9BBKcoXKLxMLVoGCD7znZqBjnMkaIipAikQJ:
     encoding: ed25519
 
-## Specify the URL to your syslog server
-syslog_url: fix.me.please.com:5514
+## Specify the perma-URL to your syslog server
+## This is *not* the built-in server, but rather an upstream one
+## That you would like all events forwarded to
+## if you have none, set to false.
+syslog_url: False
 
 ## Specify the IPMI user that will be used to bootstrap physical devices
 api_user: ADMIN
@@ -96,9 +99,21 @@ networking:
 
 ## neutron networking backend.  Valid values are networking-ovn
 ## or linuxbridge
-
 neutron:
   backend: linuxbridge
+
+## the theme you wish to install in horizon (set url to false if none).  URL should point to git repo
+## name should be the top-level directory you wish to extract the theme to
+## Site branding and site link should match appropriate values.
+## See https://docs.openstack.org/horizon/latest/configuration/customizing.html
+horizon:
+  theme:
+    url: https://github.com/GeorgiaCyber/kinetic-theme.git
+    branch: master
+    name: gcr
+    site_branding: Georgia Cyber Range
+    site_branding_link: https://www.gacybercenter.org/
+
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
