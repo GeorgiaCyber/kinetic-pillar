@@ -8,18 +8,17 @@ map:
     - cache
   phase3:
     - cephmon
-  phase4:
-    - storage
-  phase5:
     - haproxy
     - mysql
     - memcached
     - rabbitmq
     - graylog
-  phase6:
+  phase4:
+    - storage
+  phase5:
     - keystone
     - antora
-  phase7:
+  phase6:
     - placement
     - glance
     - nova
@@ -30,6 +29,6 @@ map:
     - designate
     - swift
     - zun
-  phase8:
+  phase7:
     - compute
     - container
