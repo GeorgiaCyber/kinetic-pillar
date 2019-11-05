@@ -187,14 +187,14 @@ hosts:
   container:
     role: container
     macs:
-      - 0c:c4:7a:fb:f2:68
+#      - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: SAMSUNG MZ1LW960HMJP-00003
     ipmi_addresses:
-      - 10.100.0.54
+#      - 10.100.0.54
     networks:
       bridge: false
       vlan: false
