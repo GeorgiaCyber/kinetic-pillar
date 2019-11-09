@@ -25,6 +25,7 @@
 hosts:
   controller:
     role: controller
+    os: centos7
     macs:
       - 0c:c4:7a:fb:f3:ac
       - 0c:c4:7a:fb:f0:f0
@@ -68,6 +69,7 @@ hosts:
           vlan: false
   storage:
     role: storage
+    os: centos7
     macs:
       - 00:25:90:5f:5f:7a
       - 00:25:90:5f:5f:2e
@@ -125,6 +127,7 @@ hosts:
           vlan: false
   compute:
     role: compute
+    os: centos7
     macs:
       - 0c:c4:7a:fb:f3:d0
       - 0c:c4:7a:fb:f2:80
@@ -186,6 +189,7 @@ hosts:
           vlan: false
   container:
     role: container
+    os: centos7
     macs:
 #      - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
