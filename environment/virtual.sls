@@ -155,11 +155,6 @@ virtual:
           bridge: false
           vlan: false
         ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
-        ens5:
           network: sfe
           primary: false
           bridge: false
@@ -177,11 +172,6 @@ virtual:
         ens3:
           network: management
           primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: public
-          primary: false
           bridge: false
           vlan: false
   neutron:
@@ -224,11 +214,6 @@ virtual:
           primary: true
           bridge: false
           vlan: false
-        ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
   heat:
     count: 2
     ram: 16384000
@@ -242,11 +227,6 @@ virtual:
         ens3:
           network: management
           primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: public
-          primary: false
           bridge: false
           vlan: false
   cinder:
@@ -265,11 +245,6 @@ virtual:
           bridge: false
           vlan: false
         ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
-        ens5:
           network: sfe
           primary: false
           bridge: false
@@ -289,11 +264,6 @@ virtual:
           primary: true
           bridge: false
           vlan: false
-        ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
   swift:
     count: 1
     ram: 8192000
@@ -310,11 +280,6 @@ virtual:
           bridge: false
           vlan: false
         ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
-        ens5:
           network: sfe
           primary: false
           bridge: false
@@ -334,11 +299,6 @@ virtual:
           primary: true
           bridge: false
           vlan: false
-        ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
   placement:
     count: 1
     ram: 8192000
@@ -352,11 +312,6 @@ virtual:
         ens3:
           network: management
           primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: public
-          primary: false
           bridge: false
           vlan: false
   graylog:
