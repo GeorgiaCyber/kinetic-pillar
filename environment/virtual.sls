@@ -79,11 +79,6 @@ virtual:
           primary: true
           bridge: false
           vlan: false
-        ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
   mysql:
     count: 1
     ram: 16384000
@@ -142,11 +137,6 @@ virtual:
         ens3:
           network: management
           primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: public
-          primary: false
           bridge: false
           vlan: false
   glance:
