@@ -15,3 +15,9 @@ images:
     remote_hash: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/checksums?job=upload
     local_url: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/ubuntu1804.raw.tar.gz?job=upload
     local_hash: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/checksums?job=upload
+  centos7:
+    name: centos7.raw
+    remote_url: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/centos7.raw.tar.gz?job=upload
+    remote_hash: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/checksums?job=upload
+    local_url: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/centos7.raw.tar.gz?job=upload
+    local_hash: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/checksums?job=upload
