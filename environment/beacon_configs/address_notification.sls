@@ -5,5 +5,4 @@ beacons:
 {% for interface in salt['grains.get']('ifwatch') %}
         {{ interface }}:
           ipaddr:
-          operstate:
 {% endfor %}
