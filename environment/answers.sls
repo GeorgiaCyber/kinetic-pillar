@@ -155,6 +155,12 @@ master-config:
         - /srv/dynamic_pillar
   reactor: |
     reactor:
+      - salt/minion/*/start:
+        - salt://reactor/update_mine.sls
+        - salt://reactor/highstate_haproxy.sls
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/update_ceph_conf.sls
+        - salt://reactor/highstate_pxe.sls
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls
         - salt://reactor/highstate_haproxy.sls
