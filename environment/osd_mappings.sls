@@ -18,4 +18,4 @@ osd_mappings:
       - /dev/sdl
     journals:
       INTEL SSDPED1K750GA:
-        qty: 3
+        qty: 1
