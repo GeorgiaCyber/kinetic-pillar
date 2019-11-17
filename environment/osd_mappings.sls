@@ -16,5 +16,6 @@ osd_mappings:
       - /dev/sdj
       - /dev/sdk
       - /dev/sdl
-    journal:
-      - INTEL SSDPED1K750GA
+    journals:
+      INTEL SSDPED1K750GA:
+        qty: 3
