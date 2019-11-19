@@ -13,7 +13,7 @@ map:
     - memcached
     - rabbitmq
     - graylog
-    - osdb
+    - ovsdb
   phase4:
     - storage
     - keystone
