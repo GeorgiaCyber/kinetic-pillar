@@ -176,8 +176,8 @@ virtual:
           vlan: false
   neutron:
     count: 2
-    ram: 16384000
-    cpu: 12
+    ram: 8192000
+    cpu: 4
     os: centos7
     disk: 128G
     networks:
@@ -187,16 +187,6 @@ virtual:
         ens3:
           network: management
           primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
-        ens5:
-          network: private
-          primary: false
           bridge: false
           vlan: false
   horizon:
@@ -329,7 +319,32 @@ virtual:
           primary: true
           bridge: false
           vlan: false
-  ovn:
+  network:
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: centos7
+    disk: 32G
+    networks:
+      bridge: false
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: public
+          primary: false
+          bridge: false
+          vlan: false
+        ens5:
+          network: private
+          primary: false
+          bridge: false
+          vlan: false
+  ovsdb:
     count: 1
     ram: 8192000
     cpu: 4
