@@ -13,6 +13,7 @@ map:
     - memcached
     - rabbitmq
     - graylog
+    - ovn
   phase4:
     - storage
     - keystone
