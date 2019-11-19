@@ -37,12 +37,15 @@ base:
     - environment/hosts
     - environment/osd_mappings
     - environment/openstack_services
+    - environment/mine_configs/physical
   'compute*':
     - environment/hosts
     - environment/openstack_services
+    - environment/mine_configs/physical    
   'container*':
     - environment/hosts
     - environment/openstack_services
+    - environment/mine_configs/physical
   'haproxy*':
     - environment/virtual
     - environment/openstack_services
