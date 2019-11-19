@@ -80,9 +80,11 @@ base:
   'neutron*':
     - environment/virtual
     - environment/openstack_services
-  'ovn*':
+  'network*':
     - environment/virtual
     - environment/openstack_services
+  'ovsdb*':
+    - environment/virtual
   'horizon*':
     - environment/virtual
     - environment/openstack_services
