@@ -15,10 +15,9 @@ map:
     - graylog
   phase4:
     - storage
-  phase5:
     - keystone
     - antora
-  phase6:
+  phase5:
     - placement
     - glance
     - nova
@@ -29,6 +28,6 @@ map:
     - designate
     - swift
     - zun
-  phase7:
+  phase6:
     - compute
     - container

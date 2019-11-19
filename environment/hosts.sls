@@ -25,6 +25,7 @@
 hosts:
   controller:
     role: controller
+    os: centos7
     macs:
       - 0c:c4:7a:fb:f3:ac
       - 0c:c4:7a:fb:f0:f0
@@ -68,6 +69,7 @@ hosts:
           vlan: false
   storage:
     role: storage
+    os: centos7
     macs:
       - 00:25:90:5f:5f:7a
       - 00:25:90:5f:5f:2e
@@ -125,6 +127,7 @@ hosts:
           vlan: false
   compute:
     role: compute
+    os: centos7
     macs:
       - 0c:c4:7a:fb:f3:d0
       - 0c:c4:7a:fb:f2:80
@@ -133,7 +136,7 @@ hosts:
       - 0c:c4:7a:fb:f2:84
       - 0c:c4:7a:fb:f2:1c
       - 0c:c4:7a:fb:f1:0c
-      - 0c:c4:7a:fb:f3:e4
+#      - 0c:c4:7a:fb:f3:e4
 #      - 0c:c4:7a:fb:f3:cc
 #      - 0c:c4:7a:fb:f1:10
 #      - 0c:c4:7a:fb:f2:a8
@@ -153,7 +156,7 @@ hosts:
       - 10.100.0.28
       - 10.100.0.29
       - 10.100.0.30
-      - 10.100.0.37
+#      - 10.100.0.37
 #      - 10.100.0.43
 #      - 10.100.0.44
 #      - 10.100.0.45
@@ -186,7 +189,10 @@ hosts:
           vlan: false
   container:
     role: container
+    os: centos7
     macs:
+## add this former compute node temporarily
+      - 0c:c4:7a:fb:f3:e4
 #      - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
     proxy: pull_from_mine
@@ -194,6 +200,8 @@ hosts:
     ntp_server: 0.us.pool.ntp.org
     disk: SAMSUNG MZ1LW960HMJP-00003
     ipmi_addresses:
+## add this former compute node temporarily      
+      - 10.100.0.37
 #      - 10.100.0.54
     networks:
       bridge: false
