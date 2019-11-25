@@ -175,7 +175,7 @@ virtual:
           bridge: false
           vlan: false
   neutron:
-    count: 2
+    count: 3
     ram: 8192000
     cpu: 4
     os: centos7
