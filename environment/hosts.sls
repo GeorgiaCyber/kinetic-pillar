@@ -99,7 +99,8 @@ hosts:
 #      - 10.100.0.34
 #      - 10.100.0.35
 #      - 10.100.0.38
-      - 10.100.0.39
+# The below host has hardware issues and won't boot.
+#      - 10.100.0.39
       - 10.100.0.42
       - 10.100.0.47
       - 10.100.0.48
@@ -143,7 +144,6 @@ hosts:
       - 0c:c4:7a:fb:f3:9c
       - 0c:c4:7a:fb:f3:b4
       - 0c:c4:7a:fb:f2:74
-#      - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
