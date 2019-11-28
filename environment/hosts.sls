@@ -27,18 +27,18 @@ hosts:
     role: controller
     os: centos7
     macs:
-      - 0c:c4:7a:fb:f3:ac
-      - 0c:c4:7a:fb:f0:f0
-#      - 0c:c4:7a:fb:f1:04
+#      - 0c:c4:7a:fb:f3:ac
+#      - 0c:c4:7a:fb:f0:f0
+      - 0c:c4:7a:fb:f1:04
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL6T4TCU
     ipmi_addresses:
-      - 10.100.0.22
-      - 10.100.0.23
-#      - 10.100.0.41
+#      - 10.100.0.22
+#      - 10.100.0.23
+      - 10.100.0.41
     kvm_disk_config:
       type: standard
       members:
@@ -71,41 +71,41 @@ hosts:
     role: storage
     os: centos7
     macs:
-      - 00:25:90:5f:5f:7a
-      - 00:25:90:5f:5f:2e
-      - 00:25:90:5f:5e:d6
-      - 00:25:90:5f:5e:7e
-      - 00:25:90:5f:5e:00
-      - 00:25:90:5f:5e:c2
-      - 00:25:90:5f:5f:02
-      - 00:25:90:5f:5f:c8
-#      - 00:25:90:5f:5f:10
-#      - 00:25:90:5f:5f:12
-#      - 00:25:90:5f:5e:ae
-#      - 00:25:90:5f:5f:06
-#      - 00:25:90:5f:60:0c
-#      - 00:25:90:5f:5f:be
+#      - 00:25:90:5f:5f:7a
+#      - 00:25:90:5f:5f:2e
+#      - 00:25:90:5f:5e:d6
+#      - 00:25:90:5f:5e:7e
+#      - 00:25:90:5f:5e:00
+#      - 00:25:90:5f:5e:c2
+#      - 00:25:90:5f:5f:02
+#      - 00:25:90:5f:5f:c8
+      - 00:25:90:5f:5f:10
+      - 00:25:90:5f:5f:12
+      - 00:25:90:5f:5e:ae
+      - 00:25:90:5f:5f:06
+      - 00:25:90:5f:60:0c
+      - 00:25:90:5f:5f:be
     interface: enp94s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: SAMSUNG MZ1LW960HMJP-00003
     ipmi_addresses:
-      - 10.100.0.20
-      - 10.100.0.21
-      - 10.100.0.31
-      - 10.100.0.32
-      - 10.100.0.33
-      - 10.100.0.34
-      - 10.100.0.35
-      - 10.100.0.38
-#      - 10.100.0.39
-#      - 10.100.0.42
-#      - 10.100.0.47
-#      - 10.100.0.48
-#      - 10.100.0.49
-#      - 10.100.0.51
-#      - 10.100.0.52
+#      - 10.100.0.20
+#      - 10.100.0.21
+#      - 10.100.0.31
+#      - 10.100.0.32
+#      - 10.100.0.33
+#      - 10.100.0.34
+#      - 10.100.0.35
+#      - 10.100.0.38
+      - 10.100.0.39
+      - 10.100.0.42
+      - 10.100.0.47
+      - 10.100.0.48
+      - 10.100.0.49
+      - 10.100.0.51
+      - 10.100.0.52
     networks:
       bridge: false
       vlan: false
@@ -129,40 +129,40 @@ hosts:
     role: compute
     os: centos7
     macs:
-      - 0c:c4:7a:fb:f3:d0
-      - 0c:c4:7a:fb:f2:80
-      - 0c:c4:7a:fb:f1:a8
-      - 0c:c4:7a:fb:f2:fc
-      - 0c:c4:7a:fb:f2:84
-      - 0c:c4:7a:fb:f2:1c
-      - 0c:c4:7a:fb:f1:0c
+#      - 0c:c4:7a:fb:f3:d0
+#      - 0c:c4:7a:fb:f2:80
+#      - 0c:c4:7a:fb:f1:a8
+#      - 0c:c4:7a:fb:f2:fc
+#      - 0c:c4:7a:fb:f2:84
+#      - 0c:c4:7a:fb:f2:1c
+#      - 0c:c4:7a:fb:f1:0c
 #      - 0c:c4:7a:fb:f3:e4
-#      - 0c:c4:7a:fb:f3:cc
-#      - 0c:c4:7a:fb:f1:10
-#      - 0c:c4:7a:fb:f2:a8
-#      - 0c:c4:7a:fb:f3:9c
-#      - 0c:c4:7a:fb:f3:b4
-#      - 0c:c4:7a:fb:f2:74
+      - 0c:c4:7a:fb:f3:cc
+      - 0c:c4:7a:fb:f1:10
+      - 0c:c4:7a:fb:f2:a8
+      - 0c:c4:7a:fb:f3:9c
+      - 0c:c4:7a:fb:f3:b4
+      - 0c:c4:7a:fb:f2:74
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL1T6TCU
     ipmi_addresses:
-      - 10.100.0.24
-      - 10.100.0.25
-      - 10.100.0.26
-      - 10.100.0.27
-      - 10.100.0.28
-      - 10.100.0.29
-      - 10.100.0.30
+#      - 10.100.0.24
+#      - 10.100.0.25
+#      - 10.100.0.26
+#      - 10.100.0.27
+#      - 10.100.0.28
+#      - 10.100.0.29
+#      - 10.100.0.30
 #      - 10.100.0.37
-#      - 10.100.0.43
-#      - 10.100.0.44
-#      - 10.100.0.45
-#      - 10.100.0.46
-#      - 10.100.0.50
-#      - 10.100.0.53
+      - 10.100.0.43
+      - 10.100.0.44
+      - 10.100.0.45
+      - 10.100.0.46
+      - 10.100.0.50
+      - 10.100.0.53
     networks:
       bridge: false
       vlan: false
@@ -192,17 +192,17 @@ hosts:
     os: centos7
     macs:
 ## add this former compute node temporarily
-      - 0c:c4:7a:fb:f3:e4
-#      - 0c:c4:7a:fb:f2:68
+#      - 0c:c4:7a:fb:f3:e4
+      - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
-    disk: SAMSUNG MZ1LW960HMJP-00003
+    disk: Micron_9200_MTFDHAL1T6TCU
     ipmi_addresses:
-## add this former compute node temporarily      
-      - 10.100.0.37
-#      - 10.100.0.54
+## add this former compute node temporarily
+#      - 10.100.0.37
+      - 10.100.0.54
     networks:
       bridge: false
       vlan: false
