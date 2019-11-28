@@ -25,9 +25,9 @@ timezone: America/New_York
 
 ## Specify your endpoint URLs for openstack
 endpoints:
-  public: dashboard.bitskrieg.net
-  internal: dashboard.bitskrieg.net
-  admin: dashboard.bitskrieg.net
+  public: dashboard.gacyberrange.org
+  internal: dashboard.gacyberrange.org
+  admin: dashboard.gacyberrange.org
 
 ## Specify your ldap configuration
 common_ldap_configuration:
@@ -49,13 +49,13 @@ keystone_ldap_configuration:
 ## Specify your haproxy TLS options
 haproxy:
   tls_domains:
-    - dashboard.bitskrieg.net
-    - console.bitskrieg.net
-    - docs.bitskrieg.net
+    - dashboard.gacyberrange.org
+    - console.gacyberrange.org
+    - docs.gacyberrange.org
   tls_email: testing12345678@somefakedomain.website
-  dashboard_domain: dashboard.bitskrieg.net
-  console_domain: console.bitskrieg.net
-  docs_domain: docs.bitskrieg.net
+  dashboard_domain: dashboard.gacyberrange.org
+  console_domain: console.gacyberrange.org
+  docs_domain: docs.gacyberange.org
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
