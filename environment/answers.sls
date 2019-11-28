@@ -50,12 +50,12 @@ keystone_ldap_configuration:
 haproxy:
   tls_domains:
     - dashboard.bitskrieg.net
-    - dashboard.bitskrieg.net
-    - dashboard.bitskrieg.net
+    - console.bitskrieg.net
+    - docs.bitskrieg.net
   tls_email: testing12345678@somefakedomain.website
   dashboard_domain: dashboard.bitskrieg.net
-  console_domain: dashboard.bitskrieg.net
-  docs_domain: dashboard.bitskrieg.net
+  console_domain: console.bitskrieg.net
+  docs_domain: docs.bitskrieg.net
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
