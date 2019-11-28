@@ -104,7 +104,8 @@ hosts:
 #      - 10.100.0.39
       - 10.100.0.42
       - 10.100.0.47
-      - 10.100.0.48
+# The below host has physical hardware issues and won't boot      
+#      - 10.100.0.48
       - 10.100.0.49
       - 10.100.0.51
       - 10.100.0.52
