@@ -104,7 +104,7 @@ hosts:
 #      - 10.100.0.39
       - 10.100.0.42
       - 10.100.0.47
-# The below host has physical hardware issues and won't boot      
+# The below host has physical hardware issues and won't boot
 #      - 10.100.0.48
       - 10.100.0.49
       - 10.100.0.51
@@ -164,7 +164,8 @@ hosts:
       - 10.100.0.44
       - 10.100.0.45
       - 10.100.0.46
-      - 10.100.0.50
+# host is physically nmc
+#      - 10.100.0.50
       - 10.100.0.53
     networks:
       bridge: false
