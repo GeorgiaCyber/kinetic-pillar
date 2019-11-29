@@ -143,7 +143,8 @@ hosts:
       - 0c:c4:7a:fb:f1:10
       - 0c:c4:7a:fb:f2:a8
       - 0c:c4:7a:fb:f3:9c
-      - 0c:c4:7a:fb:f3:b4
+# host is physically nmc
+#      - 0c:c4:7a:fb:f3:b4
       - 0c:c4:7a:fb:f2:74
     interface: enp97s0f0
     proxy: pull_from_mine
