@@ -120,6 +120,9 @@ horizon:
     site_branding: Georgia Cyber Range
     site_branding_link: https://www.gacybercenter.org/
 
+## specify which docker image you would wish to use for the cloud shell functionality
+zun:
+  cloud_shell_image: usacys/openstack-client:latest
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
