@@ -16,6 +16,12 @@ gitfs_other_configurations:
     url: https://git.cybbh.space/vta/kinetic-stigs.git
     branch: master
 
+## DNS A record that points to your salt master for this environment
+master_record: salt2
+
+## DNS A record that points to your pxe host for this environment
+pxe_record: pxe2
+
 ## Repository for your documentation site
 antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
 
