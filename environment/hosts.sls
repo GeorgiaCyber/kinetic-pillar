@@ -82,7 +82,8 @@ hosts:
 # the mac for 10.100.0.39 is missing because it will not power on
       - 00:25:90:5f:5f:10
       - 00:25:90:5f:5f:12
-      - 00:25:90:5f:5e:ae
+# host is nmc      
+#      - 00:25:90:5f:5e:ae
       - 00:25:90:5f:5f:06
       - 00:25:90:5f:60:0c
       - 00:25:90:5f:5f:be
