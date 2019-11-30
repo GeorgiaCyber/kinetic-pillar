@@ -17,10 +17,10 @@ gitfs_other_configurations:
     branch: master
 
 ## DNS A record that points to your salt master for this environment
-master_record: salt2
+master_record: salt2.internal.georgiacyber.org
 
 ## DNS A record that points to your pxe host for this environment
-pxe_record: pxe2
+pxe_record: pxe2.internal.georgiacyber.org
 
 ## Repository for your documentation site
 antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
