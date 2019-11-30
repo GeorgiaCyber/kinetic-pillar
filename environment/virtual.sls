@@ -18,7 +18,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 2
-    os: centos7
+    os: ubuntu1804
     disk: 512G
     networks:
       bridge: false
@@ -33,7 +33,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 32G
     networks:
       bridge: false
@@ -53,7 +53,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 32G
     networks:
       bridge: false
@@ -68,7 +68,7 @@ virtual:
     count: 1
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: ubuntu1804
     disk: 16G
     networks:
       bridge: false
@@ -83,7 +83,7 @@ virtual:
     count: 1
     ram: 16384000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 128G
     networks:
       bridge: false
@@ -98,7 +98,7 @@ virtual:
     count: 1
     ram: 32768000
     cpu: 8
-    os: centos7
+    os: ubuntu1804
     disk: 128G
     networks:
       bridge: false
@@ -113,7 +113,7 @@ virtual:
     count: 1
     ram: 32768000
     cpu: 8
-    os: centos7
+    os: ubuntu1804
     disk: 128G
     networks:
       bridge: false
@@ -128,7 +128,7 @@ virtual:
     count: 1
     ram: 16384000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 64G
     networks:
       bridge: false
@@ -143,7 +143,7 @@ virtual:
     count: 2
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 64G
     networks:
       bridge: false
@@ -163,7 +163,7 @@ virtual:
     count: 2
     ram: 16384000
     cpu: 8
-    os: centos7
+    os: ubuntu1804
     disk: 128G
     networks:
       bridge: false
@@ -193,7 +193,7 @@ virtual:
     count: 2
     ram: 16384000
     cpu: 8
-    os: centos7
+    os: ubuntu1804
     disk: 128G
     networks:
       bridge: false
@@ -208,7 +208,7 @@ virtual:
     count: 2
     ram: 16384000
     cpu: 8
-    os: centos7
+    os: ubuntu1804
     disk: 128G
     networks:
       bridge: false
@@ -223,7 +223,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 64G
     networks:
       bridge: false
@@ -243,7 +243,7 @@ virtual:
     count: 1
     ram: 16384000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 64G
     networks:
       bridge: false
@@ -258,7 +258,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 64G
     networks:
       bridge: false
@@ -278,7 +278,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 64G
     networks:
       bridge: false
@@ -293,7 +293,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 64G
     networks:
       bridge: false
@@ -308,7 +308,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: ubuntu1804
     disk: 512G
     networks:
       bridge: false
