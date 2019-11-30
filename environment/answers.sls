@@ -106,7 +106,7 @@ networking:
 ## neutron networking backend.  Valid values are networking-ovn
 ## or linuxbridge
 neutron:
-  backend: networking-ovn
+  backend: linuxbridge
 
 ## the theme you wish to install in horizon (set url to false if none).  URL should point to git repo
 ## name should be the top-level directory you wish to extract the theme to
