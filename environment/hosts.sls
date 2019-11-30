@@ -130,7 +130,7 @@ hosts:
           vlan: false
   compute:
     role: compute
-    os: centos7
+    os: ubuntu1804
     macs:
 #      - 0c:c4:7a:fb:f3:d0
 #      - 0c:c4:7a:fb:f2:80
@@ -192,7 +192,7 @@ hosts:
           vlan: false
   container:
     role: container
-    os: centos7
+    os: ubuntu1804
     macs:
 ## add this former compute node temporarily
 #      - 0c:c4:7a:fb:f3:e4
