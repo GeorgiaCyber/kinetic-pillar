@@ -13,6 +13,7 @@ map:
     - memcached
     - rabbitmq
     - graylog
+    - ovsdb
   phase4:
     - storage
     - keystone
@@ -22,6 +23,7 @@ map:
     - glance
     - nova
     - neutron
+    - network
     - horizon
     - heat
     - cinder

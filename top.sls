@@ -41,7 +41,7 @@ base:
   'compute*':
     - environment/hosts
     - environment/openstack_services
-    - environment/mine_configs/physical    
+    - environment/mine_configs/physical
   'container*':
     - environment/hosts
     - environment/openstack_services
@@ -80,6 +80,11 @@ base:
   'neutron*':
     - environment/virtual
     - environment/openstack_services
+  'network*':
+    - environment/virtual
+    - environment/openstack_services
+  'ovsdb*':
+    - environment/virtual
   'horizon*':
     - environment/virtual
     - environment/openstack_services
