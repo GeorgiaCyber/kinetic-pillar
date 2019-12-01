@@ -79,7 +79,7 @@ base:
     - environment/openstack_services
   'barbican*':
     - environment/virtual
-    - environment/openstack_services                                        
+    - environment/openstack_services
   'neutron*':
     - environment/virtual
     - environment/openstack_services

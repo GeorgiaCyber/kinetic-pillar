@@ -50,7 +50,7 @@ openstack_services:
       public_endpoint:
         protocol: "https://"
         port: ":9311"
-        path: /        
+        path: /
   nova:
     configuration:
       dbs:
