@@ -19,6 +19,8 @@ types:
   glance: virtual
   nova: virtual
   neutron: virtual
+  network: virtual
+  ovsdb: virtual    
   horizon: virtual
   heat: virtual
   cinder: virtual

@@ -3,18 +3,24 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: networking-ovn
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: networking-ovn
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
   stigs:
     url: https://git.cybbh.space/vta/kinetic-stigs.git
     branch: master
+
+## DNS A record that points to your salt master for this environment
+master_record: salt.internal.georgiacyber.org
+
+## DNS A record that points to your pxe host for this environment
+pxe_record: pxe.internal.georgiacyber.org
 
 ## Repository for your documentation site
 antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
@@ -100,7 +106,7 @@ networking:
 ## neutron networking backend.  Valid values are networking-ovn
 ## or linuxbridge
 neutron:
-  backend: linuxbridge
+  backend: networking-ovn
 
 ## the theme you wish to install in horizon (set url to false if none).  URL should point to git repo
 ## name should be the top-level directory you wish to extract the theme to
@@ -114,6 +120,9 @@ horizon:
     site_branding: Georgia Cyber Range
     site_branding_link: https://www.gacybercenter.org/
 
+## specify which docker image you would wish to use for the cloud shell functionality
+zun:
+  cloud_shell_image: usacys/openstack-client:latest
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
@@ -155,6 +164,12 @@ master-config:
         - /srv/dynamic_pillar
   reactor: |
     reactor:
+      - salt/minion/*/start:
+        - salt://reactor/update_mine.sls
+        - salt://reactor/highstate_haproxy.sls
+        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/update_ceph_conf.sls
+        - salt://reactor/highstate_pxe.sls
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls
         - salt://reactor/highstate_haproxy.sls

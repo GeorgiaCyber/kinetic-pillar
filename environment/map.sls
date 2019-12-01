@@ -13,22 +13,23 @@ map:
     - memcached
     - rabbitmq
     - graylog
+    - ovsdb
   phase4:
     - storage
-  phase5:
     - keystone
     - antora
-  phase6:
+  phase5:
     - placement
     - glance
     - nova
     - neutron
+    - network
     - horizon
     - heat
     - cinder
     - designate
     - swift
     - zun
-  phase7:
+  phase6:
     - compute
     - container
