@@ -25,7 +25,7 @@
 hosts:
   controller:
     role: controller
-    os: ubuntu1804
+    os: centos7
     macs:
 #      - 0c:c4:7a:fb:f3:ac
 #      - 0c:c4:7a:fb:f0:f0
@@ -69,7 +69,7 @@ hosts:
           vlan: false
   storage:
     role: storage
-    os: ubuntu1804
+    os: centos7
     macs:
 #      - 00:25:90:5f:5f:7a
 #      - 00:25:90:5f:5f:2e
@@ -82,7 +82,7 @@ hosts:
 # the mac for 10.100.0.39 is missing because it will not power on
       - 00:25:90:5f:5f:10
       - 00:25:90:5f:5f:12
-# host is nmc      
+# host is nmc
 #      - 00:25:90:5f:5e:ae
       - 00:25:90:5f:5f:06
       - 00:25:90:5f:60:0c
@@ -131,7 +131,7 @@ hosts:
           vlan: false
   compute:
     role: compute
-    os: ubuntu1804
+    os: centos7
     macs:
 #      - 0c:c4:7a:fb:f3:d0
 #      - 0c:c4:7a:fb:f2:80
@@ -193,7 +193,7 @@ hosts:
           vlan: false
   container:
     role: container
-    os: ubuntu1804
+    os: centos7
     macs:
 ## add this former compute node temporarily
 #      - 0c:c4:7a:fb:f3:e4
