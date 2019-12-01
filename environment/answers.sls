@@ -17,10 +17,10 @@ gitfs_other_configurations:
     branch: master
 
 ## DNS A record that points to your salt master for this environment
-master_record: salt.internal.georgiacyber.org
+master_record: salt2.internal.georgiacyber.org
 
 ## DNS A record that points to your pxe host for this environment
-pxe_record: pxe.internal.georgiacyber.org
+pxe_record: pxe2.internal.georgiacyber.org
 
 ## Repository for your documentation site
 antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
@@ -31,9 +31,9 @@ timezone: America/New_York
 
 ## Specify your endpoint URLs for openstack
 endpoints:
-  public: dashboard.gacyberrange.org
-  internal: dashboard.gacyberrange.org
-  admin: dashboard.gacyberrange.org
+  public: dashboard.bitskrieg.net
+  internal: dashboard.bitskrieg.net
+  admin: dashboard.bitskrieg.net
 
 ## Specify your ldap configuration
 common_ldap_configuration:
@@ -55,13 +55,13 @@ keystone_ldap_configuration:
 ## Specify your haproxy TLS options
 haproxy:
   tls_domains:
-    - dashboard.gacyberrange.org
-    - console.gacyberrange.org
-    - docs.gacyberrange.org
+    - dashboard.bitskrieg.net
+    - console.bitskrieg.net
+    - docs.bitskrieg.net
   tls_email: testing12345678@somefakedomain.website
-  dashboard_domain: dashboard.gacyberrange.org
-  console_domain: console.gacyberrange.org
-  docs_domain: docs.gacyberrange.org
+  dashboard_domain: dashboard.bitskrieg.net
+  console_domain: console.bitskrieg.net
+  docs_domain: docs.bitskrieg.net
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
