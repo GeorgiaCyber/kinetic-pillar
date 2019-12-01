@@ -20,7 +20,7 @@ types:
   nova: virtual
   neutron: virtual
   network: virtual
-  ovsdb: virtual    
+  ovsdb: virtual
   horizon: virtual
   heat: virtual
   cinder: virtual
@@ -29,4 +29,5 @@ types:
   zun: virtual
   placement: virtual
   graylog: virtual
+  barbican: virtual
   some_other_thing: container

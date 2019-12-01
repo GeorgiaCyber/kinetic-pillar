@@ -19,6 +19,7 @@ map:
     - keystone
     - antora
   phase5:
+    - barbican
     - placement
     - glance
     - nova
