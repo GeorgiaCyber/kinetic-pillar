@@ -23,7 +23,7 @@ map:
     - glance
     - nova
     - neutron
-    - networking
+    - network
     - horizon
     - heat
     - cinder

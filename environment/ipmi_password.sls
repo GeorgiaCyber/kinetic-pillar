@@ -9,6 +9,7 @@
 
 ipmi_password: |
   -----BEGIN PGP MESSAGE-----
+
   hF4D4vt3uiyAUUgSAQdA3KSQJD/fNr2YUNhOcbGK4YlSh7qFc0bUsYlLKVrOfnkw
   FTwkKyi4zLyL7py6ZGc/U0eTxGYcwOemqbpUNmS9+qRFN3UEQvum8B9xUl/WHgyb
   0ksBN8FZUfx4Y0hgp0vg+ykbGJ5HkXORbkH004LIJ29YX6veNF3Y9O4tDZKAAAvW

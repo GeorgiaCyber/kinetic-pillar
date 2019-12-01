@@ -79,8 +79,10 @@ hosts:
       - 00:25:90:5f:5e:c2
       - 00:25:90:5f:5f:02
       - 00:25:90:5f:5f:c8
+# the mac for 10.100.0.39 is missing because it will not power on
 #      - 00:25:90:5f:5f:10
 #      - 00:25:90:5f:5f:12
+# host is nmc
 #      - 00:25:90:5f:5e:ae
 #      - 00:25:90:5f:5f:06
 #      - 00:25:90:5f:60:0c
@@ -99,9 +101,11 @@ hosts:
       - 10.100.0.34
       - 10.100.0.35
       - 10.100.0.38
+# The below host has hardware issues and won't boot.
 #      - 10.100.0.39
 #      - 10.100.0.42
 #      - 10.100.0.47
+# The below host has physical hardware issues and won't boot
 #      - 10.100.0.48
 #      - 10.100.0.49
 #      - 10.100.0.51
@@ -136,11 +140,11 @@ hosts:
       - 0c:c4:7a:fb:f2:84
       - 0c:c4:7a:fb:f2:1c
       - 0c:c4:7a:fb:f1:0c
-#      - 0c:c4:7a:fb:f3:e4
 #      - 0c:c4:7a:fb:f3:cc
 #      - 0c:c4:7a:fb:f1:10
 #      - 0c:c4:7a:fb:f2:a8
 #      - 0c:c4:7a:fb:f3:9c
+# host is physically nmc
 #      - 0c:c4:7a:fb:f3:b4
 #      - 0c:c4:7a:fb:f2:74
     interface: enp97s0f0
@@ -156,11 +160,11 @@ hosts:
       - 10.100.0.28
       - 10.100.0.29
       - 10.100.0.30
-#      - 10.100.0.37
 #      - 10.100.0.43
 #      - 10.100.0.44
 #      - 10.100.0.45
 #      - 10.100.0.46
+# host is physically nmc
 #      - 10.100.0.50
 #      - 10.100.0.53
     networks:
@@ -191,16 +195,14 @@ hosts:
     role: container
     os: centos7
     macs:
-## add this former compute node temporarily
       - 0c:c4:7a:fb:f3:e4
 #      - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
-    disk: SAMSUNG MZ1LW960HMJP-00003
+    disk: Micron_9200_MTFDHAL1T6TCU
     ipmi_addresses:
-## add this former compute node temporarily      
       - 10.100.0.37
 #      - 10.100.0.54
     networks:

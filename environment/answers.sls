@@ -16,6 +16,12 @@ gitfs_other_configurations:
     url: https://git.cybbh.space/vta/kinetic-stigs.git
     branch: master
 
+## DNS A record that points to your salt master for this environment
+master_record: salt.internal.georgiacyber.org
+
+## DNS A record that points to your pxe host for this environment
+pxe_record: pxe.internal.georgiacyber.org
+
 ## Repository for your documentation site
 antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
 
@@ -114,6 +120,9 @@ horizon:
     site_branding: Georgia Cyber Range
     site_branding_link: https://www.gacybercenter.org/
 
+## specify which docker image you would wish to use for the cloud shell functionality
+zun:
+  cloud_shell_image: usacys/openstack-client:latest
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
