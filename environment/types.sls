@@ -29,4 +29,5 @@ types:
   zun: virtual
   placement: virtual
   graylog: virtual
+  barbican: virtual  
   some_other_thing: container
