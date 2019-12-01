@@ -35,6 +35,22 @@ openstack_services:
         protocol: "https://"
         port: ":9292"
         path: /
+  barbican:
+    configuration:
+      dbs:
+        - barbican
+      internal_endpoint:
+        protocol: "https://"
+        port: ":9311"
+        path: /
+      admin_endpoint:
+        protocol: "https://"
+        port: ":9311"
+        path: /
+      public_endpoint:
+        protocol: "https://"
+        port: ":9311"
+        path: /        
   nova:
     configuration:
       dbs:
