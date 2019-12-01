@@ -188,3 +188,19 @@ openstack_services:
         protocol: "https://"
         port: ":9517"
         path: /v1
+  magnum:
+    configuration:
+      dbs:
+        - magnum
+      internal_endpoint:
+        protocol: "https://"
+        port: ":9511"
+        path: /v1
+      admin_endpoint:
+        protocol: "https://"
+        port: ":9511"
+        path: /v1
+      public_endpoint:
+        protocol: "https://"
+        port: ":9511"
+        path: /v1

@@ -32,6 +32,7 @@ map:
     - swift
     - zun
     - barbican
+    - magnum
   phase6:
     - compute
     - container
