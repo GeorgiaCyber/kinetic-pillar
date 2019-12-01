@@ -31,6 +31,7 @@ map:
     - designate
     - swift
     - zun
+    - barbican
   phase6:
     - compute
     - container
