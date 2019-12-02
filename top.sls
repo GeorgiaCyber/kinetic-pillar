@@ -80,6 +80,9 @@ base:
   'barbican*':
     - environment/virtual
     - environment/openstack_services
+  'magnum*':
+    - environment/virtual
+    - environment/openstack_services
   'neutron*':
     - environment/virtual
     - environment/openstack_services

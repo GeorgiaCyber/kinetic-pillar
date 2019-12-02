@@ -373,4 +373,19 @@ virtual:
           network: management
           primary: true
           bridge: false
-          vlan: false          
+          vlan: false
+  magnum:
+    count: 1
+    ram: 4096000
+    cpu: 2
+    os: centos7
+    disk: 32G
+    networks:
+      bridge: false
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false

@@ -30,4 +30,5 @@ types:
   placement: virtual
   graylog: virtual
   barbican: virtual
+  magnum: virtual
   some_other_thing: container
