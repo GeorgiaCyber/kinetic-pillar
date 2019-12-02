@@ -211,12 +211,12 @@ openstack_services:
       internal_endpoint:
         protocol: "https://"
         port: ":8386"
-        path: v1.1/%\(project_id\)s
+        path: /v1.1/%\(project_id\)s
       admin_endpoint:
         protocol: "https://"
         port: ":8386"
-        path: v1.1/%\(project_id\)s
+        path: /v1.1/%\(project_id\)s
       public_endpoint:
         protocol: "https://"
         port: ":8386"
-        path: v1.1/%\(project_id\)s
+        path: /v1.1/%\(project_id\)s
