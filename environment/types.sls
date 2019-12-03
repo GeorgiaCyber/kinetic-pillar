@@ -33,4 +33,5 @@ types:
   magnum: virtual
   sahara: virtual
   manila: virtual
+  share: virtual
   some_other_thing: container

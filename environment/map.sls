@@ -35,6 +35,7 @@ map:
     - magnum
     - sahara
     - manila
+    - share
   phase6:
     - compute
     - container
