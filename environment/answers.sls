@@ -130,6 +130,7 @@ cephconf:
   vms_pgs: 2048
   volumes_pgs: 512
   images_pgs: 512
+  fileshare_pgs: 512
 
 ## Assorted salt master configuration options.  Each entry will be written to a separate file in /etc/salt/master.d
 ## https://docs.saltstack.com/en/latest/ref/configuration/master.html
