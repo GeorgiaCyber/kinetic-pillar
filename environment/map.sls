@@ -34,6 +34,7 @@ map:
     - barbican
     - magnum
     - sahara
+    - manila
   phase6:
     - compute
     - container

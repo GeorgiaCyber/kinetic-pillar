@@ -32,4 +32,5 @@ types:
   barbican: virtual
   magnum: virtual
   sahara: virtual
+  manila: virtual
   some_other_thing: container
