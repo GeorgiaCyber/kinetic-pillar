@@ -182,3 +182,5 @@ master-config:
         - salt://reactor/create_nova_pool.sls
       - create/cinder/pool:
         - salt://reactor/create_cinder_pool.sls
+      - create/manila/pool:
+        - salt://reactor/create_manila_pool.sls
