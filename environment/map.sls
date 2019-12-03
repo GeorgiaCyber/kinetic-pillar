@@ -15,6 +15,7 @@ map:
     - graylog
     - ovsdb
   phase4:
+    - mds
     - storage
     - keystone
     - antora

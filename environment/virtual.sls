@@ -49,6 +49,26 @@ virtual:
           primary: false
           bridge: false
           vlan: false
+  mds:
+    count: 1
+    ram: 8192000
+    cpu: 4
+    os: centos7
+    disk: 32G
+    networks:
+      bridge: false
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+        ens4:
+          network: sfe
+          primary: false
+          bridge: false
+          vlan: false
   haproxy:
     count: 1
     ram: 8192000

@@ -33,6 +33,9 @@ base:
   'cephmon*':
     - environment/virtual
     - environment/openstack_services
+  'mds*':
+    - environment/virtual
+    - environment/openstack_services
   'storage*':
     - environment/hosts
     - environment/osd_mappings
@@ -108,7 +111,7 @@ base:
     - environment/openstack_services
   'share*':
     - environment/virtual
-    - environment/openstack_services        
+    - environment/openstack_services
   'designate*':
     - environment/virtual
     - environment/openstack_services
