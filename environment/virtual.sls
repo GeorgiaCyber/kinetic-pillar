@@ -459,26 +459,6 @@ virtual:
           primary: false
           bridge: false
           vlan: false
-  share:
-    count: 1
-    ram: 4096000
-    cpu: 2
-    os: centos7
-    disk: 32G
-    networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
         ens5:
           network: public
           primary: false
