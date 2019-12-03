@@ -31,4 +31,5 @@ types:
   graylog: virtual
   barbican: virtual
   magnum: virtual
+  sahara: virtual
   some_other_thing: container
