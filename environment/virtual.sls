@@ -53,7 +53,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: ubuntu1804
+    os: centos7
     disk: 32G
     networks:
       bridge: false
@@ -213,7 +213,7 @@ virtual:
     count: 2
     ram: 16384000
     cpu: 8
-    os: ubuntu1804
+    os: centos7
     disk: 128G
     networks:
       bridge: false
@@ -428,7 +428,7 @@ virtual:
     count: 1
     ram: 4096000
     cpu: 2
-    os: ubuntu1804
+    os: centos7
     disk: 32G
     networks:
       bridge: false
@@ -443,7 +443,7 @@ virtual:
     count: 1
     ram: 4096000
     cpu: 2
-    os: ubuntu1804
+    os: centos7
     disk: 32G
     networks:
       bridge: false
