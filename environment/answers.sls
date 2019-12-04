@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: manila
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: manila
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -130,6 +130,8 @@ cephconf:
   vms_pgs: 2048
   volumes_pgs: 512
   images_pgs: 512
+  fileshare_data_pgs: 512
+  fileshare_metadata_pgs: 128
 
 ## Assorted salt master configuration options.  Each entry will be written to a separate file in /etc/salt/master.d
 ## https://docs.saltstack.com/en/latest/ref/configuration/master.html
@@ -182,3 +184,5 @@ master-config:
         - salt://reactor/create_nova_pool.sls
       - create/cinder/pool:
         - salt://reactor/create_cinder_pool.sls
+      - create/manila/filesystem:
+        - salt://reactor/create_manila_filesystem.sls

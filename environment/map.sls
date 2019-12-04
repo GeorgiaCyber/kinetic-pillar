@@ -19,6 +19,7 @@ map:
     - keystone
     - antora
   phase5:
+    - mds
     - barbican
     - placement
     - glance
@@ -34,6 +35,8 @@ map:
     - barbican
     - magnum
     - sahara
+    - manila
   phase6:
+    - share
     - compute
     - container

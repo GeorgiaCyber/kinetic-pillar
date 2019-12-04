@@ -220,3 +220,22 @@ openstack_services:
         protocol: "https://"
         port: ":8386"
         path: /v1.1/%\(project_id\)s
+  manila:
+    configuration:
+      dbs:
+        - manila
+      internal_endpoint:
+        protocol: "https://"
+        port: ":8786"
+        v1_path: /v1/%\(project_id\)s
+        v2_path: /v2/%\(project_id\)s
+      admin_endpoint:
+        protocol: "https://"
+        port: ":8786"
+        v1_path: /v1/%\(project_id\)s
+        v2_path: /v2/%\(project_id\)s
+      public_endpoint:
+        protocol: "https://"
+        port: ":8786"
+        v1_path: /v1/%\(project_id\)s
+        v2_path: /v2/%\(project_id\)s
