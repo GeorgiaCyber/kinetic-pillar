@@ -15,11 +15,11 @@ map:
     - graylog
     - ovsdb
   phase4:
-    - mds
     - storage
     - keystone
     - antora
   phase5:
+    - mds
     - barbican
     - placement
     - glance
@@ -36,7 +36,7 @@ map:
     - magnum
     - sahara
     - manila
-    - share
   phase6:
+    - share
     - compute
     - container
