@@ -213,7 +213,7 @@ virtual:
     count: 2
     ram: 16384000
     cpu: 8
-    os: centos7
+    os: ubuntu1804
     disk: 128G
     networks:
       bridge: false
