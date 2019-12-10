@@ -80,6 +80,8 @@ base:
   'placement*':
     - environment/virtual
     - environment/openstack_services
+  'etcd*':
+    - environment/virtual
   'barbican*':
     - environment/virtual
     - environment/openstack_services

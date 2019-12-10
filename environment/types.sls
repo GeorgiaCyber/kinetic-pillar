@@ -35,4 +35,5 @@ types:
   manila: virtual
   share: virtual
   mds: virtual
+  etcd: virtual
   some_other_thing: container
