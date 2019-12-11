@@ -465,7 +465,7 @@ virtual:
           bridge: false
           vlan: false
   etcd:
-    count: 3
+    count: 1
     ram: 4096000
     cpu: 2
     os: centos7
