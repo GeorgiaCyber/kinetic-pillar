@@ -131,7 +131,7 @@ virtual:
           vlan: false
   memcached:
     count: 3
-    ram: 8192
+    ram: 8192000
     cpu: 2
     os: centos7
     disk: 32G
