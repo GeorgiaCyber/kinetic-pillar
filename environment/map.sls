@@ -7,6 +7,7 @@ map:
   phase2:
     - cache
   phase3:
+    - etcd
     - cephmon
     - haproxy
     - mysql
