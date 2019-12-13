@@ -132,7 +132,7 @@ virtual:
   memcached:
     count: 3
     ram: 8192
-    cpu: 8
+    cpu: 2
     os: centos7
     disk: 32G
     networks:
