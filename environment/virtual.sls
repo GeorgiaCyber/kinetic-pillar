@@ -130,11 +130,11 @@ virtual:
           bridge: false
           vlan: false
   memcached:
-    count: 1
-    ram: 32768000
+    count: 3
+    ram: 8192
     cpu: 8
     os: centos7
-    disk: 128G
+    disk: 32G
     networks:
       bridge: false
       vlan: false
