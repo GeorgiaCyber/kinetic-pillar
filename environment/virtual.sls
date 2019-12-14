@@ -100,7 +100,7 @@ virtual:
           bridge: false
           vlan: false
   mysql:
-    count: 1
+    count: 3
     ram: 16384000
     cpu: 4
     os: centos7
