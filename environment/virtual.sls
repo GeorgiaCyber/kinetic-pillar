@@ -116,7 +116,7 @@ virtual:
           vlan: false
   rabbitmq:
     count: 3
-    ram: 8192
+    ram: 8192000
     cpu: 4
     os: centos7
     disk: 32G
