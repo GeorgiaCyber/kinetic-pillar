@@ -115,11 +115,11 @@ virtual:
           bridge: false
           vlan: false
   rabbitmq:
-    count: 1
-    ram: 32768000
-    cpu: 8
+    count: 3
+    ram: 8192000
+    cpu: 4
     os: centos7
-    disk: 128G
+    disk: 32G
     networks:
       bridge: false
       vlan: false
