@@ -21,7 +21,6 @@ map:
     - antora
   phase5:
     - mds
-    - barbican
     - placement
     - glance
     - nova
