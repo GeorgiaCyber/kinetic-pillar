@@ -36,4 +36,5 @@ types:
   share: virtual
   mds: virtual
   etcd: virtual
+  volume: virtual
   some_other_thing: container
