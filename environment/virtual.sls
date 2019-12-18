@@ -275,11 +275,26 @@ virtual:
           bridge: false
           vlan: false
   designate:
-    count: 1
-    ram: 16384000
+    count: 3
+    ram: 4096000
     cpu: 4
     os: centos7
-    disk: 64G
+    disk: 32G
+    networks:
+      bridge: false
+      vlan: false
+      interfaces:
+        ens3:
+          network: management
+          primary: true
+          bridge: false
+          vlan: false
+  bind:
+    count: 3
+    ram: 4096000
+    cpu: 4
+    os: centos7
+    disk: 32G
     networks:
       bridge: false
       vlan: false

@@ -37,4 +37,5 @@ types:
   mds: virtual
   etcd: virtual
   volume: virtual
+  bind: virtual
   some_other_thing: container
