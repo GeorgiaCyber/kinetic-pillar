@@ -365,7 +365,7 @@ virtual:
           bridge: false
           vlan: false
   ovsdb:
-    count: 1
+    count: 3
     ram: 8192000
     cpu: 4
     os: centos7
