@@ -108,6 +108,9 @@ base:
   'cinder*':
     - environment/virtual
     - environment/openstack_services
+  'volume*':
+    - environment/virtual
+    - environment/openstack_services
   'manila*':
     - environment/virtual
     - environment/openstack_services
