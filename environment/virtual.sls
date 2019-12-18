@@ -241,7 +241,7 @@ virtual:
           vlan: false
   cinder:
     count: 3
-    ram: 4096
+    ram: 4096000
     cpu: 2
     os: centos7
     disk: 64G
