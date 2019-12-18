@@ -244,7 +244,7 @@ virtual:
     ram: 4096000
     cpu: 2
     os: centos7
-    disk: 64G
+    disk: 32G
     networks:
       bridge: false
       vlan: false
@@ -255,11 +255,11 @@ virtual:
           bridge: false
           vlan: false
   volume:
-    count: 1
-    ram: 8192000
-    cpu: 4
+    count: 3
+    ram: 4096000
+    cpu: 2
     os: centos7
-    disk: 64G
+    disk: 32G
     networks:
       bridge: false
       vlan: false
