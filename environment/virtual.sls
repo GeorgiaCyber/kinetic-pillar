@@ -277,8 +277,8 @@ virtual:
   designate:
     count: 3
     ram: 4096000
-    cpu: 4
-    os: ubuntu1804
+    cpu: 2
+    os: centos7
     disk: 32G
     networks:
       bridge: false
@@ -292,8 +292,8 @@ virtual:
   bind:
     count: 3
     ram: 4096000
-    cpu: 4
-    os: ubuntu1804
+    cpu: 2
+    os: centos7
     disk: 32G
     networks:
       bridge: false
