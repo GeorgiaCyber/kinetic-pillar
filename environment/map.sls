@@ -15,6 +15,7 @@ map:
     - rabbitmq
     - graylog
     - ovsdb
+    - bind
   phase4:
     - storage
     - keystone
@@ -36,6 +37,7 @@ map:
     - magnum
     - sahara
     - manila
+    - volume
   phase6:
     - share
     - compute
