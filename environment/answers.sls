@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: cinder-multi
+  branch: designate-multi
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: cinder-multi
+  branch: designate-multi
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -172,6 +172,7 @@ master-config:
         - salt://reactor/highstate_mysql.sls
         - salt://reactor/update_ceph_conf.sls
         - salt://reactor/highstate_pxe.sls
+        - salt://reactor/highstate_dns.sls
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls
         - salt://reactor/highstate_haproxy.sls

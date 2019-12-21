@@ -120,6 +120,9 @@ base:
   'designate*':
     - environment/virtual
     - environment/openstack_services
+  'bind*':
+    - environment/virtual
+    - environment/openstack_services
   'swift*':
     - environment/virtual
     - environment/openstack_services
