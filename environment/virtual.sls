@@ -470,7 +470,7 @@ virtual:
           bridge: false
           vlan: false
   share:
-    count: 1
+    count: 3
     ram: 4096000
     cpu: 2
     os: centos7
