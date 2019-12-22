@@ -458,7 +458,7 @@ virtual:
     count: 3
     ram: 4096000
     cpu: 2
-    os: ubuntu1804
+    os: centos7
     disk: 32G
     networks:
       bridge: false
@@ -470,10 +470,10 @@ virtual:
           bridge: false
           vlan: false
   share:
-    count: 3
+    count: 1
     ram: 4096000
     cpu: 2
-    os: ubuntu1804
+    os: centos7
     disk: 32G
     networks:
       bridge: false
