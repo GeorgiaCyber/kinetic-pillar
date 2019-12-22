@@ -101,7 +101,7 @@ virtual:
           vlan: false
   mysql:
     count: 3
-    ram: 16384000
+    ram: 8192000
     cpu: 4
     os: centos7
     disk: 128G
@@ -181,7 +181,7 @@ virtual:
           vlan: false
   nova:
     count: 2
-    ram: 16384000
+    ram: 8192000
     cpu: 8
     os: centos7
     disk: 128G
@@ -211,7 +211,7 @@ virtual:
           vlan: false
   horizon:
     count: 2
-    ram: 16384000
+    ram: 8192000
     cpu: 8
     os: centos7
     disk: 128G
@@ -226,10 +226,10 @@ virtual:
           vlan: false
   heat:
     count: 2
-    ram: 16384000
-    cpu: 8
+    ram: 8192000
+    cpu: 2
     os: centos7
-    disk: 128G
+    disk: 32G
     networks:
       bridge: false
       vlan: false
