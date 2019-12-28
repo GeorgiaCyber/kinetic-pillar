@@ -112,9 +112,7 @@ hosts:
       - 10.100.0.51
       - 10.100.0.52
     networks:
-      bonds:
-        bond0:
-          - enp175s0f1
+      bonds: False
       bridge: false
       vlan: false
       interfaces:
@@ -133,12 +131,6 @@ hosts:
           primary: false
           bridge: false
           vlan: false
-        bond0:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
-          bond: true
   compute:
     role: compute
     os: centos7
