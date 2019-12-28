@@ -44,6 +44,7 @@ hosts:
       members:
         - rootfs
     networks:
+      bonds: false
       bridge: true
       vlan: false
       interfaces:
@@ -111,6 +112,9 @@ hosts:
       - 10.100.0.51
       - 10.100.0.52
     networks:
+      bonds: true
+        bond0:
+          - enp175s0f1
       bridge: false
       vlan: false
       interfaces:
@@ -126,6 +130,11 @@ hosts:
           vlan: false
         enp175s0f0:
           network: sbe
+          primary: false
+          bridge: false
+          vlan: false
+        bond0:
+          network: public
           primary: false
           bridge: false
           vlan: false
@@ -168,7 +177,8 @@ hosts:
 #      - 10.100.0.50
       - 10.100.0.53
     networks:
-      bridge: false
+      bonds: false
+      bridge: true
       vlan: false
       interfaces:
         enp97s0f0:
@@ -206,7 +216,8 @@ hosts:
 #      - 10.100.0.37
       - 10.100.0.54
     networks:
-      bridge: false
+      bonds: false
+      bridge: true
       vlan: false
       interfaces:
         enp97s0f0:
