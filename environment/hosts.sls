@@ -112,7 +112,7 @@ hosts:
       - 10.100.0.51
       - 10.100.0.52
     networks:
-      bonds: true
+      bonds:
         bond0:
           - enp175s0f1
       bridge: false
