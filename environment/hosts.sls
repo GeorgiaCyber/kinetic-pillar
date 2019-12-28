@@ -115,6 +115,8 @@ hosts:
       bonds:
         bond0:
           - enp175s0f1
+          - foo
+          - bar
       bridge: false
       vlan: false
       interfaces:
@@ -138,6 +140,7 @@ hosts:
           primary: false
           bridge: false
           vlan: false
+          bond: true
   compute:
     role: compute
     os: centos7
