@@ -138,7 +138,7 @@ hosts:
           primary: false
           bridge: false
           vlan: false
-          bond: true
+          bond: false
   compute:
     role: compute
     os: centos7
