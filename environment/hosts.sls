@@ -15,6 +15,11 @@
 
 ## networks: specify how you want your final, post-deployment network to be configured.
 ##   bridge: true if this host will be used as a hypervisor
+##   bonds: false if there are no LAGG iterfaces,
+##   bonds:
+##     bond0:
+##       - slaveX
+##   if there are
 ##   vlan: true if you will be tagging on this host
 ##   interface entries: top level definition will be the name of the physical interface
 ##     network: the network to which it will bind (must match answers.sls)
@@ -171,7 +176,7 @@ hosts:
       - 10.100.0.53
     networks:
       bonds: false
-      bridge: true
+      bridge: false
       vlan: false
       interfaces:
         enp97s0f0:
@@ -210,7 +215,7 @@ hosts:
       - 10.100.0.54
     networks:
       bonds: false
-      bridge: true
+      bridge: false
       vlan: false
       interfaces:
         enp97s0f0:
