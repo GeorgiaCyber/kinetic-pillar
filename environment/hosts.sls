@@ -115,8 +115,6 @@ hosts:
       bonds:
         bond0:
           - enp175s0f1
-          - foo
-          - bar
       bridge: false
       vlan: false
       interfaces:
