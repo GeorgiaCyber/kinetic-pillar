@@ -110,3 +110,843 @@ flavors:
     vcpus: 8
     ram: 16384
     disk: 32
+  hack.c1.m1024.d4:
+    vcpus: 1
+    ram: 1024
+    disk: 4
+  hack.c1.m1024.d8:
+    vcpus: 1
+    ram: 1024
+    disk: 8
+  hack.c1.m1024.d16:
+    vcpus: 1
+    ram: 1024
+    disk: 16
+  hack.c1.m1024.d32:
+    vcpus: 1
+    ram: 1024
+    disk: 32
+  hack.c1.m1024.d64:
+    vcpus: 1
+    ram: 1024
+    disk: 64
+  hack.c1.m1024.d128:
+    vcpus: 1
+    ram: 1024
+    disk: 128
+  hack.c1.m1024.d256:
+    vcpus: 1
+    ram: 1024
+    disk: 256
+  hack.c1.m2048.d4:
+    vcpus: 1
+    ram: 2048
+    disk: 4
+  hack.c1.m2048.d8:
+    vcpus: 1
+    ram: 2048
+    disk: 8
+  hack.c1.m2048.d16:
+    vcpus: 1
+    ram: 2048
+    disk: 16
+  hack.c1.m2048.d32:
+    vcpus: 1
+    ram: 2048
+    disk: 32
+  hack.c1.m2048.d64:
+    vcpus: 1
+    ram: 2048
+    disk: 64
+  hack.c1.m2048.d128:
+    vcpus: 1
+    ram: 2048
+    disk: 128
+  hack.c1.m2048.d256:
+    vcpus: 1
+    ram: 2048
+    disk: 256
+  hack.c1.m4096.d4:
+    vcpus: 1
+    ram: 4096
+    disk: 4
+  hack.c1.m4096.d8:
+    vcpus: 1
+    ram: 4096
+    disk: 8
+  hack.c1.m4096.d16:
+    vcpus: 1
+    ram: 4096
+    disk: 16
+  hack.c1.m4096.d32:
+    vcpus: 1
+    ram: 4096
+    disk: 32
+  hack.c1.m4096.d64:
+    vcpus: 1
+    ram: 4096
+    disk: 64
+  hack.c1.m4096.d128:
+    vcpus: 1
+    ram: 4096
+    disk: 128
+  hack.c1.m4096.d256:
+    vcpus: 1
+    ram: 4096
+    disk: 256
+  hack.c1.m8192.d4:
+    vcpus: 1
+    ram: 8192
+    disk: 4
+  hack.c1.m8192.d8:
+    vcpus: 1
+    ram: 8192
+    disk: 8
+  hack.c1.m8192.d16:
+    vcpus: 1
+    ram: 8192
+    disk: 16
+  hack.c1.m8192.d32:
+    vcpus: 1
+    ram: 8192
+    disk: 32
+  hack.c1.m8192.d64:
+    vcpus: 1
+    ram: 8192
+    disk: 64
+  hack.c1.m8192.d128:
+    vcpus: 1
+    ram: 8192
+    disk: 128
+  hack.c1.m8192.d256:
+    vcpus: 1
+    ram: 8192
+    disk: 256
+  hack.c1.m16384.d4:
+    vcpus: 1
+    ram: 16384
+    disk: 4
+  hack.c1.m16384.d8:
+    vcpus: 1
+    ram: 16384
+    disk: 8
+  hack.c1.m16384.d16:
+    vcpus: 1
+    ram: 16384
+    disk: 16
+  hack.c1.m16384.d32:
+    vcpus: 1
+    ram: 16384
+    disk: 32
+  hack.c1.m16384.d64:
+    vcpus: 1
+    ram: 16384
+    disk: 64
+  hack.c1.m16384.d128:
+    vcpus: 1
+    ram: 16384
+    disk: 128
+  hack.c1.m16384.d256:
+    vcpus: 1
+    ram: 16384
+    disk: 256
+  hack.c1.m32768.d4:
+    vcpus: 1
+    ram: 32768
+    disk: 4
+  hack.c1.m32768.d8:
+    vcpus: 1
+    ram: 32768
+    disk: 8
+  hack.c1.m32768.d16:
+    vcpus: 1
+    ram: 32768
+    disk: 16
+  hack.c1.m32768.d32:
+    vcpus: 1
+    ram: 32768
+    disk: 32
+  hack.c1.m32768.d64:
+    vcpus: 1
+    ram: 32768
+    disk: 64
+  hack.c1.m32768.d128:
+    vcpus: 1
+    ram: 32768
+    disk: 128
+  hack.c1.m32768.d256:
+    vcpus: 1
+    ram: 32768
+    disk: 256
+  hack.c2.m1024.d4:
+    vcpus: 2
+    ram: 1024
+    disk: 4
+  hack.c2.m1024.d8:
+    vcpus: 2
+    ram: 1024
+    disk: 8
+  hack.c2.m1024.d16:
+    vcpus: 2
+    ram: 1024
+    disk: 16
+  hack.c2.m1024.d32:
+    vcpus: 2
+    ram: 1024
+    disk: 32
+  hack.c2.m1024.d64:
+    vcpus: 2
+    ram: 1024
+    disk: 64
+  hack.c2.m1024.d128:
+    vcpus: 2
+    ram: 1024
+    disk: 128
+  hack.c2.m1024.d256:
+    vcpus: 2
+    ram: 1024
+    disk: 256
+  hack.c2.m2048.d4:
+    vcpus: 2
+    ram: 2048
+    disk: 4
+  hack.c2.m2048.d8:
+    vcpus: 2
+    ram: 2048
+    disk: 8
+  hack.c2.m2048.d16:
+    vcpus: 2
+    ram: 2048
+    disk: 16
+  hack.c2.m2048.d32:
+    vcpus: 2
+    ram: 2048
+    disk: 32
+  hack.c2.m2048.d64:
+    vcpus: 2
+    ram: 2048
+    disk: 64
+  hack.c2.m2048.d128:
+    vcpus: 2
+    ram: 2048
+    disk: 128
+  hack.c2.m2048.d256:
+    vcpus: 2
+    ram: 2048
+    disk: 256
+  hack.c2.m4096.d4:
+    vcpus: 2
+    ram: 4096
+    disk: 4
+  hack.c2.m4096.d8:
+    vcpus: 2
+    ram: 4096
+    disk: 8
+  hack.c2.m4096.d16:
+    vcpus: 2
+    ram: 4096
+    disk: 16
+  hack.c2.m4096.d32:
+    vcpus: 2
+    ram: 4096
+    disk: 32
+  hack.c2.m4096.d64:
+    vcpus: 2
+    ram: 4096
+    disk: 64
+  hack.c2.m4096.d128:
+    vcpus: 2
+    ram: 4096
+    disk: 128
+  hack.c2.m4096.d256:
+    vcpus: 2
+    ram: 4096
+    disk: 256
+  hack.c2.m8192.d4:
+    vcpus: 2
+    ram: 8192
+    disk: 4
+  hack.c2.m8192.d8:
+    vcpus: 2
+    ram: 8192
+    disk: 8
+  hack.c2.m8192.d16:
+    vcpus: 2
+    ram: 8192
+    disk: 16
+  hack.c2.m8192.d32:
+    vcpus: 2
+    ram: 8192
+    disk: 32
+  hack.c2.m8192.d64:
+    vcpus: 2
+    ram: 8192
+    disk: 64
+  hack.c2.m8192.d128:
+    vcpus: 2
+    ram: 8192
+    disk: 128
+  hack.c2.m8192.d256:
+    vcpus: 2
+    ram: 8192
+    disk: 256
+  hack.c2.m16384.d4:
+    vcpus: 2
+    ram: 16384
+    disk: 4
+  hack.c2.m16384.d8:
+    vcpus: 2
+    ram: 16384
+    disk: 8
+  hack.c2.m16384.d16:
+    vcpus: 2
+    ram: 16384
+    disk: 16
+  hack.c2.m16384.d32:
+    vcpus: 2
+    ram: 16384
+    disk: 32
+  hack.c2.m16384.d64:
+    vcpus: 2
+    ram: 16384
+    disk: 64
+  hack.c2.m16384.d128:
+    vcpus: 2
+    ram: 16384
+    disk: 128
+  hack.c2.m16384.d256:
+    vcpus: 2
+    ram: 16384
+    disk: 256
+  hack.c2.m32768.d4:
+    vcpus: 2
+    ram: 32768
+    disk: 4
+  hack.c2.m32768.d8:
+    vcpus: 2
+    ram: 32768
+    disk: 8
+  hack.c2.m32768.d16:
+    vcpus: 2
+    ram: 32768
+    disk: 16
+  hack.c2.m32768.d32:
+    vcpus: 2
+    ram: 32768
+    disk: 32
+  hack.c2.m32768.d64:
+    vcpus: 2
+    ram: 32768
+    disk: 64
+  hack.c2.m32768.d128:
+    vcpus: 2
+    ram: 32768
+    disk: 128
+  hack.c2.m32768.d256:
+    vcpus: 2
+    ram: 32768
+    disk: 256
+  hack.c4.m1024.d4:
+    vcpus: 4
+    ram: 1024
+    disk: 4
+  hack.c4.m1024.d8:
+    vcpus: 4
+    ram: 1024
+    disk: 8
+  hack.c4.m1024.d16:
+    vcpus: 4
+    ram: 1024
+    disk: 16
+  hack.c4.m1024.d32:
+    vcpus: 4
+    ram: 1024
+    disk: 32
+  hack.c4.m1024.d64:
+    vcpus: 4
+    ram: 1024
+    disk: 64
+  hack.c4.m1024.d128:
+    vcpus: 4
+    ram: 1024
+    disk: 128
+  hack.c4.m1024.d256:
+    vcpus: 4
+    ram: 1024
+    disk: 256
+  hack.c4.m2048.d4:
+    vcpus: 4
+    ram: 2048
+    disk: 4
+  hack.c4.m2048.d8:
+    vcpus: 4
+    ram: 2048
+    disk: 8
+  hack.c4.m2048.d16:
+    vcpus: 4
+    ram: 2048
+    disk: 16
+  hack.c4.m2048.d32:
+    vcpus: 4
+    ram: 2048
+    disk: 32
+  hack.c4.m2048.d64:
+    vcpus: 4
+    ram: 2048
+    disk: 64
+  hack.c4.m2048.d128:
+    vcpus: 4
+    ram: 2048
+    disk: 128
+  hack.c4.m2048.d256:
+    vcpus: 4
+    ram: 2048
+    disk: 256
+  hack.c4.m4096.d4:
+    vcpus: 4
+    ram: 4096
+    disk: 4
+  hack.c4.m4096.d8:
+    vcpus: 4
+    ram: 4096
+    disk: 8
+  hack.c4.m4096.d16:
+    vcpus: 4
+    ram: 4096
+    disk: 16
+  hack.c4.m4096.d32:
+    vcpus: 4
+    ram: 4096
+    disk: 32
+  hack.c4.m4096.d64:
+    vcpus: 4
+    ram: 4096
+    disk: 64
+  hack.c4.m4096.d128:
+    vcpus: 4
+    ram: 4096
+    disk: 128
+  hack.c4.m4096.d256:
+    vcpus: 4
+    ram: 4096
+    disk: 256
+  hack.c4.m8192.d4:
+    vcpus: 4
+    ram: 8192
+    disk: 4
+  hack.c4.m8192.d8:
+    vcpus: 4
+    ram: 8192
+    disk: 8
+  hack.c4.m8192.d16:
+    vcpus: 4
+    ram: 8192
+    disk: 16
+  hack.c4.m8192.d32:
+    vcpus: 4
+    ram: 8192
+    disk: 32
+  hack.c4.m8192.d64:
+    vcpus: 4
+    ram: 8192
+    disk: 64
+  hack.c4.m8192.d128:
+    vcpus: 4
+    ram: 8192
+    disk: 128
+  hack.c4.m8192.d256:
+    vcpus: 4
+    ram: 8192
+    disk: 256
+  hack.c4.m16384.d4:
+    vcpus: 4
+    ram: 16384
+    disk: 4
+  hack.c4.m16384.d8:
+    vcpus: 4
+    ram: 16384
+    disk: 8
+  hack.c4.m16384.d16:
+    vcpus: 4
+    ram: 16384
+    disk: 16
+  hack.c4.m16384.d32:
+    vcpus: 4
+    ram: 16384
+    disk: 32
+  hack.c4.m16384.d64:
+    vcpus: 4
+    ram: 16384
+    disk: 64
+  hack.c4.m16384.d128:
+    vcpus: 4
+    ram: 16384
+    disk: 128
+  hack.c4.m16384.d256:
+    vcpus: 4
+    ram: 16384
+    disk: 256
+  hack.c4.m32768.d4:
+    vcpus: 4
+    ram: 32768
+    disk: 4
+  hack.c4.m32768.d8:
+    vcpus: 4
+    ram: 32768
+    disk: 8
+  hack.c4.m32768.d16:
+    vcpus: 4
+    ram: 32768
+    disk: 16
+  hack.c4.m32768.d32:
+    vcpus: 4
+    ram: 32768
+    disk: 32
+  hack.c4.m32768.d64:
+    vcpus: 4
+    ram: 32768
+    disk: 64
+  hack.c4.m32768.d128:
+    vcpus: 4
+    ram: 32768
+    disk: 128
+  hack.c4.m32768.d256:
+    vcpus: 4
+    ram: 32768
+    disk: 256
+  hack.c6.m1024.d4:
+    vcpus: 6
+    ram: 1024
+    disk: 4
+  hack.c6.m1024.d8:
+    vcpus: 6
+    ram: 1024
+    disk: 8
+  hack.c6.m1024.d16:
+    vcpus: 6
+    ram: 1024
+    disk: 16
+  hack.c6.m1024.d32:
+    vcpus: 6
+    ram: 1024
+    disk: 32
+  hack.c6.m1024.d64:
+    vcpus: 6
+    ram: 1024
+    disk: 64
+  hack.c6.m1024.d128:
+    vcpus: 6
+    ram: 1024
+    disk: 128
+  hack.c6.m1024.d256:
+    vcpus: 6
+    ram: 1024
+    disk: 256
+  hack.c6.m2048.d4:
+    vcpus: 6
+    ram: 2048
+    disk: 4
+  hack.c6.m2048.d8:
+    vcpus: 6
+    ram: 2048
+    disk: 8
+  hack.c6.m2048.d16:
+    vcpus: 6
+    ram: 2048
+    disk: 16
+  hack.c6.m2048.d32:
+    vcpus: 6
+    ram: 2048
+    disk: 32
+  hack.c6.m2048.d64:
+    vcpus: 6
+    ram: 2048
+    disk: 64
+  hack.c6.m2048.d128:
+    vcpus: 6
+    ram: 2048
+    disk: 128
+  hack.c6.m2048.d256:
+    vcpus: 6
+    ram: 2048
+    disk: 256
+  hack.c6.m4096.d4:
+    vcpus: 6
+    ram: 4096
+    disk: 4
+  hack.c6.m4096.d8:
+    vcpus: 6
+    ram: 4096
+    disk: 8
+  hack.c6.m4096.d16:
+    vcpus: 6
+    ram: 4096
+    disk: 16
+  hack.c6.m4096.d32:
+    vcpus: 6
+    ram: 4096
+    disk: 32
+  hack.c6.m4096.d64:
+    vcpus: 6
+    ram: 4096
+    disk: 64
+  hack.c6.m4096.d128:
+    vcpus: 6
+    ram: 4096
+    disk: 128
+  hack.c6.m4096.d256:
+    vcpus: 6
+    ram: 4096
+    disk: 256
+  hack.c6.m8192.d4:
+    vcpus: 6
+    ram: 8192
+    disk: 4
+  hack.c6.m8192.d8:
+    vcpus: 6
+    ram: 8192
+    disk: 8
+  hack.c6.m8192.d16:
+    vcpus: 6
+    ram: 8192
+    disk: 16
+  hack.c6.m8192.d32:
+    vcpus: 6
+    ram: 8192
+    disk: 32
+  hack.c6.m8192.d64:
+    vcpus: 6
+    ram: 8192
+    disk: 64
+  hack.c6.m8192.d128:
+    vcpus: 6
+    ram: 8192
+    disk: 128
+  hack.c6.m8192.d256:
+    vcpus: 6
+    ram: 8192
+    disk: 256
+  hack.c6.m16384.d4:
+    vcpus: 6
+    ram: 16384
+    disk: 4
+  hack.c6.m16384.d8:
+    vcpus: 6
+    ram: 16384
+    disk: 8
+  hack.c6.m16384.d16:
+    vcpus: 6
+    ram: 16384
+    disk: 16
+  hack.c6.m16384.d32:
+    vcpus: 6
+    ram: 16384
+    disk: 32
+  hack.c6.m16384.d64:
+    vcpus: 6
+    ram: 16384
+    disk: 64
+  hack.c6.m16384.d128:
+    vcpus: 6
+    ram: 16384
+    disk: 128
+  hack.c6.m16384.d256:
+    vcpus: 6
+    ram: 16384
+    disk: 256
+  hack.c6.m32768.d4:
+    vcpus: 6
+    ram: 32768
+    disk: 4
+  hack.c6.m32768.d8:
+    vcpus: 6
+    ram: 32768
+    disk: 8
+  hack.c6.m32768.d16:
+    vcpus: 6
+    ram: 32768
+    disk: 16
+  hack.c6.m32768.d32:
+    vcpus: 6
+    ram: 32768
+    disk: 32
+  hack.c6.m32768.d64:
+    vcpus: 6
+    ram: 32768
+    disk: 64
+  hack.c6.m32768.d128:
+    vcpus: 6
+    ram: 32768
+    disk: 128
+  hack.c6.m32768.d256:
+    vcpus: 6
+    ram: 32768
+    disk: 256
+  hack.c8.m1024.d4:
+    vcpus: 8
+    ram: 1024
+    disk: 4
+  hack.c8.m1024.d8:
+    vcpus: 8
+    ram: 1024
+    disk: 8
+  hack.c8.m1024.d16:
+    vcpus: 8
+    ram: 1024
+    disk: 16
+  hack.c8.m1024.d32:
+    vcpus: 8
+    ram: 1024
+    disk: 32
+  hack.c8.m1024.d64:
+    vcpus: 8
+    ram: 1024
+    disk: 64
+  hack.c8.m1024.d128:
+    vcpus: 8
+    ram: 1024
+    disk: 128
+  hack.c8.m1024.d256:
+    vcpus: 8
+    ram: 1024
+    disk: 256
+  hack.c8.m2048.d4:
+    vcpus: 8
+    ram: 2048
+    disk: 4
+  hack.c8.m2048.d8:
+    vcpus: 8
+    ram: 2048
+    disk: 8
+  hack.c8.m2048.d16:
+    vcpus: 8
+    ram: 2048
+    disk: 16
+  hack.c8.m2048.d32:
+    vcpus: 8
+    ram: 2048
+    disk: 32
+  hack.c8.m2048.d64:
+    vcpus: 8
+    ram: 2048
+    disk: 64
+  hack.c8.m2048.d128:
+    vcpus: 8
+    ram: 2048
+    disk: 128
+  hack.c8.m2048.d256:
+    vcpus: 8
+    ram: 2048
+    disk: 256
+  hack.c8.m4096.d4:
+    vcpus: 8
+    ram: 4096
+    disk: 4
+  hack.c8.m4096.d8:
+    vcpus: 8
+    ram: 4096
+    disk: 8
+  hack.c8.m4096.d16:
+    vcpus: 8
+    ram: 4096
+    disk: 16
+  hack.c8.m4096.d32:
+    vcpus: 8
+    ram: 4096
+    disk: 32
+  hack.c8.m4096.d64:
+    vcpus: 8
+    ram: 4096
+    disk: 64
+  hack.c8.m4096.d128:
+    vcpus: 8
+    ram: 4096
+    disk: 128
+  hack.c8.m4096.d256:
+    vcpus: 8
+    ram: 4096
+    disk: 256
+  hack.c8.m8192.d4:
+    vcpus: 8
+    ram: 8192
+    disk: 4
+  hack.c8.m8192.d8:
+    vcpus: 8
+    ram: 8192
+    disk: 8
+  hack.c8.m8192.d16:
+    vcpus: 8
+    ram: 8192
+    disk: 16
+  hack.c8.m8192.d32:
+    vcpus: 8
+    ram: 8192
+    disk: 32
+  hack.c8.m8192.d64:
+    vcpus: 8
+    ram: 8192
+    disk: 64
+  hack.c8.m8192.d128:
+    vcpus: 8
+    ram: 8192
+    disk: 128
+  hack.c8.m8192.d256:
+    vcpus: 8
+    ram: 8192
+    disk: 256
+  hack.c8.m16384.d4:
+    vcpus: 8
+    ram: 16384
+    disk: 4
+  hack.c8.m16384.d8:
+    vcpus: 8
+    ram: 16384
+    disk: 8
+  hack.c8.m16384.d16:
+    vcpus: 8
+    ram: 16384
+    disk: 16
+  hack.c8.m16384.d32:
+    vcpus: 8
+    ram: 16384
+    disk: 32
+  hack.c8.m16384.d64:
+    vcpus: 8
+    ram: 16384
+    disk: 64
+  hack.c8.m16384.d128:
+    vcpus: 8
+    ram: 16384
+    disk: 128
+  hack.c8.m16384.d256:
+    vcpus: 8
+    ram: 16384
+    disk: 256
+  hack.c8.m32768.d4:
+    vcpus: 8
+    ram: 32768
+    disk: 4
+  hack.c8.m32768.d8:
+    vcpus: 8
+    ram: 32768
+    disk: 8
+  hack.c8.m32768.d16:
+    vcpus: 8
+    ram: 32768
+    disk: 16
+  hack.c8.m32768.d32:
+    vcpus: 8
+    ram: 32768
+    disk: 32
+  hack.c8.m32768.d64:
+    vcpus: 8
+    ram: 32768
+    disk: 64
+  hack.c8.m32768.d128:
+    vcpus: 8
+    ram: 32768
+    disk: 128
+  hack.c8.m32768.d256:
+    vcpus: 8
+    ram: 32768
+    disk: 256
