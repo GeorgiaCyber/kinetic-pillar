@@ -68,7 +68,9 @@ haproxy:
 authorized_keys:
   AAAAC3NzaC1lZDI1NTE5AAAAIIKw+cBx9BBKcoXKLxMLVoGCD7znZqBjnMkaIipAikQJ:
     encoding: ed25519
-
+  AAAAB3NzaC1yc2EAAAABJQAAAQEAs9JlRHUaXiXNjMtIfdBDFO73n2DYzQcNIF1Gd5U5OjJ0bBAx0K/C2k3vSWZlfey6/OgP6QIzZGApbzNu3wONfG8EYpuprwLjRtJ6MQnO4lRMqXkhmIhZz9bfqjUWwp4Yi27Ryv/LE5/6+4pSC9v99Ieeha0q12BeQfXEF1of6biT3bPzoX5OtiyKXiohj3V+L1kWUxHdEBj7np19GvLeXL7KHWmr229q8WT3nZkQfz88UXYPRMhQYLSorGVEsum7NnyzcPp09U+34cJ6IyW//pk0HLCnDMqwqE1PT9KadvgnGkdsX6IBCLg51I5LDRm+Y2AS+s0ucqOIsXbvhvYUhQ==:
+    encoding: ssh-rsa
+    
 ## Specify the perma-URL to your syslog server
 ## This is *not* the built-in server, but rather an upstream one
 ## That you would like all events forwarded to
