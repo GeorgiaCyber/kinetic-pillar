@@ -16,6 +16,9 @@ gitfs_other_configurations:
     url: https://git.cybbh.space/vta/kinetic-stigs.git
     branch: master
 
+## Salt version to pin your release to.  Set to 'latest' to always use the latest stable release.
+salt_version: 2019.2.3
+    
 ## DNS A record that points to your salt master for this environment
 master_record: salt2.internal.georgiacyber.org
 
