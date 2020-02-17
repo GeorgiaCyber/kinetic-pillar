@@ -16,7 +16,12 @@ gitfs_other_configurations:
     url: https://git.cybbh.space/vta/kinetic-stigs.git
     branch: master
 
+## Salt transport mechanism.  Valid values are zreomq and tcp
+## See https://docs.saltstack.com/en/latest/topics/transports/
+salt_transport: tcp
+
 ## Salt version to pin your release to.  Set to 'latest' to always use the latest stable release.
+## See https://github.com/saltstack/salt-bootstrap/blob/develop/bootstrap-salt.sh
 salt_version: 2019.2.3
 
 ## DNS A record that points to your salt master for this environment
@@ -173,8 +178,6 @@ master-config:
     gather_job_timeout: 30
   timeout: |
     timeout: 10
-  transport: |
-    transport: tcp
   reactor: |
     reactor:
       - salt/minion/*/start:
