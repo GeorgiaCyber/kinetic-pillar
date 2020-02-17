@@ -169,7 +169,7 @@ master-config:
     pillar_roots:
       base:
         - /srv/dynamic_pillar
-  gather_job_timeout:
+  gather_job_timeout: |
     gather_job_timeout: 30
   reactor: |
     reactor:
