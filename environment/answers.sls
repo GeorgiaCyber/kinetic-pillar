@@ -173,12 +173,8 @@ master-config:
     gather_job_timeout: 30
   timeout: |
     timeout: 10
-  transport_opts: |
-    transport_opts:
-      tcp:
-        publish_port: 4605
-        ret_port: 4606
-      zeromq: []
+  transport: |
+    transport: tcp
   reactor: |
     reactor:
       - salt/minion/*/start:
