@@ -22,13 +22,13 @@ salt_transport: tcp
 
 ## Salt version to pin your release to.  Set to 'latest' to always use the latest stable release.
 ## See https://github.com/saltstack/salt-bootstrap/blob/develop/bootstrap-salt.sh
-salt_version: 2019.2.3
+salt_version: 3000.3
 
 ## DNS A record that points to your salt master for this environment
-master_record: salt2.internal.georgiacyber.org
+master_record: salt.internal.georgiacyber.org
 
 ## DNS A record that points to your pxe host for this environment
-pxe_record: pxe2.internal.georgiacyber.org
+pxe_record: pxe.internal.georgiacyber.org
 
 ## Repository for your documentation site
 antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
