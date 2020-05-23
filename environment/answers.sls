@@ -174,10 +174,6 @@ master-config:
     pillar_roots:
       base:
         - /srv/dynamic_pillar
-  gather_job_timeout: |
-    gather_job_timeout: 30
-  timeout: |
-    timeout: 10
   reactor: |
     reactor:
       - salt/minion/*/start:
