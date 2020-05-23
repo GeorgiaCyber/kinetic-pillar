@@ -107,7 +107,7 @@ hosts:
       - 10.100.0.34
       - 10.100.0.35
       - 10.100.0.38
-# The below host has hardware issues and won't boot.
+# The below host has hardware issues and won't boot/power on
 #      - 10.100.0.39
       - 10.100.0.42
       - 10.100.0.47
@@ -151,7 +151,7 @@ hosts:
       - 0c:c4:7a:fb:f1:10
       - 0c:c4:7a:fb:f2:a8
       - 0c:c4:7a:fb:f3:9c
-# host is physically nmc
+# host is physically nmc, bad NVME drive
 #      - 0c:c4:7a:fb:f3:b4
       - 0c:c4:7a:fb:f2:74
     interface: enp97s0f0
@@ -171,7 +171,7 @@ hosts:
       - 10.100.0.44
       - 10.100.0.45
       - 10.100.0.46
-# host is physically nmc
+# host is physically nmc, bad NVME drive
 #      - 10.100.0.50
       - 10.100.0.53
     networks:
