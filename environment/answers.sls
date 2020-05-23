@@ -18,7 +18,7 @@ gitfs_other_configurations:
 
 ## Salt transport mechanism.  Valid values are zreomq and tcp
 ## See https://docs.saltstack.com/en/latest/topics/transports/
-salt_transport: tcp
+salt_transport: zeromq
 
 ## Salt version to pin your release to.  Set to 'latest' to always use the latest stable release.
 ## See https://github.com/saltstack/salt-bootstrap/blob/develop/bootstrap-salt.sh
