@@ -1,5 +1,4 @@
 mine_functions:
-  bmc_address:
+  host_uuid:
     mine_function: cmd.run
-    cmd: "ipmitool lan print 1 | grep 'IP Address  ' | grep -oE '[^ ]+$'"
-    python_shell: True
+    cmd: "cat /sys/devices/virtual/dmi/id/product_uuid"
