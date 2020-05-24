@@ -15,7 +15,6 @@ base:
     - environment/beacon_configs/address_notification
   'pxe':
     - environment/hosts
-    - environment/mine_configs/metal
   'salt*':
     - environment/ipmi_password
     - environment/hosts
