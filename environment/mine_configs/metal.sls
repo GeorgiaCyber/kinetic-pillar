@@ -1,3 +1,3 @@
 mine_functions:
   metal.gather:
-    network: {{ pillar['networking']['subnets']['oob'] }}
+    network: pillar['networking']['subnets']['oob']
