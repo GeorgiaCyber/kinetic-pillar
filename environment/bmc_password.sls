@@ -7,7 +7,7 @@
 ## feature.  Ensure that your BMCs *cannot* access anything outside of the OOB network, and the only device
 ## that can reach inside the OOB network is your salt master.
 
-ipmi_password: |
+bmc_password: |
   -----BEGIN PGP MESSAGE-----
 
   hF4DAAAAAAAAAAASAQdA2pk4EjS4V4pgP/n1iS4SiuUvHFTmRlDQb6arEr5BkF4w
@@ -16,4 +16,3 @@ ipmi_password: |
   ZzTI/CIDiqIpTNtT5qTBPEq3L4P6FcYp7m7bjpA=
   =pH/O
   -----END PGP MESSAGE-----
-
