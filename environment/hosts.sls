@@ -31,7 +31,7 @@ hosts:
   controller:
     role: controller
     os: centos7
-    macs:
+    uuids:
       - 0c:c4:7a:fb:f3:ac
       - 0c:c4:7a:fb:f0:f0
       - 0c:c4:7a:fb:f1:04
@@ -40,10 +40,6 @@ hosts:
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL6T4TCU
-    ipmi_addresses:
-      - 10.100.0.22
-      - 10.100.0.23
-      - 10.100.0.41
     kvm_disk_config:
       type: standard
       members:
@@ -76,7 +72,7 @@ hosts:
   storage:
     role: storage
     os: centos7
-    macs:
+    uuids:
       - 00:25:90:5f:5f:7a
       - 00:25:90:5f:5f:2e
       - 00:25:90:5f:5e:d6
@@ -98,24 +94,6 @@ hosts:
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: SAMSUNG MZ1LW960HMJP-00003
-    ipmi_addresses:
-      - 10.100.0.20
-      - 10.100.0.21
-      - 10.100.0.31
-      - 10.100.0.32
-      - 10.100.0.33
-      - 10.100.0.34
-      - 10.100.0.35
-      - 10.100.0.38
-# The below host has hardware issues and won't boot/power on
-#      - 10.100.0.39
-      - 10.100.0.42
-      - 10.100.0.47
-# The below host has physical hardware issues and won't boot
-#      - 10.100.0.48
-      - 10.100.0.49
-      - 10.100.0.51
-      - 10.100.0.52
     networks:
       bonds: False
       bridge: false
@@ -139,7 +117,7 @@ hosts:
   compute:
     role: compute
     os: centos7
-    macs:
+    uuids:
       - 0c:c4:7a:fb:f3:d0
       - 0c:c4:7a:fb:f2:80
       - 0c:c4:7a:fb:f1:a8
@@ -159,21 +137,6 @@ hosts:
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL1T6TCU
-    ipmi_addresses:
-      - 10.100.0.24
-      - 10.100.0.25
-      - 10.100.0.26
-      - 10.100.0.27
-      - 10.100.0.28
-      - 10.100.0.29
-      - 10.100.0.30
-      - 10.100.0.43
-      - 10.100.0.44
-      - 10.100.0.45
-      - 10.100.0.46
-# host is physically nmc, bad NVME drive
-#      - 10.100.0.50
-      - 10.100.0.53
     networks:
       bonds: false
       bridge: false
@@ -202,7 +165,7 @@ hosts:
   container:
     role: container
     os: centos7
-    macs:
+    uuids:
       - 0c:c4:7a:fb:f3:e4
       - 0c:c4:7a:fb:f2:68
     interface: enp97s0f0
@@ -210,9 +173,6 @@ hosts:
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL1T6TCU
-    ipmi_addresses:
-      - 10.100.0.37
-      - 10.100.0.54
     networks:
       bonds: false
       bridge: false
