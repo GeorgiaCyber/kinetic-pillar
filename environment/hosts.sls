@@ -32,9 +32,9 @@ hosts:
     role: controller
     os: centos7
     uuids:
-      - 0c:c4:7a:fb:f3:ac
-      - 0c:c4:7a:fb:f0:f0
-      - 0c:c4:7a:fb:f1:04
+      - 00000000-0000-0000-0000-AC1F6B65ADEC
+      - 00000000-0000-0000-0000-AC1F6B65AE15
+      - 00000000-0000-0000-0000-AC1F6B65AE30
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
@@ -73,22 +73,22 @@ hosts:
     role: storage
     os: centos7
     uuids:
-      - 00:25:90:5f:5f:7a
-      - 00:25:90:5f:5f:2e
-      - 00:25:90:5f:5e:d6
-      - 00:25:90:5f:5e:7e
-      - 00:25:90:5f:5e:00
-      - 00:25:90:5f:5e:c2
-      - 00:25:90:5f:5f:02
-      - 00:25:90:5f:5f:c8
-# the mac for 10.100.0.39 is missing because it will not power on
-      - 00:25:90:5f:5f:10
-      - 00:25:90:5f:5f:12
+      - 00000000-0000-0000-0000-AC1F6BB6DF3A
+      - 00000000-0000-0000-0000-AC1F6BB6DF29
+      - 00000000-0000-0000-0000-AC1F6BB6DF26
+      - 00000000-0000-0000-0000-AC1F6BB6DF4F
+      - 00000000-0000-0000-0000-AC1F6BB6DF49
+      - 00000000-0000-0000-0000-AC1F6BB6DF24
+      - 00000000-0000-0000-0000-AC1F6BB6DF4E
+      - 00000000-0000-0000-0000-AC1F6BB6DF1A
 # host is nmc
-#      - 00:25:90:5f:5e:ae
-      - 00:25:90:5f:5f:06
-      - 00:25:90:5f:60:0c
-      - 00:25:90:5f:5f:be
+#      - 00000000-0000-0000-0000-AC1F6BB6DF39
+      - 00000000-0000-0000-0000-AC1F6BB6DF18
+      - 00000000-0000-0000-0000-AC1F6BB6DF1D
+      - 00000000-0000-0000-0000-AC1F6BB6DF28
+      - 00000000-0000-0000-0000-AC1F6BB6DF2F
+      - 00000000-0000-0000-0000-AC1F6BB6DF22
+      - 00000000-0000-0000-0000-AC1F6BB6DF12
     interface: enp94s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
@@ -118,20 +118,19 @@ hosts:
     role: compute
     os: centos7
     uuids:
-      - 0c:c4:7a:fb:f3:d0
-      - 0c:c4:7a:fb:f2:80
-      - 0c:c4:7a:fb:f1:a8
-      - 0c:c4:7a:fb:f2:fc
-      - 0c:c4:7a:fb:f2:84
-      - 0c:c4:7a:fb:f2:1c
-      - 0c:c4:7a:fb:f1:0c
-      - 0c:c4:7a:fb:f3:cc
-      - 0c:c4:7a:fb:f1:10
-      - 0c:c4:7a:fb:f2:a8
-      - 0c:c4:7a:fb:f3:9c
-# host is physically nmc, bad NVME drive
-#      - 0c:c4:7a:fb:f3:b4
-      - 0c:c4:7a:fb:f2:74
+      - 00000000-0000-0000-0000-AC1F6B644A9D
+      - 00000000-0000-0000-0000-AC1F6B644A9F
+      - 00000000-0000-0000-0000-AC1F6B6449A4
+      - 00000000-0000-0000-0000-AC1F6B65AE1F
+      - 00000000-0000-0000-0000-AC1F6B644AA7
+      - 00000000-0000-0000-0000-AC1F6B644AB2
+      - 00000000-0000-0000-0000-AC1F6B644A94
+      - 00000000-0000-0000-0000-AC1F6B644A35
+      - 00000000-0000-0000-0000-AC1F6B65ADC7
+      - 00000000-0000-0000-0000-AC1F6B65ADC0
+      - 00000000-0000-0000-0000-AC1F6B644995
+      - 00000000-0000-0000-0000-AC1F6B67BB30
+      - 00000000-0000-0000-0000-AC1F6B65AE93
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
@@ -166,8 +165,8 @@ hosts:
     role: container
     os: centos7
     uuids:
-      - 0c:c4:7a:fb:f3:e4
-      - 0c:c4:7a:fb:f2:68
+      - 00000000-0000-0000-0000-AC1F6B64499F
+      - 00000000-0000-0000-0000-AC1F6B644ADD
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
