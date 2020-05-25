@@ -49,9 +49,9 @@ hosts:
       bridge: true
       vlan: false
       interfaces:
-        enp97s0f0:
+        management:
           network: management
-          primary: true
+          interface: enp97s0f0
           bridge: true
           vlan: false
         enp97s0f1:
