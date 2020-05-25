@@ -30,7 +30,7 @@
 hosts:
   controller:
     role: controller
-    os: centos7
+    os: centos8
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3AC
       - 00000000-0000-0000-0000-0CC47AFBF104
@@ -71,7 +71,7 @@ hosts:
           vlan: false
   storage:
     role: storage
-    os: centos8
+    os: centos7
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
       - 00000000-0000-0000-0000-AC1F6BB6DF29
