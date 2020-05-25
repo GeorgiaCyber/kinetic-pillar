@@ -30,20 +30,16 @@
 hosts:
   controller:
     role: controller
-    os: centos7
-    macs:
-      - 0c:c4:7a:fb:f3:ac
-      - 0c:c4:7a:fb:f0:f0
-      - 0c:c4:7a:fb:f1:04
+    os: centos8
+    uuids:
+      - 00000000-0000-0000-0000-0CC47AFBF3AC
+      - 00000000-0000-0000-0000-0CC47AFBF104
+      - 00000000-0000-0000-0000-0CC47AFBF0F0
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL6T4TCU
-    ipmi_addresses:
-      - 10.100.0.22
-      - 10.100.0.23
-      - 10.100.0.41
     kvm_disk_config:
       type: standard
       members:
@@ -76,46 +72,28 @@ hosts:
   storage:
     role: storage
     os: centos7
-    macs:
-      - 00:25:90:5f:5f:7a
-      - 00:25:90:5f:5f:2e
-      - 00:25:90:5f:5e:d6
-      - 00:25:90:5f:5e:7e
-      - 00:25:90:5f:5e:00
-      - 00:25:90:5f:5e:c2
-      - 00:25:90:5f:5f:02
-      - 00:25:90:5f:5f:c8
-# the mac for 10.100.0.39 is missing because it will not power on
-      - 00:25:90:5f:5f:10
-      - 00:25:90:5f:5f:12
+    uuids:
+      - 00000000-0000-0000-0000-AC1F6BB6DF3A
+      - 00000000-0000-0000-0000-AC1F6BB6DF29
+      - 00000000-0000-0000-0000-AC1F6BB6DF26
+      - 00000000-0000-0000-0000-AC1F6BB6DF4F
+      - 00000000-0000-0000-0000-AC1F6BB6DF49
+      - 00000000-0000-0000-0000-AC1F6BB6DF24
+      - 00000000-0000-0000-0000-AC1F6BB6DF4E
+      - 00000000-0000-0000-0000-AC1F6BB6DF1A
 # host is nmc
-#      - 00:25:90:5f:5e:ae
-      - 00:25:90:5f:5f:06
-      - 00:25:90:5f:60:0c
-      - 00:25:90:5f:5f:be
+#      - 00000000-0000-0000-0000-AC1F6BB6DF39
+      - 00000000-0000-0000-0000-AC1F6BB6DF18
+      - 00000000-0000-0000-0000-AC1F6BB6DF1D
+      - 00000000-0000-0000-0000-AC1F6BB6DF28
+      - 00000000-0000-0000-0000-AC1F6BB6DF2F
+      - 00000000-0000-0000-0000-AC1F6BB6DF22
+      - 00000000-0000-0000-0000-AC1F6BB6DF12
     interface: enp94s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: SAMSUNG MZ1LW960HMJP-00003
-    ipmi_addresses:
-      - 10.100.0.20
-      - 10.100.0.21
-      - 10.100.0.31
-      - 10.100.0.32
-      - 10.100.0.33
-      - 10.100.0.34
-      - 10.100.0.35
-      - 10.100.0.38
-# The below host has hardware issues and won't boot/power on
-#      - 10.100.0.39
-      - 10.100.0.42
-      - 10.100.0.47
-# The below host has physical hardware issues and won't boot
-#      - 10.100.0.48
-      - 10.100.0.49
-      - 10.100.0.51
-      - 10.100.0.52
     networks:
       bonds: False
       bridge: false
@@ -139,41 +117,25 @@ hosts:
   compute:
     role: compute
     os: centos7
-    macs:
-      - 0c:c4:7a:fb:f3:d0
-      - 0c:c4:7a:fb:f2:80
-      - 0c:c4:7a:fb:f1:a8
-      - 0c:c4:7a:fb:f2:fc
-      - 0c:c4:7a:fb:f2:84
-      - 0c:c4:7a:fb:f2:1c
-      - 0c:c4:7a:fb:f1:0c
-      - 0c:c4:7a:fb:f3:cc
-      - 0c:c4:7a:fb:f1:10
-      - 0c:c4:7a:fb:f2:a8
-      - 0c:c4:7a:fb:f3:9c
-# host is physically nmc, bad NVME drive
-#      - 0c:c4:7a:fb:f3:b4
-      - 0c:c4:7a:fb:f2:74
+    uuids:
+      - 00000000-0000-0000-0000-AC1F6B644A9D
+      - 00000000-0000-0000-0000-AC1F6B644A9F
+      - 00000000-0000-0000-0000-AC1F6B6449A4
+      - 00000000-0000-0000-0000-AC1F6B65AE1F
+      - 00000000-0000-0000-0000-AC1F6B644AA7
+      - 00000000-0000-0000-0000-AC1F6B644AB2
+      - 00000000-0000-0000-0000-AC1F6B644A94
+      - 00000000-0000-0000-0000-AC1F6B644A35
+      - 00000000-0000-0000-0000-AC1F6B65ADC7
+      - 00000000-0000-0000-0000-AC1F6B65ADC0
+      - 00000000-0000-0000-0000-AC1F6B644995
+      - 00000000-0000-0000-0000-AC1F6B67BB30
+      - 00000000-0000-0000-0000-AC1F6B65AE93
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL1T6TCU
-    ipmi_addresses:
-      - 10.100.0.24
-      - 10.100.0.25
-      - 10.100.0.26
-      - 10.100.0.27
-      - 10.100.0.28
-      - 10.100.0.29
-      - 10.100.0.30
-      - 10.100.0.43
-      - 10.100.0.44
-      - 10.100.0.45
-      - 10.100.0.46
-# host is physically nmc, bad NVME drive
-#      - 10.100.0.50
-      - 10.100.0.53
     networks:
       bonds: false
       bridge: false
@@ -202,17 +164,14 @@ hosts:
   container:
     role: container
     os: centos7
-    macs:
-      - 0c:c4:7a:fb:f3:e4
-      - 0c:c4:7a:fb:f2:68
+    uuids:
+      - 00000000-0000-0000-0000-AC1F6B64499F
+      - 00000000-0000-0000-0000-AC1F6B644ADD
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL1T6TCU
-    ipmi_addresses:
-      - 10.100.0.37
-      - 10.100.0.54
     networks:
       bonds: false
       bridge: false

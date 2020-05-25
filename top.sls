@@ -15,8 +15,9 @@ base:
     - environment/beacon_configs/address_notification
   'pxe':
     - environment/hosts
+    - environment/bmc_password
   'salt*':
-    - environment/ipmi_password
+    - environment/bmc_password    
     - environment/hosts
     - environment/virtual
     - environment/map
