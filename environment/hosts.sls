@@ -30,7 +30,7 @@
 hosts:
   controller:
     role: controller
-    os: ubuntu2004
+    os: centos8
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3AC
       - 00000000-0000-0000-0000-0CC47AFBF104
