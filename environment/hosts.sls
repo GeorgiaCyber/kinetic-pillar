@@ -71,7 +71,7 @@ hosts:
           vlan: false
   storage:
     role: storage
-    os: centos7
+    os: centos8
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
       - 00000000-0000-0000-0000-AC1F6BB6DF29
