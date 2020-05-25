@@ -32,9 +32,9 @@ hosts:
     role: controller
     os: centos7
     uuids:
-      - 00000000-0000-0000-0000-AC1F6B65ADEC
-      - 00000000-0000-0000-0000-AC1F6B65AE15
-      - 00000000-0000-0000-0000-AC1F6B65AE30
+      - 00000000-0000-0000-0000-0CC47AFBF3AC
+      - 00000000-0000-0000-0000-0CC47AFBF104
+      - 00000000-0000-0000-0000-0CC47AFBF0F0
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
