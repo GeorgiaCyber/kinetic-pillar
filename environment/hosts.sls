@@ -54,19 +54,19 @@ hosts:
           interface: enp97s0f0
           bridge: true
           vlan: false
-        enp97s0f1:
+        sfe:
           network: sfe
-          primary: false
+          interface: enp97s0f1
           bridge: true
           vlan: false
-        enp113s0f0:
+        public:
           network: public
-          primary: false
+          interface: enp113s0f0
           bridge: true
           vlan: false
-        enp113s0f1:
+        private:
           network: private
-          primary: false
+          interface: enp113s0f1
           bridge: true
           vlan: false
   storage:
