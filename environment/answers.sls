@@ -174,6 +174,17 @@ master-config:
     pillar_roots:
       base:
         - /srv/dynamic_pillar
+  external_auth: |
+    external_auth:
+      pam:
+        api:
+          - salt
+            - address.*
+  rest_cherrypy: |
+    rest_cherrypy:
+      port: 8000
+      ssl_crt: /etc/pki/tls/certs/localhost.cert
+      ssl_key: /etc/pki/tls/certs/localhost.key
   reactor: |
     reactor:
       - salt/minion/*/start:
