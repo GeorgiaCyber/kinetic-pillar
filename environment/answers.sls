@@ -183,7 +183,7 @@ master-config:
   rest_cherrypy: |
     rest_cherrypy:
       port: 8000
-      ssl_crt: /etc/pki/tls/certs/localhost.cert
+      ssl_crt: /etc/pki/tls/certs/localhost.crt
       ssl_key: /etc/pki/tls/certs/localhost.key
   reactor: |
     reactor:
