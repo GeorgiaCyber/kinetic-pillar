@@ -178,7 +178,7 @@ master-config:
     external_auth:
       pam:
         api:
-          - salt
+          - 'salt':
             - address.*
   rest_cherrypy: |
     rest_cherrypy:
