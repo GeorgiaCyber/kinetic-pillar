@@ -45,30 +45,26 @@ hosts:
       members:
         - rootfs
     networks:
-      bonds: false
-      bridge: true
-      vlan: false
-      interfaces:
-        management:
-          network: management
-          interfaces: [enp97s0f0]
-          bridge: true
-          vlan: false
-        sfe:
-          network: sfe
-          interfaces: [enp97s0f1]
-          bridge: true
-          vlan: false
-        public:
-          network: public
-          interfaces: [enp113s0f0]
-          bridge: true
-          vlan: false
-        private:
-          network: private
-          interfaces: [enp113s0f1]
-          bridge: true
-          vlan: false
+      management:
+        network: management
+        interfaces: [enp97s0f0]
+        bridge: true
+        vlan: false
+      sfe:
+        network: sfe
+        interfaces: [enp97s0f1]
+        bridge: true
+        vlan: false
+      public:
+        network: public
+        interfaces: [enp113s0f0]
+        bridge: true
+        vlan: false
+      private:
+        network: private
+        interfaces: [enp113s0f1]
+        bridge: true
+        vlan: false
   storage:
     role: storage
     os: centos7
