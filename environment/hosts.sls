@@ -51,22 +51,22 @@ hosts:
       interfaces:
         management:
           network: management
-          interface: enp97s0f0
+          interfaces: [enp97s0f0]
           bridge: true
           vlan: false
         sfe:
           network: sfe
-          interface: enp97s0f1
+          interfaces: [enp97s0f1]
           bridge: true
           vlan: false
         public:
           network: public
-          interface: enp113s0f0
+          interfaces: [enp113s0f0]
           bridge: true
           vlan: false
         private:
           network: private
-          interface: enp113s0f1
+          interfaces: [enp113s0f1]
           bridge: true
           vlan: false
   storage:
