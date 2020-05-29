@@ -160,7 +160,7 @@ hosts:
           vlan: false
   container:
     role: container
-    os: centos7
+    os: centos8
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274 #duplicated UUID - remove from compute
       - 00000000-0000-0000-0000-0CC47AFBF268 #duplicated UUID - remove from compute
