@@ -84,7 +84,7 @@ hosts:
       - 00000000-0000-0000-0000-AC1F6BB6DF2F
       - 00000000-0000-0000-0000-AC1F6BB6DF22
       - 00000000-0000-0000-0000-AC1F6BB6DF12
-    interface: enp94s0f0
+    interface: ens2f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
     ntp_server: 0.us.pool.ntp.org
@@ -94,17 +94,17 @@ hosts:
       bridge: false
       vlan: false
       interfaces:
-        enp94s0f0:
+        ens2f0:
           network: management
           primary: true
           bridge: false
           vlan: false
-        enp94s0f1:
+        ens2f1:
           network: sfe
           primary: false
           bridge: false
           vlan: false
-        enp175s0f0:
+        ens1f0:
           network: sbe
           primary: false
           bridge: false
