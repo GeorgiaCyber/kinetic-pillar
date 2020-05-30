@@ -5,13 +5,11 @@
 ## os: OS that instance should be deployed on
 ## disk: root disk size
 ## networks: specify how you want your final, post-deployment network to be configured.
-##   bridge: true if this host will be used as a hypervisor
-##   vlan: true if you will be tagging on this host
 ##   interface entries: top level definition will be the name of the physical interface
-##     network: the network to which it will bind (must match answers.sls)
-##     primary: true if it will get DHCP, otherwise false
-##     bridge: true if a bridged interface, otherwise false
-##     vlan: vlanID if a vlan, otherwise false.
+##     network: the network to which it will bind
+##     interfaces: list of interfaces that will bind to the network.  If the list is <1, it implies a bond.
+##     bridge: true if a bridged interface, otherwise false or omitted (implicit false)
+##     vlan: vlanID if a vlan, otherwise false or omitted (implicit false)
 
 virtual:
   cache:
@@ -21,14 +19,9 @@ virtual:
     os: centos7
     disk: 512G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   cephmon:
     count: 3
     ram: 8192000
@@ -36,19 +29,12 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
+      sfe:
+        network: sfe
+        interfaces: [ens4]
   mds:
     count: 3
     ram: 8192000
@@ -56,19 +42,12 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
+      sfe:
+        network: sfe
+        interfaces: [ens4]
   haproxy:
     count: 1
     ram: 8192000
@@ -76,14 +55,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   antora:
     count: 1
     ram: 4096000
@@ -91,14 +65,9 @@ virtual:
     os: centos7
     disk: 16G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   mysql:
     count: 3
     ram: 8192000
@@ -106,14 +75,9 @@ virtual:
     os: centos7
     disk: 128G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   rabbitmq:
     count: 3
     ram: 8192000
@@ -121,14 +85,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   memcached:
     count: 3
     ram: 8192000
@@ -136,14 +95,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   keystone:
     count: 3
     ram: 8192000
@@ -151,14 +105,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   glance:
     count: 2
     ram: 8192000
@@ -166,19 +115,12 @@ virtual:
     os: centos7
     disk: 64G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
+      sfe:
+        network: sfe
+        interfaces: [ens4]
   nova:
     count: 2
     ram: 8192000
@@ -186,14 +128,9 @@ virtual:
     os: centos7
     disk: 128G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   neutron:
     count: 3
     ram: 8192000
@@ -201,14 +138,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   horizon:
     count: 2
     ram: 8192000
@@ -216,14 +148,9 @@ virtual:
     os: centos7
     disk: 128G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   heat:
     count: 2
     ram: 8192000
@@ -231,14 +158,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   cinder:
     count: 3
     ram: 4096000
@@ -246,14 +168,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   volume:
     count: 3
     ram: 4096000
@@ -261,19 +178,12 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
+      sfe:
+        network: sfe
+        interfaces: [ens4]
   designate:
     count: 3
     ram: 4096000
@@ -281,14 +191,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   bind:
     count: 3
     ram: 4096000
@@ -296,14 +201,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   swift:
     count: 2
     ram: 8192000
@@ -311,19 +211,12 @@ virtual:
     os: centos7
     disk: 64G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
+      sfe:
+        network: sfe
+        interfaces: [ens4]
   zun:
     count: 2
     ram: 8192000
@@ -331,14 +224,9 @@ virtual:
     os: centos7
     disk: 64G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   placement:
     count: 2
     ram: 8192000
@@ -346,14 +234,9 @@ virtual:
     os: centos7
     disk: 64G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   graylog:
     count: 1
     ram: 8192000
@@ -361,14 +244,9 @@ virtual:
     os: centos7
     disk: 512G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   network:
     count: 3
     ram: 8192000
@@ -376,24 +254,15 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
-        ens5:
-          network: private
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
+      public:
+        network: public
+        interfaces: [ens4]
+      private:
+        network: private
+        interfaces: [ens5]
   ovsdb:
     count: 3
     ram: 8192000
@@ -401,14 +270,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   barbican:
     count: 2
     ram: 4096000
@@ -416,14 +280,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   magnum:
     count: 2
     ram: 4096000
@@ -431,14 +290,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   sahara:
     count: 2
     ram: 4096000
@@ -446,14 +300,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   manila:
     count: 3
     ram: 4096000
@@ -461,14 +310,9 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
   share:
     count: 1
     ram: 4096000
@@ -476,24 +320,15 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens4:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
-        ens5:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
+      sfe:
+        network: sfe
+        interfaces: [ens4]
+      public:
+        network: public
+        interfaces: [ens5]
   etcd:
     count: 3
     ram: 4096000
@@ -501,11 +336,6 @@ virtual:
     os: centos7
     disk: 32G
     networks:
-      bridge: false
-      vlan: false
-      interfaces:
-        ens3:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens3]
