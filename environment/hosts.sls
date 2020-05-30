@@ -14,18 +14,11 @@
 ## just create a directory on the root filesystem at /kvm
 
 ## networks: specify how you want your final, post-deployment network to be configured.
-##   bridge: true if this host will be used as a hypervisor
-##   bonds: false if there are no LAGG iterfaces,
-##   bonds:
-##     bond0:
-##       - slaveX
-##   if there are
-##   vlan: true if you will be tagging on this host
 ##   interface entries: top level definition will be the name of the physical interface
-##     network: the network to which it will bind (must match answers.sls)
-##     primary: true if it will get DHCP, otherwise false
-##     bridge: true if a bridged interface, otherwise false
-##     vlan: vlanID if a vlan, otherwise false.
+##     network: the network to which it will bind
+##     interfaces: list of interfaces that will bind to the network.  If the list is <1, it implies a bond.
+##     bridge: true if a bridged interface, otherwise false or omitted (implicit false)
+##     vlan: vlanID if a vlan, otherwise false or omitted (implicit false)
 
 hosts:
   controller:
@@ -49,22 +42,18 @@ hosts:
         network: management
         interfaces: [enp97s0f0]
         bridge: true
-        vlan: false
       sfe:
         network: sfe
         interfaces: [enp97s0f1]
         bridge: true
-        vlan: false
       public:
         network: public
         interfaces: [enp113s0f0]
         bridge: true
-        vlan: false
       private:
         network: private
         interfaces: [enp113s0f1]
         bridge: true
-        vlan: false
   storage:
     role: storage
     os: centos8
@@ -90,25 +79,15 @@ hosts:
     ntp_server: 0.us.pool.ntp.org
     disk: SAMSUNG MZ1LW960HMJP-00003
     networks:
-      bonds: False
-      bridge: false
-      vlan: false
-      interfaces:
-        ens2f0:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        ens2f1:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
-        ens1f0:
-          network: sbe
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [ens2f0]
+      sfe:
+        network: sfe
+        interfaces: [ens2f1]
+      sbe:
+        network: sbe
+        interfaces: [ens1f0]
   compute:
     role: compute
     os: centos8
@@ -134,30 +113,18 @@ hosts:
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL1T6TCU
     networks:
-      bonds: false
-      bridge: false
-      vlan: false
-      interfaces:
-        enp97s0f0:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        enp97s0f1:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
-        enp113s0f0:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
-        enp113s0f1:
-          network: private
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [enp97s0f0]
+      sfe:
+        network: sfe
+        interfaces: [enp97s0f1]
+      public:
+        network: public
+        interfaces: [enp113s0f0]
+      private:
+        network: private
+        interfaces: [enp113s0f1]
   container:
     role: container
     os: centos8
@@ -170,27 +137,15 @@ hosts:
     ntp_server: 0.us.pool.ntp.org
     disk: Micron_9200_MTFDHAL1T6TCU
     networks:
-      bonds: false
-      bridge: false
-      vlan: false
-      interfaces:
-        enp97s0f0:
-          network: management
-          primary: true
-          bridge: false
-          vlan: false
-        enp97s0f1:
-          network: sfe
-          primary: false
-          bridge: false
-          vlan: false
-        enp113s0f0:
-          network: public
-          primary: false
-          bridge: false
-          vlan: false
-        enp113s0f1:
-          network: private
-          primary: false
-          bridge: false
-          vlan: false
+      management:
+        network: management
+        interfaces: [enp97s0f0]
+      sfe:
+        network: sfe
+        interfaces: [enp97s0f1]
+      public:
+        network: public
+        interfaces: [enp113s0f0]
+      private:
+        network: private
+        interfaces: [enp113s0f1]
