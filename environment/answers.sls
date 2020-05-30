@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: networkd
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: networkd
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -39,9 +39,9 @@ timezone: America/New_York
 
 ## Specify your endpoint URLs for openstack
 endpoints:
-  public: dashboard.bitskrieg.net
-  internal: dashboard.bitskrieg.net
-  admin: dashboard.bitskrieg.net
+  public: dashboard.gacyberrange.org
+  internal: dashboard.gacyberrange.org
+  admin: dashboard.gacyberrange.org
 
 ## Specify your ldap configuration
 common_ldap_configuration:
@@ -67,9 +67,9 @@ haproxy:
     - console.bitskrieg.net
     - docs.bitskrieg.net
   tls_email: testing12345678@somefakedomain.website
-  dashboard_domain: dashboard.bitskrieg.net
-  console_domain: console.bitskrieg.net
-  docs_domain: docs.bitskrieg.net
+  dashboard_domain: dashboard.gacyberrange.org
+  console_domain: console.gacyberrange.org
+  docs_domain: docs.gacyberrange.orgt
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
@@ -174,6 +174,17 @@ master-config:
     pillar_roots:
       base:
         - /srv/dynamic_pillar
+  external_auth: |
+    external_auth:
+      pam:
+        api:
+          - 'salt':
+            - address.*
+  rest_cherrypy: |
+    rest_cherrypy:
+      port: 8000
+      ssl_crt: /etc/pki/tls/certs/localhost.crt
+      ssl_key: /etc/pki/tls/certs/localhost.key
   reactor: |
     reactor:
       - salt/minion/*/start:

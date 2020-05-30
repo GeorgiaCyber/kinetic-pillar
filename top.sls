@@ -17,7 +17,7 @@ base:
     - environment/hosts
     - environment/bmc_password
   'salt*':
-    - environment/bmc_password    
+    - environment/bmc_password
     - environment/hosts
     - environment/virtual
     - environment/map
@@ -30,7 +30,6 @@ base:
     - environment/hosts
     - environment/images
     - environment/virtual
-    - environment/mine_configs/physical
   'cephmon*':
     - environment/virtual
     - environment/openstack_services
@@ -41,15 +40,12 @@ base:
     - environment/hosts
     - environment/osd_mappings
     - environment/openstack_services
-    - environment/mine_configs/physical
   'compute*':
     - environment/hosts
     - environment/openstack_services
-    - environment/mine_configs/physical
   'container*':
     - environment/hosts
     - environment/openstack_services
-    - environment/mine_configs/physical
   'haproxy*':
     - environment/virtual
     - environment/openstack_services
