@@ -9,15 +9,5 @@
 ## local_hash: hash file for tarball (generally pull_from_mine unless external cache being used)
 
 images:
-  ubuntu1804:
-    name: ubuntu1804.raw
-    remote_url: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/ubuntu1804.raw.tar.gz?job=upload
-    remote_hash: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/checksums?job=upload
-    local_url: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/ubuntu1804.raw.tar.gz?job=upload
-    local_hash: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/checksums?job=upload
-  centos7:
-    name: centos7-udev.raw
-    remote_url: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/centos7-udev.raw.tar.gz?job=upload
-    remote_hash: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/checksums?job=upload
-    local_url: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/centos7-udev.raw.tar.gz?job=upload
-    local_hash: https://git.cybbh.space/bitskrieg/images/-/jobs/artifacts/master/raw/checksums?job=upload
+  centos8:
+    name: centos-8.0
