@@ -63,9 +63,9 @@ keystone_ldap_configuration:
 ## Specify your haproxy TLS options
 haproxy:
   tls_domains:
-    - dashboard.bitskrieg.net
-    - console.bitskrieg.net
-    - docs.bitskrieg.net
+    - dashboard.gacyberrange.org
+    - console.gacyberrange.org
+    - docs.gacyberrange.org
   tls_email: testing12345678@somefakedomain.website
   dashboard_domain: dashboard.gacyberrange.org
   console_domain: console.gacyberrange.org
