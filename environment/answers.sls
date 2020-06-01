@@ -69,7 +69,7 @@ haproxy:
   tls_email: testing12345678@somefakedomain.website
   dashboard_domain: dashboard.gacyberrange.org
   console_domain: console.gacyberrange.org
-  docs_domain: docs.gacyberrange.orgt
+  docs_domain: docs.gacyberrange.org
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
