@@ -136,6 +136,7 @@ zun:
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
+## deprecated - currently does nothing
 cephconf:
   vms_pgs: 2048
   volumes_pgs: 512
