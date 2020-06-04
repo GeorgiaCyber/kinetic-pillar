@@ -230,9 +230,9 @@ virtual:
   placement:
     count: 2
     ram: 8192000
-    cpu: 4
-    os: centos7
-    disk: 64G
+    cpu: 2
+    os: centos8
+    disk: 32G
     networks:
       management:
         network: management
