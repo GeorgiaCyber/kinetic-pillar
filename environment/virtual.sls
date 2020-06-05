@@ -208,7 +208,7 @@ virtual:
     count: 2
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 64G
     networks:
       management:
