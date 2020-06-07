@@ -264,7 +264,7 @@ virtual:
         network: private
         interfaces: [ens5]
   ovsdb:
-    count: 1
+    count: 3
     ram: 8192000
     cpu: 4
     os: centos8
