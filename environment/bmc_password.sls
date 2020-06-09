@@ -10,9 +10,9 @@
 bmc_password: |
   -----BEGIN PGP MESSAGE-----
 
-  hF4DAAAAAAAAAAASAQdAs63vnZhJNolQHIZM9S8ES5/WJYbMqlSuVXQCrL+NcFMw
-  52Kmnc2nvobk8VpEHe9gMGmT4y/djQaDVoMrZ3IrIj80loe/b7/chqRwSXNWKgDG
-  0ksBawxj6oCSdxy0xdgbiu7kIlsk29jP0+vrh9SeF8tUm9V6qN+LStvDQHInHTPS
-  jLvZAF4EtXhRYeg5ABGHroYilWVyzu01C2sykQE=
-  =PfO5
+  hF4DqhQ2aFP17aMSAQdAJvHlYqLe4y8UhPmvp7gWzHWXxicG/CsV/hW0zJSIPkQw
+  WOLDbnGX+IIcIOsYiTf0vKYKu3vtGQBIWsiZlrQ0NQZQKm4B17dRbvMzM54WC/Lc
+  0ksB2+NWrjGOrgHjsZUOJkTwI4Q1tXUjVjwv9scCtgRqrWhsV+Zbbdgg6PAbrqIb
+  d2//6DQ7Q87SXiaGrUliqZuJsTMgbvJnIR/AEbU=
+  =wdnj
   -----END PGP MESSAGE-----
