@@ -104,7 +104,7 @@ hosts:
       - 00000000-0000-0000-0000-0CC47AFBF110
       - 00000000-0000-0000-0000-0CC47AFBF2A8
       - 00000000-0000-0000-0000-0CC47AFBF39C
-      - 00000000-0000-0000-0000-0CC47AFBF3B4 #inop no nvme detected
+      - 00000000-0000-0000-0000-0CC47AFBF3B4
     interface: enp97s0f0
     proxy: pull_from_mine
     root_password_crypted: $6$sSXsfvsKhwy$RrINorhH4lNeNdNbi/vHqCAApM8ID9Lhvmzs6OQMO4791igXZIrhWg6Kyi7XPRGhIZOgGUdCx4prarhaV62id0
