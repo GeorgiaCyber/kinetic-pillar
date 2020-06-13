@@ -103,9 +103,9 @@ networking:
   subnets:
     management: 10.100.4.0/22
     public: 10.101.0.0/16
-    private: 10.110.4.0/22
-    sfe: 10.120.4.0/22
-    sbe: 10.130.4.0/22
+    private: 10.110.4.0/24
+    sfe: 10.120.4.0/24
+    sbe: 10.130.4.0/24
     oob: 10.100.0.0/22
   addresses:
     float_start: 10.101.20.0
