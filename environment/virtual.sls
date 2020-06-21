@@ -326,9 +326,6 @@ virtual:
       sfe:
         network: sfe
         interfaces: [ens4]
-      public:
-        network: public
-        interfaces: [ens5]
   etcd:
     count: 3
     ram: 4096000
