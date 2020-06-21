@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: centos8
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: centos8
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -63,13 +63,13 @@ keystone_ldap_configuration:
 ## Specify your haproxy TLS options
 haproxy:
   tls_domains:
-    - dashboard.bitskrieg.net
-    - console.bitskrieg.net
-    - docs.bitskrieg.net
+    - dashboard.gacyberrange.org
+    - console.gacyberrange.org
+    - docs.gacyberrange.org
   tls_email: testing12345678@somefakedomain.website
   dashboard_domain: dashboard.gacyberrange.org
   console_domain: console.gacyberrange.org
-  docs_domain: docs.gacyberrange.orgt
+  docs_domain: docs.gacyberrange.org
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
@@ -103,9 +103,9 @@ networking:
   subnets:
     management: 10.100.4.0/22
     public: 10.101.0.0/16
-    private: 10.110.4.0/22
-    sfe: 10.120.4.0/22
-    sbe: 10.130.4.0/22
+    private: 10.110.4.0/24
+    sfe: 10.120.4.0/24
+    sbe: 10.130.4.0/24
     oob: 10.100.0.0/22
   addresses:
     float_start: 10.101.20.0
@@ -116,7 +116,7 @@ networking:
 ## neutron networking backend.  Valid values are networking-ovn
 ## or linuxbridge
 neutron:
-  backend: linuxbridge
+  backend: networking-ovn
 
 ## the theme you wish to install in horizon (set url to false if none).  URL should point to git repo
 ## name should be the top-level directory you wish to extract the theme to
@@ -136,6 +136,7 @@ zun:
 
 ## Number of placement groups for your ceph pools
 ## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
+## deprecated - currently does nothing
 cephconf:
   vms_pgs: 2048
   volumes_pgs: 512

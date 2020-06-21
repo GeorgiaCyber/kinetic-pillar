@@ -16,7 +16,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 512G
     networks:
       management:
@@ -26,7 +26,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -39,7 +39,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -52,7 +52,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -62,7 +62,7 @@ virtual:
     count: 1
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 16G
     networks:
       management:
@@ -72,7 +72,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 128G
     networks:
       management:
@@ -82,7 +82,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -92,7 +92,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -102,7 +102,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -112,7 +112,7 @@ virtual:
     count: 2
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 64G
     networks:
       management:
@@ -125,7 +125,7 @@ virtual:
     count: 2
     ram: 8192000
     cpu: 8
-    os: centos7
+    os: centos8
     disk: 128G
     networks:
       management:
@@ -135,7 +135,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -145,7 +145,7 @@ virtual:
     count: 2
     ram: 8192000
     cpu: 8
-    os: centos7
+    os: centos8
     disk: 128G
     networks:
       management:
@@ -155,7 +155,7 @@ virtual:
     count: 2
     ram: 8192000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -165,7 +165,7 @@ virtual:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -175,7 +175,7 @@ virtual:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -188,7 +188,7 @@ virtual:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -198,7 +198,7 @@ virtual:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -208,7 +208,7 @@ virtual:
     count: 2
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 64G
     networks:
       management:
@@ -221,7 +221,7 @@ virtual:
     count: 2
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 64G
     networks:
       management:
@@ -230,9 +230,9 @@ virtual:
   placement:
     count: 2
     ram: 8192000
-    cpu: 4
-    os: centos7
-    disk: 64G
+    cpu: 2
+    os: centos8
+    disk: 32G
     networks:
       management:
         network: management
@@ -241,7 +241,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 512G
     networks:
       management:
@@ -251,7 +251,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -267,7 +267,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -277,7 +277,7 @@ virtual:
     count: 2
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -287,7 +287,7 @@ virtual:
     count: 2
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -297,7 +297,7 @@ virtual:
     count: 2
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -307,17 +307,17 @@ virtual:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
         network: management
         interfaces: [ens3]
   share:
-    count: 1
+    count: 3
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
@@ -326,14 +326,11 @@ virtual:
       sfe:
         network: sfe
         interfaces: [ens4]
-      public:
-        network: public
-        interfaces: [ens5]
   etcd:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos7
+    os: centos8
     disk: 32G
     networks:
       management:
