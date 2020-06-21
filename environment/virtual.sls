@@ -314,7 +314,7 @@ virtual:
         network: management
         interfaces: [ens3]
   share:
-    count: 1
+    count: 3
     ram: 4096000
     cpu: 2
     os: centos8
