@@ -330,7 +330,7 @@ virtual:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
