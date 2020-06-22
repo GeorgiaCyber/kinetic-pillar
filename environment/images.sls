@@ -11,3 +11,7 @@
 images:
   centos8:
     name: centos-8.0
+    type: virt-builder
+  ubuntu2004:
+    name: ubuntu2004
+    type: url
