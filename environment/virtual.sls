@@ -39,7 +39,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -52,7 +52,7 @@ virtual:
     count: 1
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -62,7 +62,7 @@ virtual:
     count: 1
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 16G
     networks:
       management:
@@ -72,7 +72,7 @@ virtual:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 128G
     networks:
       management:
