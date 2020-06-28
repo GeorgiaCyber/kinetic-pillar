@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: danos
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: danos
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -87,6 +87,28 @@ syslog_url: False
 
 ## Specify the IPMI user that will be used to bootstrap physical devices
 api_user: ADMIN
+
+### Integrated DANOS Configuration
+### Enabled: True or False
+### username: the DANOS user that will access the REST API
+### endpoint: Can either be the special value of 'gateway' (which will resolve to the ip address of the default gateway on the management network) or an IP
+### password: gpg-encrypted rest user password
+danos:
+  enabled: True
+  username: rest
+  endpoint: gateway
+  password: |
+    -----BEGIN PGP MESSAGE-----
+
+    hF4DVKIw8IQ6/H0SAQdAxH6m9LCUhB1noVXVzA9DTgnE83XIRPUVEho4VkkxKU4w
+    3vHSg7a82g+HIkeR7UBc47nEB7z3u4ej33IXbLwuEqdpqSdKaEzoTH0bpx8PfhLI
+    0nsB3gTRNYr+lwPMzaM6RbS1P+jCQtVryGV+2Y6+7YhSk1B+2uQua7ay3bRZwQxC
+    JbssjTI1ZVg8xvqu5xx6dBtIc33+l//+LMFKJSmkNHCvgO4YaocaEidxw/IEi1fO
+    Ukm7EfHNXscUQB7YdFHNdBeScmy2jG67l16Y4zQ=
+    =U/Hz
+    -----END PGP MESSAGE-----
+
+
 
 ## Specify your subnets.  The number of addresses for private, sfe, sbe, and oob should be
 ## equivalent to the number of addresses in management (and management should be at least a /24)
