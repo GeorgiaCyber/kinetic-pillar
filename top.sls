@@ -49,6 +49,7 @@ base:
   'haproxy*':
     - environment/virtual
     - environment/openstack_services
+    - environment/danos_password
   'antora*':
     - environment/virtual
     - environment/schedule_configs/antora_schedule

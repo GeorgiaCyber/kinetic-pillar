@@ -92,23 +92,11 @@ api_user: ADMIN
 ### Enabled: True or False
 ### username: the DANOS user that will access the REST API
 ### endpoint: Can either be the special value of 'gateway' (which will resolve to the ip address of the default gateway on the management network) or an IP
-### password: gpg-encrypted rest user password
+### See environment/danos_password.sls for password configuration
 danos:
   enabled: True
   username: rest
   endpoint: gateway
-  password: |
-    -----BEGIN PGP MESSAGE-----
-
-    hF4DVKIw8IQ6/H0SAQdAxH6m9LCUhB1noVXVzA9DTgnE83XIRPUVEho4VkkxKU4w
-    3vHSg7a82g+HIkeR7UBc47nEB7z3u4ej33IXbLwuEqdpqSdKaEzoTH0bpx8PfhLI
-    0nsB3gTRNYr+lwPMzaM6RbS1P+jCQtVryGV+2Y6+7YhSk1B+2uQua7ay3bRZwQxC
-    JbssjTI1ZVg8xvqu5xx6dBtIc33+l//+LMFKJSmkNHCvgO4YaocaEidxw/IEi1fO
-    Ukm7EfHNXscUQB7YdFHNdBeScmy2jG67l16Y4zQ=
-    =U/Hz
-    -----END PGP MESSAGE-----
-
-
 
 ## Specify your subnets.  The number of addresses for private, sfe, sbe, and oob should be
 ## equivalent to the number of addresses in management (and management should be at least a /24)
