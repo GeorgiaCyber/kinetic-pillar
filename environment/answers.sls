@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: focal
+  branch: master
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: focal
+  branch: master
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -22,7 +22,7 @@ salt_transport: zeromq
 
 ## Salt version to pin your release to.  Set to 'latest' to always use the latest stable release.
 ## See https://github.com/saltstack/salt-bootstrap/blob/develop/bootstrap-salt.sh
-salt_version: 3000.3
+salt_version: 3001
 
 ## DNS A record that points to your salt master for this environment
 master_record: salt.internal.georgiacyber.org
