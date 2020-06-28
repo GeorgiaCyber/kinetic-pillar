@@ -23,7 +23,7 @@
 hosts:
   controller:
     role: controller
-    os: centos8
+    os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3AC
       - 00000000-0000-0000-0000-0CC47AFBF104
@@ -56,7 +56,7 @@ hosts:
         bridge: true
   storage:
     role: storage
-    os: centos8
+    os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
       - 00000000-0000-0000-0000-AC1F6BB6DF29
@@ -90,7 +90,7 @@ hosts:
         interfaces: [ens1f0]
   compute:
     role: compute
-    os: centos8
+    os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
       - 00000000-0000-0000-0000-0CC47AFBF280
@@ -125,7 +125,7 @@ hosts:
         interfaces: [enp113s0f1]
   container:
     role: container
-    os: centos8
+    os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
       - 00000000-0000-0000-0000-0CC47AFBF268
