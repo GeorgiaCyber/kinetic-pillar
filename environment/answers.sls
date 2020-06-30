@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: danos
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: danos
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -87,6 +87,16 @@ syslog_url: False
 
 ## Specify the IPMI user that will be used to bootstrap physical devices
 api_user: ADMIN
+
+### Integrated DANOS Configuration
+### Enabled: True or False
+### username: the DANOS user that will access the REST API
+### endpoint: Can either be the special value of 'gateway' (which will resolve to the ip address of the default gateway on the management network) or an IP
+### See environment/danos_password.sls for password configuration
+danos:
+  enabled: True
+  username: rest
+  endpoint: gateway
 
 ## Specify your subnets.  The number of addresses for private, sfe, sbe, and oob should be
 ## equivalent to the number of addresses in management (and management should be at least a /24)
