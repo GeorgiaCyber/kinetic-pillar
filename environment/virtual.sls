@@ -274,7 +274,7 @@ virtual:
         network: management
         interfaces: [ens3]
   barbican:
-    count: 2
+    count: 4
     ram: 4096000
     cpu: 2
     os: ubuntu2004
