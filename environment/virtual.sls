@@ -6,10 +6,9 @@
 ## disk: root disk size
 ## networks: specify how you want your final, post-deployment network to be configured.
 ##   interface entries: top level definition will be the name of the physical interface
-##     network: the network to which it will bind
+##     managed: whether or not the builtin networking state should manage the configuration.  boolean, defaults to True
 ##     interfaces: list of interfaces that will bind to the network.  If the list is <1, it implies a bond.
 ##     bridge: true if a bridged interface, otherwise false or omitted (implicit false)
-##     vlan: vlanID if a vlan, otherwise false or omitted (implicit false)
 
 virtual:
   cache:
@@ -20,7 +19,6 @@ virtual:
     disk: 512G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   cephmon:
     count: 3
@@ -30,10 +28,8 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
       sfe:
-        network: sfe
         interfaces: [ens4]
   mds:
     count: 3
@@ -43,10 +39,8 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
       sfe:
-        network: sfe
         interfaces: [ens4]
   haproxy:
     count: 1
@@ -56,7 +50,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   antora:
     count: 1
@@ -66,7 +59,6 @@ virtual:
     disk: 16G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   mysql:
     count: 3
@@ -76,7 +68,7 @@ virtual:
     disk: 128G
     networks:
       management:
-        network: management
+
         interfaces: [ens3]
   rabbitmq:
     count: 3
@@ -86,7 +78,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   memcached:
     count: 3
@@ -96,7 +87,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   keystone:
     count: 3
@@ -106,7 +96,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   glance:
     count: 2
@@ -116,10 +105,8 @@ virtual:
     disk: 64G
     networks:
       management:
-        network: management
         interfaces: [ens3]
       sfe:
-        network: sfe
         interfaces: [ens4]
   nova:
     count: 2
@@ -129,7 +116,6 @@ virtual:
     disk: 128G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   neutron:
     count: 3
@@ -139,7 +125,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   horizon:
     count: 2
@@ -149,7 +134,6 @@ virtual:
     disk: 128G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   heat:
     count: 2
@@ -159,7 +143,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   cinder:
     count: 3
@@ -169,7 +152,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   volume:
     count: 3
@@ -179,10 +161,8 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
       sfe:
-        network: sfe
         interfaces: [ens4]
   designate:
     count: 3
@@ -192,7 +172,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   bind:
     count: 3
@@ -202,7 +181,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   swift:
     count: 2
@@ -212,10 +190,8 @@ virtual:
     disk: 64G
     networks:
       management:
-        network: management
         interfaces: [ens3]
       sfe:
-        network: sfe
         interfaces: [ens4]
   zun:
     count: 2
@@ -225,7 +201,6 @@ virtual:
     disk: 64G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   placement:
     count: 2
@@ -235,7 +210,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   graylog:
     count: 1
@@ -245,7 +219,6 @@ virtual:
     disk: 512G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   network:
     count: 3
@@ -255,13 +228,10 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
       public:
-        network: public
         interfaces: [ens4]
       private:
-        network: private
         interfaces: [ens5]
   ovsdb:
     count: 3
@@ -271,7 +241,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   barbican:
     count: 2
@@ -281,7 +250,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   magnum:
     count: 2
@@ -291,7 +259,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   sahara:
     count: 2
@@ -301,7 +268,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   manila:
     count: 3
@@ -311,7 +277,6 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
   share:
     count: 3
@@ -321,10 +286,8 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]
       sfe:
-        network: sfe
         interfaces: [ens4]
   etcd:
     count: 3
@@ -334,5 +297,4 @@ virtual:
     disk: 32G
     networks:
       management:
-        network: management
         interfaces: [ens3]

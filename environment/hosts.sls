@@ -15,10 +15,9 @@
 
 ## networks: specify how you want your final, post-deployment network to be configured.
 ##   interface entries: top level definition will be the name of the physical interface
-##     network: the network to which it will bind
+##     managed: whether or not the builtin networking state should manage the configuration.  boolean, defaults to True
 ##     interfaces: list of interfaces that will bind to the network.  If the list is <1, it implies a bond.
 ##     bridge: true if a bridged interface, otherwise false or omitted (implicit false)
-##     vlan: vlanID if a vlan, otherwise false or omitted (implicit false)
 
 hosts:
   controller:
@@ -39,19 +38,15 @@ hosts:
         - rootfs
     networks:
       management:
-        network: management
         interfaces: [enp97s0f0]
         bridge: true
       sfe:
-        network: sfe
         interfaces: [enp97s0f1]
         bridge: true
       public:
-        network: public
         interfaces: [enp113s0f0]
         bridge: true
       private:
-        network: private
         interfaces: [enp113s0f1]
         bridge: true
   storage:
@@ -80,13 +75,10 @@ hosts:
     disk: SAMSUNG MZ1LW960HMJP-00003
     networks:
       management:
-        network: management
         interfaces: [ens2f0]
       sfe:
-        network: sfe
         interfaces: [ens2f1]
       sbe:
-        network: sbe
         interfaces: [ens1f0]
   compute:
     role: compute
@@ -115,13 +107,10 @@ hosts:
         network: management
         interfaces: [enp97s0f0]
       sfe:
-        network: sfe
         interfaces: [enp97s0f1]
       public:
-        network: public
         interfaces: [enp113s0f0]
       private:
-        network: private
         interfaces: [enp113s0f1]
   container:
     role: container
@@ -136,14 +125,10 @@ hosts:
     disk: Micron_9200_MTFDHAL1T6TCU
     networks:
       management:
-        network: management
         interfaces: [enp97s0f0]
       sfe:
-        network: sfe
         interfaces: [enp97s0f1]
       public:
-        network: public
         interfaces: [enp113s0f0]
       private:
-        network: private
         interfaces: [enp113s0f1]
