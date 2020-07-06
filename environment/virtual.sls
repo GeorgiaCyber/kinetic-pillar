@@ -68,7 +68,6 @@ virtual:
     disk: 128G
     networks:
       management:
-
         interfaces: [ens3]
   rabbitmq:
     count: 3
