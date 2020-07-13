@@ -198,17 +198,13 @@ master-config:
       ssl_key: /etc/pki/tls/certs/localhost.key
   reactor: |
     reactor:
-      - salt/minion/*/start:
+{% for event in ['salt/minion/*/start', 'salt/beacon/*/network_settings/result'] %}
+      - {{ event }}:
         - salt://reactor/update_mine.sls
         - salt://reactor/highstate_haproxy.sls
         - salt://reactor/highstate_mysql.sls
         - salt://reactor/update_ceph_conf.sls
         - salt://reactor/highstate_pxe.sls
         - salt://reactor/highstate_dns.sls
-      - salt/beacon/*/network_settings/result:
-        - salt://reactor/update_mine.sls
-        - salt://reactor/highstate_haproxy.sls
-        - salt://reactor/highstate_mysql.sls
-        - salt://reactor/update_ceph_conf.sls
-        - salt://reactor/highstate_pxe.sls
         - salt://reactor/highstate_manila.sls
+{% endfor %}
