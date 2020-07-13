@@ -217,3 +217,5 @@ master-config:
   engines: |
     engines:
       - thorium: {}
+  thorium_top: |
+    thorium_top: salt://thorium/top.sls
