@@ -23,8 +23,9 @@ hosts:
   controller:
     role: controller
     needs:
-      salt: configure
-      pxe: configure
+      configure:
+        salt: configure
+        pxe: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3AC
