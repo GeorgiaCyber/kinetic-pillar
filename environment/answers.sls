@@ -214,8 +214,3 @@ master-config:
         - salt://reactor/highstate_pxe.sls
         - salt://reactor/highstate_dns.sls
         - salt://reactor/highstate_manila.sls
-  engines: |
-    engines:
-      - thorium: {}
-  thorium_top: |
-    thorium_top: salt://thorium/top.sls
