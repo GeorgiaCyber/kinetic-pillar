@@ -11,7 +11,7 @@ base:
   '*':
     - environment/answers
     - environment/types
-    - environment/mine_configs/networking
+    - environment/mine_configs/mine_functions
     - environment/beacon_configs/address_notification
   'pxe':
     - environment/hosts
