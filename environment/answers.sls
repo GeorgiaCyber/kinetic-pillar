@@ -196,6 +196,9 @@ master-config:
       port: 8000
       ssl_crt: /etc/pki/tls/certs/localhost.crt
       ssl_key: /etc/pki/tls/certs/localhost.key
+  runner_dirs: |
+    runner_dirs:
+      - /srv/runners
   reactor: |
     reactor:
       - salt/minion/*/start:
