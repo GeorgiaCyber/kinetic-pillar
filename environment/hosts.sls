@@ -55,6 +55,12 @@ hosts:
         bridge: true
   storage:
     role: storage
+    needs:
+      install:
+        cache: configure
+      configure:
+        cephmon: configure
+        pxe: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
@@ -86,6 +92,12 @@ hosts:
         interfaces: [ens1f0]
   compute:
     role: compute
+    needs:
+      install:
+        cache: configure
+      configure:
+        nova: configure
+        neutron: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
@@ -118,6 +130,12 @@ hosts:
         interfaces: [enp113s0f1]
   container:
     role: container
+    needs:
+      install:
+        cache: configure
+      configure:
+        nova: configure
+        neutron: configure    
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
