@@ -15,7 +15,7 @@ base:
   'pxe':
     - environment/hosts
     - environment/bmc_password
-  'salt*':
+  'salt':
     - environment/bmc_password
     - environment/hosts
     - environment/openstack_services
