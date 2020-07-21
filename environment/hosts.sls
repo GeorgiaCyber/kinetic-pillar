@@ -21,6 +21,7 @@
 
 hosts:
   controller:
+    style: physical
     role: controller
     needs:
       configure:
@@ -54,6 +55,7 @@ hosts:
         interfaces: [enp113s0f1]
         bridge: true
   storage:
+    style: physical
     role: storage
     needs:
       install:
@@ -91,6 +93,7 @@ hosts:
       sbe:
         interfaces: [ens1f0]
   compute:
+    style: physical
     role: compute
     needs:
       install:
@@ -129,13 +132,14 @@ hosts:
       private:
         interfaces: [enp113s0f1]
   container:
+    style: physical
     role: container
     needs:
       install:
         cache: configure
       configure:
         nova: configure
-        neutron: configure    
+        neutron: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
@@ -154,3 +158,409 @@ hosts:
         interfaces: [enp113s0f0]
       private:
         interfaces: [enp113s0f1]
+  cache:
+    style: virtual
+    needs:
+      configure:
+        controller: configure
+    count: 1
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 512G
+    networks:
+      management:
+        interfaces: [ens3]
+  cephmon:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  mds:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  haproxy:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 1
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  antora:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 1
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 16G
+    networks:
+      management:
+        interfaces: [ens3]
+  mysql:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 128G
+    networks:
+      management:
+        interfaces: [ens3]
+  rabbitmq:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  memcached:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  keystone:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  glance:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 64G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  nova:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 8192000
+    cpu: 8
+    os: ubuntu2004
+    disk: 128G
+    networks:
+      management:
+        interfaces: [ens3]
+  neutron:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  horizon:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 8192000
+    cpu: 8
+    os: ubuntu2004
+    disk: 128G
+    networks:
+      management:
+        interfaces: [ens3]
+  heat:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  cinder:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  volume:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  designate:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  bind:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  swift:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 64G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  zun:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 64G
+    networks:
+      management:
+        interfaces: [ens3]
+  placement:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  graylog:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 1
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 512G
+    networks:
+      management:
+        interfaces: [ens3]
+  network:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      public:
+        interfaces: [ens4]
+      private:
+        interfaces: [ens5]
+  ovsdb:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  barbican:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  magnum:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  sahara:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 2
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  manila:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  share:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  etcd:
+    style: virtual
+    needs:
+      configure:
+        blocker: configure    
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
