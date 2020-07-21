@@ -162,7 +162,7 @@ hosts:
     style: virtual
     needs:
       configure:
-        controller: configure
+        blocker: configure
     count: 1
     ram: 8192000
     cpu: 2
@@ -555,7 +555,7 @@ hosts:
     style: virtual
     needs:
       configure:
-        blocker: configure    
+        blocker: configure
     count: 3
     ram: 4096000
     cpu: 2
