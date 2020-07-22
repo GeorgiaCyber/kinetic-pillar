@@ -63,6 +63,7 @@ hosts:
       configure:
         cephmon: configure
         pxe: configure
+        blocker: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
@@ -101,6 +102,7 @@ hosts:
       configure:
         nova: configure
         neutron: configure
+        blocker: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
@@ -140,6 +142,7 @@ hosts:
       configure:
         nova: configure
         neutron: configure
+        blocker: configure        
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
