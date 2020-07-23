@@ -37,6 +37,20 @@ antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.timezone.html
 timezone: America/New_York
 
+## Set your orchestration timeouts
+## generate is how long a generate runner will wait until it gets a phase check
+## event, e.g. {{ type }}/generate/auth/start
+## phasecheck configures the dependence retry states.  You can increase interval and splay
+## and decrease attempts to lower the load on your salt-master somewhat at the cost
+## of overall orchestration completion speed
+timeouts:
+  generate: 7200
+  phasecheck:
+    interval: 30
+    attempts: 240
+    splay: 10
+
+
 ## Specify your endpoint URLs for openstack
 endpoints:
   public: dashboard.gacyberrange.org
