@@ -63,7 +63,6 @@ hosts:
       configure:
         cephmon: configure
         pxe: configure
-        blocker: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
@@ -102,7 +101,6 @@ hosts:
       configure:
         nova: configure
         neutron: configure
-        blocker: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
@@ -142,7 +140,7 @@ hosts:
       configure:
         nova: configure
         neutron: configure
-        blocker: configure        
+        blocker: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
@@ -177,8 +175,10 @@ hosts:
   cephmon:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -192,8 +192,11 @@ hosts:
   mds:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        cephmon: configure
+        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -207,8 +210,10 @@ hosts:
   haproxy:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 1
     ram: 8192000
     cpu: 4
@@ -220,8 +225,11 @@ hosts:
   antora:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
     count: 1
     ram: 4096000
     cpu: 2
@@ -233,8 +241,11 @@ hosts:
   mysql:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -246,8 +257,10 @@ hosts:
   rabbitmq:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -259,8 +272,10 @@ hosts:
   memcached:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 3
     ram: 8192000
     cpu: 2
@@ -272,8 +287,13 @@ hosts:
   keystone:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
     count: 3
     ram: 8192000
     cpu: 2
@@ -285,8 +305,14 @@ hosts:
   glance:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
     count: 2
     ram: 8192000
     cpu: 4
@@ -300,8 +326,15 @@ hosts:
   nova:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        placement: configure
     count: 2
     ram: 8192000
     cpu: 8
@@ -313,8 +346,15 @@ hosts:
   neutron:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        ovsdb: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -326,8 +366,12 @@ hosts:
   horizon:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
     count: 2
     ram: 8192000
     cpu: 8
@@ -339,8 +383,14 @@ hosts:
   heat:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
     count: 2
     ram: 8192000
     cpu: 2
@@ -434,8 +484,14 @@ hosts:
   placement:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
     count: 2
     ram: 8192000
     cpu: 2
@@ -447,8 +503,10 @@ hosts:
   graylog:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 1
     ram: 8192000
     cpu: 4
@@ -477,8 +535,10 @@ hosts:
   ovsdb:
     style: virtual
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
