@@ -215,7 +215,7 @@ hosts:
         interfaces: [ens4]
   haproxy:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -231,7 +231,7 @@ hosts:
         interfaces: [ens3]
   antora:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -248,7 +248,7 @@ hosts:
         interfaces: [ens3]
   mysql:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -265,7 +265,7 @@ hosts:
         interfaces: [ens3]
   rabbitmq:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -281,7 +281,7 @@ hosts:
         interfaces: [ens3]
   memcached:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
