@@ -196,7 +196,7 @@ hosts:
         interfaces: [ens4]
   mds:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
