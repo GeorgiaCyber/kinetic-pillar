@@ -23,6 +23,7 @@ hosts:
   controller:
     style: physical
     role: controller
+    enabled: True
     needs:
       configure:
         salt: configure
@@ -57,6 +58,7 @@ hosts:
   storage:
     style: physical
     role: storage
+    enabled: False
     needs:
       install:
         cache: configure
@@ -95,6 +97,7 @@ hosts:
   compute:
     style: physical
     role: compute
+    enabled: False
     needs:
       install:
         cache: configure
@@ -134,13 +137,13 @@ hosts:
   container:
     style: physical
     role: container
+    enabled: False
     needs:
       install:
         cache: configure
       configure:
         nova: configure
         neutron: configure
-        blocker: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
@@ -161,6 +164,7 @@ hosts:
         interfaces: [enp113s0f1]
   cache:
     style: virtual
+    enabled: True
     needs:
       configure:
         controller: configure
@@ -174,6 +178,7 @@ hosts:
         interfaces: [ens3]
   cephmon:
     style: virtual
+    enabled: True
     needs:
       install:
         cache: configure
@@ -191,6 +196,7 @@ hosts:
         interfaces: [ens4]
   mds:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -209,6 +215,7 @@ hosts:
         interfaces: [ens4]
   haproxy:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -224,6 +231,7 @@ hosts:
         interfaces: [ens3]
   antora:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -240,6 +248,7 @@ hosts:
         interfaces: [ens3]
   mysql:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -256,6 +265,7 @@ hosts:
         interfaces: [ens3]
   rabbitmq:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -271,6 +281,7 @@ hosts:
         interfaces: [ens3]
   memcached:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -286,6 +297,7 @@ hosts:
         interfaces: [ens3]
   keystone:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -304,6 +316,7 @@ hosts:
         interfaces: [ens3]
   glance:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -325,6 +338,7 @@ hosts:
         interfaces: [ens4]
   nova:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -345,6 +359,7 @@ hosts:
         interfaces: [ens3]
   neutron:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -365,6 +380,7 @@ hosts:
         interfaces: [ens3]
   horizon:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -382,6 +398,7 @@ hosts:
         interfaces: [ens3]
   heat:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -401,6 +418,7 @@ hosts:
         interfaces: [ens3]
   cinder:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -414,6 +432,7 @@ hosts:
         interfaces: [ens3]
   volume:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -429,6 +448,7 @@ hosts:
         interfaces: [ens4]
   designate:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -442,6 +462,7 @@ hosts:
         interfaces: [ens3]
   bind:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -455,6 +476,7 @@ hosts:
         interfaces: [ens3]
   swift:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -470,6 +492,7 @@ hosts:
         interfaces: [ens4]
   zun:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -483,6 +506,7 @@ hosts:
         interfaces: [ens3]
   placement:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -502,6 +526,7 @@ hosts:
         interfaces: [ens3]
   graylog:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -517,6 +542,7 @@ hosts:
         interfaces: [ens3]
   network:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -534,6 +560,7 @@ hosts:
         interfaces: [ens5]
   ovsdb:
     style: virtual
+    enabled: False
     needs:
       install:
         cache: configure
@@ -549,6 +576,7 @@ hosts:
         interfaces: [ens3]
   barbican:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -562,6 +590,7 @@ hosts:
         interfaces: [ens3]
   magnum:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -575,6 +604,7 @@ hosts:
         interfaces: [ens3]
   sahara:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -588,6 +618,7 @@ hosts:
         interfaces: [ens3]
   manila:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -601,6 +632,7 @@ hosts:
         interfaces: [ens3]
   share:
     style: virtual
+    enabled: False
     needs:
       configure:
         blocker: configure
@@ -616,6 +648,7 @@ hosts:
         interfaces: [ens4]
   etcd:
     style: virtual
+    enabled: False    
     needs:
       configure:
         blocker: configure
