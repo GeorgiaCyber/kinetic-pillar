@@ -58,7 +58,7 @@ hosts:
   storage:
     style: physical
     role: storage
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -648,7 +648,7 @@ hosts:
         interfaces: [ens4]
   etcd:
     style: virtual
-    enabled: False    
+    enabled: False
     needs:
       configure:
         blocker: configure
