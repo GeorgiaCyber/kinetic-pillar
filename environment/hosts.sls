@@ -316,7 +316,7 @@ hosts:
         interfaces: [ens3]
   glance:
     style: virtual
-    enabled: True
+    enabled: False
     needs:
       install:
         cache: configure
@@ -338,7 +338,7 @@ hosts:
         interfaces: [ens4]
   nova:
     style: virtual
-    enabled: True
+    enabled: False
     needs:
       install:
         cache: configure
@@ -508,7 +508,7 @@ hosts:
         interfaces: [ens3]
   placement:
     style: virtual
-    enabled: True
+    enabled: False
     needs:
       install:
         cache: configure
