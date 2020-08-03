@@ -297,7 +297,7 @@ hosts:
         interfaces: [ens3]
   keystone:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -316,7 +316,7 @@ hosts:
         interfaces: [ens3]
   glance:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -338,7 +338,7 @@ hosts:
         interfaces: [ens4]
   nova:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -462,10 +462,12 @@ hosts:
         interfaces: [ens3]
   bind:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -506,7 +508,7 @@ hosts:
         interfaces: [ens3]
   placement:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -526,7 +528,7 @@ hosts:
         interfaces: [ens3]
   graylog:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -648,10 +650,12 @@ hosts:
         interfaces: [ens4]
   etcd:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 3
     ram: 4096000
     cpu: 2
