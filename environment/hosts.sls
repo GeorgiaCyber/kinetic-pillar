@@ -316,7 +316,7 @@ hosts:
         interfaces: [ens3]
   glance:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -338,7 +338,7 @@ hosts:
         interfaces: [ens4]
   nova:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -359,7 +359,7 @@ hosts:
         interfaces: [ens3]
   neutron:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -380,7 +380,7 @@ hosts:
         interfaces: [ens3]
   horizon:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -508,7 +508,7 @@ hosts:
         interfaces: [ens3]
   placement:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -562,7 +562,7 @@ hosts:
         interfaces: [ens5]
   ovsdb:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
