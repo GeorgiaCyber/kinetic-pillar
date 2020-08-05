@@ -254,7 +254,6 @@ hosts:
         cache: configure
       configure:
         controller: configure
-        haproxy: configure
     count: 3
     ram: 8192000
     cpu: 4
