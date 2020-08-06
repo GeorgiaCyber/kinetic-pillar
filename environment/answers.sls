@@ -192,6 +192,8 @@ master-config:
     pillar_roots:
       base:
         - /srv/dynamic_pillar
+  sock_pool_size: |
+    sock_pool_size: 16
   external_auth: |
     external_auth:
       pam:
@@ -216,7 +218,7 @@ master-config:
         - salt://reactor/highstate_pxe.sls
         - salt://reactor/highstate_dns.sls
         - salt://reactor/highstate_manila.sls
-        - salt://reactor/highstate_rabbitmq.sls        
+        - salt://reactor/highstate_rabbitmq.sls
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls
         - salt://reactor/highstate_haproxy.sls
