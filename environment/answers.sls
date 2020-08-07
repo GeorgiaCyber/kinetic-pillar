@@ -193,7 +193,7 @@ master-config:
       base:
         - /srv/dynamic_pillar
   sock_pool_size: |
-    sock_pool_size: 16
+    sock_pool_size: 4
   external_auth: |
     external_auth:
       pam:
