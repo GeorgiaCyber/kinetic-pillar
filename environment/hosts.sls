@@ -97,13 +97,14 @@ hosts:
   compute:
     style: physical
     role: compute
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
       configure:
         nova: configure
         neutron: configure
+        ovsdb: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
