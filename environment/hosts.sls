@@ -478,10 +478,14 @@ hosts:
         interfaces: [ens3]
   swift:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        cephmon: configure
+        storage: configure
+        keystone: configure
     count: 2
     ram: 8192000
     cpu: 4
