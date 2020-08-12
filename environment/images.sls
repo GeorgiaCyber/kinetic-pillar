@@ -10,7 +10,7 @@
 
 images:
   centos8:
-    name: centos-8.0
+    name: centos-8.2
     type: virt-builder
   ubuntu2004:
     name: ubuntu2004
