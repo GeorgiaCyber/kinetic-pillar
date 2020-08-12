@@ -581,8 +581,10 @@ hosts:
     style: virtual
     enabled: False
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -685,7 +687,7 @@ hosts:
         keystone: configure
         cephmon: configure
         mds: configure
-        storage: configure        
+        storage: configure
     count: 3
     ram: 4096000
     cpu: 2
