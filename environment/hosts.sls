@@ -138,13 +138,16 @@ hosts:
   container:
     style: physical
     role: container
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
       configure:
         nova: configure
         neutron: configure
+        ovsdb: configure
+        zun: configure
+        etcd: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
@@ -398,7 +401,7 @@ hosts:
         interfaces: [ens3]
   heat:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
@@ -418,10 +421,18 @@ hosts:
         interfaces: [ens3]
   cinder:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        cephmon: configure
+        storage: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -432,10 +443,17 @@ hosts:
         interfaces: [ens3]
   volume:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        cinder: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -448,10 +466,17 @@ hosts:
         interfaces: [ens4]
   designate:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        bind: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -498,10 +523,16 @@ hosts:
         interfaces: [ens4]
   zun:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
     count: 2
     ram: 8192000
     cpu: 4
@@ -582,10 +613,16 @@ hosts:
         interfaces: [ens3]
   barbican:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
     count: 2
     ram: 4096000
     cpu: 2
@@ -596,10 +633,16 @@ hosts:
         interfaces: [ens3]
   magnum:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
     count: 2
     ram: 4096000
     cpu: 2
@@ -610,10 +653,16 @@ hosts:
         interfaces: [ens3]
   sahara:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
     count: 2
     ram: 4096000
     cpu: 2
@@ -624,10 +673,19 @@ hosts:
         interfaces: [ens3]
   manila:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        cephmon: configure
+        mds: configure
+        storage: configure        
     count: 3
     ram: 4096000
     cpu: 2
@@ -638,10 +696,20 @@ hosts:
         interfaces: [ens3]
   share:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
+      install:
+        cache: configure
       configure:
-        blocker: configure
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        manila: configure
+        cephmon: configure
+        mds: configure
+        storage: configure
     count: 3
     ram: 4096000
     cpu: 2
