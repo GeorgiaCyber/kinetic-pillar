@@ -104,7 +104,6 @@ hosts:
       configure:
         nova: configure
         neutron: configure
-        ovsdb: configure
     os: centos8
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
@@ -145,7 +144,6 @@ hosts:
       configure:
         nova: configure
         neutron: configure
-        ovsdb: configure
         zun: configure
         etcd: configure
     os: centos8
@@ -372,7 +370,7 @@ hosts:
         memcached: configure
         rabbitmq: configure
         keystone: configure
-        ovsdb: configure
+#        ovsdb: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -600,7 +598,7 @@ hosts:
         interfaces: [ens5]
   ovsdb:
     style: virtual
-    enabled: True
+    enabled: False
     needs:
       install:
         cache: configure
