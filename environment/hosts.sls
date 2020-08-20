@@ -126,7 +126,6 @@ hosts:
     disk: Micron_9200_MTFDHAL1T6TCU
     networks:
       management:
-        network: management
         interfaces: [enp97s0f0]
       sfe:
         interfaces: [enp97s0f1]
