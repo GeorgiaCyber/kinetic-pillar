@@ -579,12 +579,13 @@ hosts:
         interfaces: [ens3]
   network:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
       configure:
         controller: configure
+        neutron: configure
     count: 3
     ram: 8192000
     cpu: 4
