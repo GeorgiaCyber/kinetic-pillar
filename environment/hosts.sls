@@ -369,7 +369,7 @@ hosts:
         memcached: configure
         rabbitmq: configure
         keystone: configure
-#        ovsdb: configure
+        ovsdb: configure
     count: 5
     ram: 8192000
     cpu: 4
@@ -576,7 +576,7 @@ hosts:
         interfaces: [ens3]
   network:
     style: virtual
-    enabled: True
+    enabled: False
     needs:
       install:
         cache: configure
@@ -597,7 +597,7 @@ hosts:
         interfaces: [ens5]
   ovsdb:
     style: virtual
-    enabled: False
+    enabled: True
     needs:
       install:
         cache: configure
