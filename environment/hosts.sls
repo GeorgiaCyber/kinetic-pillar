@@ -370,7 +370,7 @@ hosts:
         rabbitmq: configure
         keystone: configure
 #        ovsdb: configure
-    count: 3
+    count: 5
     ram: 8192000
     cpu: 4
     os: ubuntu2004
