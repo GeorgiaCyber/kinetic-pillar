@@ -218,7 +218,6 @@ master-config:
         - salt://reactor/highstate_pxe.sls
         - salt://reactor/highstate_dns.sls
         - salt://reactor/highstate_manila.sls
-        - salt://reactor/highstate_rabbitmq.sls
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls
         - salt://reactor/highstate_haproxy.sls
@@ -227,4 +226,3 @@ master-config:
         - salt://reactor/highstate_pxe.sls
         - salt://reactor/highstate_dns.sls
         - salt://reactor/highstate_manila.sls
-        - salt://reactor/highstate_rabbitmq.sls
