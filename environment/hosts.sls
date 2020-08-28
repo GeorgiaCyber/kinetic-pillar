@@ -308,7 +308,7 @@ hosts:
         rabbitmq: configure
     count: 3
     ram: 8192000
-    cpu: 2
+    cpu: 4
     os: ubuntu2004
     disk: 32G
     networks:
@@ -349,7 +349,7 @@ hosts:
         rabbitmq: configure
         keystone: configure
         placement: configure
-    count: 2
+    count: 3
     ram: 8192000
     cpu: 8
     os: ubuntu2004
@@ -430,7 +430,7 @@ hosts:
         keystone: configure
         cephmon: configure
         storage: configure
-    count: 3
+    count: 2
     ram: 4096000
     cpu: 2
     os: ubuntu2004
