@@ -326,6 +326,8 @@ hosts:
         memcached: configure
         rabbitmq: configure
         keystone: configure
+        storage: configure
+        cephmon: configure
     count: 2
     ram: 8192000
     cpu: 4
