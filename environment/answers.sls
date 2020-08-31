@@ -85,8 +85,6 @@ haproxy:
 authorized_keys:
   AAAAC3NzaC1lZDI1NTE5AAAAIIKw+cBx9BBKcoXKLxMLVoGCD7znZqBjnMkaIipAikQJ:
     encoding: ed25519
-  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKg7GHPymvheHKaaMEPB7Vp9naGAAl+9oA6VaNFNIzGid1cPAJRbeTFAgqOzdv1Etczc/bL/MeTOnckduiC0axijKRqFDeg+lLZydee4W6C2CW3+K4Ti4D3XRIJTv5mYUfLA+iOk2dDVpE/6PVsHOetofWzKrbNIO3jj7sPHsnzvJvHPrlWzidq1/bmAjaov/RCH3yzy9QlD9rM6SS/umTPMTaWilKN2OPn4zGbUmnZ1pX5hfw1UxbdtgJmnwReTY83Ar01ULr1wrydLKtq2jF2E1SCfHveVc5JyYWU7Uh3gXEUfQvFKF/cCOOIelhWq0wHSe7JZqktNS0AqVyl7RLgOACiT86yw7DKGXMXCaBOsQQAfZdUKXUz3z2Zbx+pYnAVuVnhUnYHvse/DfEJyLQVp7/NepNG6AjNwVPwz7U/kRz+r+ABPoTf+s3Q8MOARYGSmBEX/cmrEezTIEp0kJomSPPwby7qz01pzDbQCigVbptQVAZ/EMmggPIUZA3FY0=:
-    encoding: ssh-rsa
 
 ## Specify the perma-URL to your syslog server
 ## This is *not* the built-in server, but rather an upstream one
