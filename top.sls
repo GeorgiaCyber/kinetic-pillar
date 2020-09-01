@@ -10,8 +10,7 @@
 base:
   '*':
     - environment/answers
-    - environment/types
-    - environment/mine_configs/networking
+    - environment/mine_configs/mine_functions
     - environment/beacon_configs/address_notification
   'pxe':
     - environment/hosts
@@ -19,22 +18,18 @@ base:
   'salt*':
     - environment/bmc_password
     - environment/hosts
-    - environment/virtual
-    - environment/map
     - environment/openstack_services
   'cache*':
-    - environment/virtual
     - environment/hosts
     - environment/images
   'controller*':
     - environment/hosts
     - environment/images
-    - environment/virtual
   'cephmon*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'mds*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'storage*':
     - environment/hosts
@@ -47,83 +42,83 @@ base:
     - environment/hosts
     - environment/openstack_services
   'haproxy*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
     - environment/danos_password
   'antora*':
-    - environment/virtual
+    - environment/hosts
     - environment/schedule_configs/antora_schedule
   'mysql*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'rabbitmq*':
-    - environment/virtual
+    - environment/hosts
   'graylog*':
-    - environment/virtual
+    - environment/hosts
   'memcached*':
-    - environment/virtual
+    - environment/hosts
   'keystone*':
-    - environment/virtual
+    - environment/hosts
     - environment/bind_password
     - environment/ldap_ca
     - environment/openstack_services
   'glance*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
     - environment/images
   'nova*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
     - environment/flavors
   'placement*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'etcd*':
-    - environment/virtual
+    - environment/hosts
   'barbican*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'sahara*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'magnum*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'neutron*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'network*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'ovsdb*':
-    - environment/virtual
+    - environment/hosts
   'horizon*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'heat*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'cinder*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'volume*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'manila*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'share*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'designate*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'bind*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'swift*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services
   'zun*':
-    - environment/virtual
+    - environment/hosts
     - environment/openstack_services

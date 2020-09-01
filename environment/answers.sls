@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: i-am-speed
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: i-am-speed
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -37,6 +37,19 @@ antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.timezone.html
 timezone: America/New_York
 
+## Set your orchestration timeouts
+## generate is how long a generate runner will wait until it gets a phase check
+## event, e.g. {{ type }}/generate/auth/start
+## phasecheck configures the dependence retry states.  You can increase interval and splay
+## and decrease attempts to lower the load on your salt-master somewhat at the cost
+## of overall orchestration completion speed
+timeouts:
+  generate: 7200
+  phasecheck:
+    interval: 30
+    attempts: 240
+    splay: 10
+
 ## Specify your endpoint URLs for openstack
 endpoints:
   public: dashboard.gacyberrange.org
@@ -62,11 +75,7 @@ keystone_ldap_configuration:
 
 ## Specify your haproxy TLS options
 haproxy:
-  tls_domains:
-    - dashboard.gacyberrange.org
-    - console.gacyberrange.org
-    - docs.gacyberrange.org
-  tls_email: testing12345678@somefakedomain.website
+  acme_email: testing12345678@somefakedomain.website
   dashboard_domain: dashboard.gacyberrange.org
   console_domain: console.gacyberrange.org
   docs_domain: docs.gacyberrange.org
@@ -76,8 +85,6 @@ haproxy:
 authorized_keys:
   AAAAC3NzaC1lZDI1NTE5AAAAIIKw+cBx9BBKcoXKLxMLVoGCD7znZqBjnMkaIipAikQJ:
     encoding: ed25519
-  AAAAB3NzaC1yc2EAAAABJQAAAQEAs9JlRHUaXiXNjMtIfdBDFO73n2DYzQcNIF1Gd5U5OjJ0bBAx0K/C2k3vSWZlfey6/OgP6QIzZGApbzNu3wONfG8EYpuprwLjRtJ6MQnO4lRMqXkhmIhZz9bfqjUWwp4Yi27Ryv/LE5/6+4pSC9v99Ieeha0q12BeQfXEF1of6biT3bPzoX5OtiyKXiohj3V+L1kWUxHdEBj7np19GvLeXL7KHWmr229q8WT3nZkQfz88UXYPRMhQYLSorGVEsum7NnyzcPp09U+34cJ6IyW//pk0HLCnDMqwqE1PT9KadvgnGkdsX6IBCLg51I5LDRm+Y2AS+s0ucqOIsXbvhvYUhQ==:
-    encoding: ssh-rsa
 
 ## Specify the perma-URL to your syslog server
 ## This is *not* the built-in server, but rather an upstream one
@@ -185,6 +192,8 @@ master-config:
     pillar_roots:
       base:
         - /srv/dynamic_pillar
+  sock_pool_size: |
+    sock_pool_size: 4
   external_auth: |
     external_auth:
       pam:
@@ -196,6 +205,9 @@ master-config:
       port: 8000
       ssl_crt: /etc/pki/tls/certs/localhost.crt
       ssl_key: /etc/pki/tls/certs/localhost.key
+  runner_dirs: |
+    runner_dirs:
+      - /srv/runners
   reactor: |
     reactor:
       - salt/minion/*/start:
@@ -205,18 +217,12 @@ master-config:
         - salt://reactor/update_ceph_conf.sls
         - salt://reactor/highstate_pxe.sls
         - salt://reactor/highstate_dns.sls
+        - salt://reactor/highstate_manila.sls
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls
         - salt://reactor/highstate_haproxy.sls
         - salt://reactor/highstate_mysql.sls
         - salt://reactor/update_ceph_conf.sls
         - salt://reactor/highstate_pxe.sls
+        - salt://reactor/highstate_dns.sls
         - salt://reactor/highstate_manila.sls
-      - create/glance/pool:
-        - salt://reactor/create_glance_pool.sls
-      - create/nova/pool:
-        - salt://reactor/create_nova_pool.sls
-      - create/cinder/pool:
-        - salt://reactor/create_cinder_pool.sls
-      - create/manila/filesystem:
-        - salt://reactor/create_manila_filesystem.sls

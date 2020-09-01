@@ -21,7 +21,13 @@
 
 hosts:
   controller:
+    style: physical
     role: controller
+    enabled: True
+    needs:
+      configure:
+        salt: configure
+        pxe: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3AC
@@ -50,7 +56,15 @@ hosts:
         interfaces: [enp113s0f1]
         bridge: true
   storage:
+    style: physical
     role: storage
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        cephmon: configure
+        pxe: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
@@ -81,7 +95,15 @@ hosts:
       sbe:
         interfaces: [ens1f0]
   compute:
+    style: physical
     role: compute
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        nova: configure
+        neutron: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
@@ -104,7 +126,6 @@ hosts:
     disk: Micron_9200_MTFDHAL1T6TCU
     networks:
       management:
-        network: management
         interfaces: [enp97s0f0]
       sfe:
         interfaces: [enp97s0f1]
@@ -113,7 +134,17 @@ hosts:
       private:
         interfaces: [enp113s0f1]
   container:
+    style: physical
     role: container
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        nova: configure
+        neutron: configure
+        zun: configure
+        etcd: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
@@ -132,3 +163,578 @@ hosts:
         interfaces: [enp113s0f0]
       private:
         interfaces: [enp113s0f1]
+  cache:
+    style: virtual
+    enabled: True
+    needs:
+      configure:
+        controller: configure
+    count: 1
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 512G
+    networks:
+      management:
+        interfaces: [ens3]
+  cephmon:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  mds:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        cephmon: configure
+        controller: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  haproxy:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 1
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  antora:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+    count: 1
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 16G
+    networks:
+      management:
+        interfaces: [ens3]
+  mysql:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 128G
+    networks:
+      management:
+        interfaces: [ens3]
+  rabbitmq:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  memcached:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 3
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  keystone:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  glance:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        storage: configure
+        cephmon: configure
+    count: 2
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 64G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  nova:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        placement: configure
+    count: 3
+    ram: 8192000
+    cpu: 8
+    os: ubuntu2004
+    disk: 128G
+    networks:
+      management:
+        interfaces: [ens3]
+  neutron:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        ovsdb: configure
+    count: 5
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  horizon:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+    count: 2
+    ram: 8192000
+    cpu: 8
+    os: ubuntu2004
+    disk: 128G
+    networks:
+      management:
+        interfaces: [ens3]
+  heat:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+    count: 2
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  cinder:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        cephmon: configure
+        storage: configure
+    count: 2
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  volume:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        cinder: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  designate:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        bind: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  bind:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  swift:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        cephmon: configure
+        storage: configure
+        keystone: configure
+    count: 2
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 64G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  zun:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+    count: 2
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 64G
+    networks:
+      management:
+        interfaces: [ens3]
+  placement:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+    count: 2
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  graylog:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 1
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 512G
+    networks:
+      management:
+        interfaces: [ens3]
+  network:
+    style: virtual
+    enabled: False
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        neutron: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      private:
+        interfaces: [ens4]
+      public:
+        interfaces: [ens5]
+  ovsdb:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 3
+    ram: 8192000
+    cpu: 4
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  barbican:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+    count: 2
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  magnum:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+    count: 2
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  sahara:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+    count: 2
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  manila:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        cephmon: configure
+        mds: configure
+        storage: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  share:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+        haproxy: configure
+        memcached: configure
+        rabbitmq: configure
+        keystone: configure
+        manila: configure
+        cephmon: configure
+        mds: configure
+        storage: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+      sfe:
+        interfaces: [ens4]
+  etcd:
+    style: virtual
+    enabled: True
+    needs:
+      install:
+        cache: configure
+      configure:
+        controller: configure
+    count: 3
+    ram: 4096000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
