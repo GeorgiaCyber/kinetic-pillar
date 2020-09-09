@@ -371,7 +371,9 @@ hosts:
         memcached: configure
         rabbitmq: configure
         keystone: configure
+{% if pillar['neutron']['backend'] == "networking-ovn" %}
         ovsdb: configure
+{% endif %}
     count: 5
     ram: 8192000
     cpu: 4
