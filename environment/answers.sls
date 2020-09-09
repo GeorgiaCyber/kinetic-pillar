@@ -135,7 +135,7 @@ networking:
 ## neutron networking backend.  Valid values are networking-ovn
 ## or linuxbridge
 neutron:
-  backend: networking-ovn
+  backend: linuxbridge
 
 ## nova configuration options.  Ref: https://docs.openstack.org/nova/latest/configuration/config.html
 nova:
