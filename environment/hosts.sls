@@ -24,10 +24,6 @@ hosts:
     style: physical
     role: controller
     enabled: True
-    needs:
-      configure:
-        salt: configure
-        pxe: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3AC
@@ -59,12 +55,6 @@ hosts:
     style: physical
     role: storage
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        cephmon: configure
-        pxe: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
@@ -98,12 +88,6 @@ hosts:
     style: physical
     role: compute
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        nova: configure
-        neutron: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
@@ -137,14 +121,6 @@ hosts:
     style: physical
     role: container
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        nova: configure
-        neutron: configure
-        zun: configure
-        etcd: configure
     os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
@@ -166,9 +142,6 @@ hosts:
   cache:
     style: virtual
     enabled: True
-    needs:
-      configure:
-        controller: configure
     count: 1
     ram: 8192000
     cpu: 2
@@ -180,11 +153,6 @@ hosts:
   cephmon:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -198,12 +166,6 @@ hosts:
   mds:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        cephmon: configure
-        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -217,11 +179,6 @@ hosts:
   haproxy:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 1
     ram: 8192000
     cpu: 4
@@ -233,12 +190,6 @@ hosts:
   antora:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
     count: 1
     ram: 4096000
     cpu: 2
@@ -250,11 +201,6 @@ hosts:
   mysql:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -266,11 +212,6 @@ hosts:
   rabbitmq:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -282,11 +223,6 @@ hosts:
   memcached:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 3
     ram: 8192000
     cpu: 2
@@ -298,14 +234,6 @@ hosts:
   keystone:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -317,17 +245,6 @@ hosts:
   glance:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
-        storage: configure
-        cephmon: configure
     count: 2
     ram: 8192000
     cpu: 4
@@ -341,16 +258,6 @@ hosts:
   nova:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
-        placement: configure
     count: 3
     ram: 8192000
     cpu: 8
@@ -362,16 +269,6 @@ hosts:
   neutron:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
-        ovsdb: configure
     count: 5
     ram: 8192000
     cpu: 4
@@ -383,13 +280,6 @@ hosts:
   horizon:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
     count: 2
     ram: 8192000
     cpu: 8
@@ -401,15 +291,6 @@ hosts:
   heat:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
     count: 2
     ram: 8192000
     cpu: 2
@@ -421,17 +302,6 @@ hosts:
   cinder:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
-        cephmon: configure
-        storage: configure
     count: 2
     ram: 4096000
     cpu: 2
@@ -443,16 +313,6 @@ hosts:
   volume:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
-        cinder: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -466,16 +326,6 @@ hosts:
   designate:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
-        bind: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -487,11 +337,6 @@ hosts:
   bind:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -503,13 +348,6 @@ hosts:
   swift:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        cephmon: configure
-        storage: configure
-        keystone: configure
     count: 2
     ram: 8192000
     cpu: 4
@@ -523,15 +361,6 @@ hosts:
   zun:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
     count: 2
     ram: 8192000
     cpu: 4
@@ -543,15 +372,6 @@ hosts:
   placement:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
     count: 2
     ram: 8192000
     cpu: 2
@@ -563,11 +383,6 @@ hosts:
   graylog:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 1
     ram: 8192000
     cpu: 4
@@ -579,12 +394,6 @@ hosts:
   network:
     style: virtual
     enabled: False
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        neutron: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -600,11 +409,6 @@ hosts:
   ovsdb:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 3
     ram: 8192000
     cpu: 4
@@ -616,15 +420,6 @@ hosts:
   barbican:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
     count: 2
     ram: 4096000
     cpu: 2
@@ -636,15 +431,6 @@ hosts:
   magnum:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
     count: 2
     ram: 4096000
     cpu: 2
@@ -656,15 +442,6 @@ hosts:
   sahara:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
     count: 2
     ram: 4096000
     cpu: 2
@@ -676,18 +453,6 @@ hosts:
   manila:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
-        cephmon: configure
-        mds: configure
-        storage: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -699,19 +464,6 @@ hosts:
   share:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
-        haproxy: configure
-        memcached: configure
-        rabbitmq: configure
-        keystone: configure
-        manila: configure
-        cephmon: configure
-        mds: configure
-        storage: configure
     count: 3
     ram: 4096000
     cpu: 2
@@ -725,11 +477,6 @@ hosts:
   etcd:
     style: virtual
     enabled: True
-    needs:
-      install:
-        cache: configure
-      configure:
-        controller: configure
     count: 3
     ram: 4096000
     cpu: 2
