@@ -137,7 +137,6 @@ networking:
 neutron:
   backend: networking-ovn
 
-
 ## nova configuration options.  Ref: https://docs.openstack.org/nova/latest/configuration/config.html
 nova:
   token_ttl: 3600
