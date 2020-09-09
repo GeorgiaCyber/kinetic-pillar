@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: console-expiry
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: console-expiry
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
@@ -64,14 +64,16 @@ common_ldap_configuration:
   user_dn: cn=users,cn=accounts,dc=foo,dc=bar
   group_dn: cn=groups,cn=accounts,dc=foo,dc=bar
 
-## keystone-specific LDAP config.  user_filter should be a group that all range users
+## keystone-specific config.  user_filter should be a group that all range users
 ## are a member of.  group_filter should be a group that all range groups are a member
 ## of.  Keystone_domain is the domain you want to use to access your LDAP accounts on
 ## the horizon login page
-keystone_ldap_configuration:
-  user_filter: (memberOf=cn=foo_user_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
-  group_filter: (memberOf=cn=foo_group_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
-  keystone_domain: ipa
+keystone:
+  ldap_configuration:
+    user_filter: (memberOf=cn=foo_user_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
+    group_filter: (memberOf=cn=foo_group_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
+    keystone_domain: ipa
+  token_expiration: 14400
 
 ## Specify your haproxy TLS options
 haproxy:
@@ -135,6 +137,11 @@ networking:
 neutron:
   backend: networking-ovn
 
+
+## nova configuration options.  Ref: https://docs.openstack.org/nova/latest/configuration/config.html
+nova:
+  token_ttl: 3600
+
 ## the theme you wish to install in horizon (set url to false if none).  URL should point to git repo
 ## name should be the top-level directory you wish to extract the theme to
 ## Site branding and site link should match appropriate values.
@@ -146,6 +153,7 @@ horizon:
     name: gcr
     site_branding: Georgia Cyber Range
     site_branding_link: https://www.gacybercenter.org/
+  session_timeout: 7200
 
 ## specify which docker image you would wish to use for the cloud shell functionality
 zun:
