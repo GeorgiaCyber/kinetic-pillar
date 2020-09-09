@@ -137,6 +137,11 @@ networking:
 neutron:
   backend: networking-ovn
 
+
+## nova configuration options.  Ref: https://docs.openstack.org/nova/latest/configuration/config.html
+nova:
+  token_ttl: 3600
+
 ## the theme you wish to install in horizon (set url to false if none).  URL should point to git repo
 ## name should be the top-level directory you wish to extract the theme to
 ## Site branding and site link should match appropriate values.
