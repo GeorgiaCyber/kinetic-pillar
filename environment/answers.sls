@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 gitfs_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: console-expiry
+  branch: neutron-deps
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 gitfs_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: console-expiry
+  branch: neutron-deps
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 gitfs_other_configurations:
