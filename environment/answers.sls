@@ -1,28 +1,25 @@
 #!yaml|gpg
 
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
-gitfs_remote_configuration:
+kinetic_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: neutron-deps
+  branch: other-roots
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
-gitfs_pillar_configuration:
+kinetic_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: neutron-deps
+  branch: other-roots
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
-gitfs_other_configurations:
-  stigs:
-    url: https://git.cybbh.space/vta/kinetic-stigs.git
-    branch: master
-
-## Salt transport mechanism.  Valid values are zreomq and tcp
-## See https://docs.saltstack.com/en/latest/topics/transports/
-salt_transport: zeromq
-
-## Salt version to pin your release to.  Set to 'latest' to always use the latest stable release.
-## See https://github.com/saltstack/salt-bootstrap/blob/develop/bootstrap-salt.sh
-salt_version: 3001
+## Ex:
+# gitfs_other_configurations:
+#   security:
+#     url: https://somerepohost.whatever/security.git
+#     branch: master
+#   other_thing:
+#     url: https://somerepohost.whatever/other_thing.git
+#     branch: master
+gitfs_other_configurations: {}
 
 ## DNS A record that points to your salt master for this environment
 master_record: salt.internal.georgiacyber.org
