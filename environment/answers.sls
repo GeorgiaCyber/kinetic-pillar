@@ -11,13 +11,15 @@ kinetic_pillar_configuration:
   branch: other-roots
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
-gitfs_other_configurations:
-  stigs:
-    url: https://git.cybbh.space/vta/kinetic-stigs.git
-    branch: master
-  other_thing:
-    url: https://whatever
-    branch: master
+## Ex:
+# gitfs_other_configurations:
+#   security:
+#     url: https://somerepohost.whatever/security.git
+#     branch: master
+#   other_thing:
+#     url: https://somerepohost.whatever/other_thing.git
+#     branch: master
+gitfs_other_configurations: {}
 
 ## Salt transport mechanism.  Valid values are zreomq and tcp
 ## See https://docs.saltstack.com/en/latest/topics/transports/
