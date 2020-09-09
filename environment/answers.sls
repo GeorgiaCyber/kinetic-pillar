@@ -21,14 +21,6 @@ kinetic_pillar_configuration:
 #     branch: master
 gitfs_other_configurations: {}
 
-## Salt transport mechanism.  Valid values are zreomq and tcp
-## See https://docs.saltstack.com/en/latest/topics/transports/
-salt_transport: zeromq
-
-## Salt version to pin your release to.  Set to 'latest' to always use the latest stable release.
-## See https://github.com/saltstack/salt-bootstrap/blob/develop/bootstrap-salt.sh
-salt_version: 3001
-
 ## DNS A record that points to your salt master for this environment
 master_record: salt.internal.georgiacyber.org
 
