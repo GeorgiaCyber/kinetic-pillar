@@ -15,6 +15,9 @@ gitfs_other_configurations:
   stigs:
     url: https://git.cybbh.space/vta/kinetic-stigs.git
     branch: master
+  other_thing:
+    url: https://whatever
+    branch: master
 
 ## Salt transport mechanism.  Valid values are zreomq and tcp
 ## See https://docs.saltstack.com/en/latest/topics/transports/
