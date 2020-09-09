@@ -18,98 +18,10 @@
 ##
 
 flavors:
-  disk.medium:
-    vcpus: 1
-    ram: 2048
-    disk: 16
-  disk.nano:
-    vcpus: 1
-    ram: 1024
-    disk: 4
-  disk.small:
-    vcpus: 1
-    ram: 2048
-    disk: 8
   m1.nano:
     vcpus: 1
-    ram: 64
-    disk: 0
-  m1.small:
-    vcpus: 2
-    ram: 6144
-    disk: 32
-  m1.medium:
-    vcpus: 2
-    ram: 8192
-    disk: 32
-  mem.medium:
-    vcpus: 1
-    ram: 4096
-    disk: 8
-  mem.nano:
-    vcpus: 1
-    ram: 1024
-    disk: 4
-  mem.small:
-    vcpus: 1
-    ram: 2048
-    disk: 4
-  cpu.nano:
-    vcpus: 2
-    ram: 1024
-    disk: 4
-  cy.large:
-    vcpus: 2
-    ram: 4096
-    disk: 32
-  cy.medium:
-    vcpus: 2
-    ram: 4096
-    disk: 16
-  cy.small:
-    vcpus: 2
-    ram: 2048
-    disk: 8
-  disk.large:
-    vcpus: 2
-    ram: 4096
-    disk: 32
-  mem.large:
-    vcpus: 2
-    ram: 8192
-    disk: 8
-  mem.mega:
-    vcpus: 2
-    ram: 16384
-    disk: 16
-  cpu.small:
-    vcpus: 4
-    ram: 4096
-    disk: 8
-  cy.mega:
-    vcpus: 4
-    ram: 6144
-    disk: 32
-  cpu.medium:
-    vcpus: 6
-    ram: 4096
-    disk: 8
-  cpu.large:
-    vcpus: 8
-    ram: 4096
-    disk: 16
-  cpu.mega:
-    vcpus: 12
-    ram: 8192
-    disk: 12
-  mem.es1:
-    vcpus: 4
-    ram: 16384
-    disk: 32
-  mem.es2:
-    vcpus: 8
-    ram: 16384
-    disk: 32
+    ram: 128
+    disk: 1
   hack.c1.m1024.d4:
     vcpus: 1
     ram: 1024
