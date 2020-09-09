@@ -73,7 +73,7 @@ keystone:
     user_filter: (memberOf=cn=foo_user_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
     group_filter: (memberOf=cn=foo_group_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
     keystone_domain: ipa
-  token_expiration: 14400 
+  token_expiration: 14400
 
 ## Specify your haproxy TLS options
 haproxy:
@@ -148,6 +148,7 @@ horizon:
     name: gcr
     site_branding: Georgia Cyber Range
     site_branding_link: https://www.gacybercenter.org/
+  session_timeout: 7200
 
 ## specify which docker image you would wish to use for the cloud shell functionality
 zun:
