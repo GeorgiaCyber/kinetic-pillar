@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 kinetic_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: interface-assignment
+  branch: master
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 kinetic_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: interface-assignment
+  branch: master
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 ## Ex:
