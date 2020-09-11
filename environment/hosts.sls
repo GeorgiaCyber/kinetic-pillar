@@ -402,9 +402,9 @@ hosts:
     networks:
       management:
         interfaces: [ens3]
-      private:
-        interfaces: [ens4]
       public:
+        interfaces: [ens4]
+      private:
         interfaces: [ens5]
   ovsdb:
     style: virtual
