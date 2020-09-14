@@ -230,3 +230,5 @@ master-config:
         - salt://reactor/highstate_pxe.sls
         - salt://reactor/highstate_dns.sls
         - salt://reactor/highstate_manila.sls
+      - salt/beacon/*/inotify//var/log/apt-cacher-ng/apt-cacher.err
+        - salt://reactor/acng_maintenance.sls
