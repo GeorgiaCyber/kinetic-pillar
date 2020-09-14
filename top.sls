@@ -22,6 +22,7 @@ base:
   'cache*':
     - environment/hosts
     - environment/images
+    - environment/beacon_configs/cache_errors
   'controller*':
     - environment/hosts
     - environment/images
