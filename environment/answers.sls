@@ -28,10 +28,9 @@ master_record: salt.internal.georgiacyber.org
 pxe_record: pxe.internal.georgiacyber.org
 
 ## Repository for your documentation site
-antora_docs_repo: https://github.com/GeorgiaCyber/kinetic-docs.git
-
-## Repository for your theme/ui customization for the documentation site
-antora_theme_url: https://gitlab.com/gacybercenter/antora-gcc-ui/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=build
+antora:
+  repo_url: https://github.com/GeorgiaCyber/kinetic-docs.git
+  theme_url: https://gitlab.com/gacybercenter/antora-gcc-ui/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=build
 
 ## Specify your timezone
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.timezone.html
