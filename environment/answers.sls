@@ -31,6 +31,7 @@ pxe_record: pxe.internal.georgiacyber.org
 antora:
   repo_url: https://github.com/GeorgiaCyber/kinetic-docs.git
   theme_url: https://gitlab.com/gacybercenter/antora-gcc-ui/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=build
+  theme_hash_url: https://gitlab.com/gacybercenter/antora-gcc-ui/-/jobs/artifacts/master/raw/build/hash?job=build
 
 ## Specify your timezone
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.timezone.html
