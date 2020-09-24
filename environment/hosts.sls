@@ -489,7 +489,7 @@ hosts:
     style: virtual
     enabled: True
     count: 1
-    ram: 8192
+    ram: 8192000
     cpu: 2
     os: ubuntu2004
     disk: 128G
