@@ -485,3 +485,14 @@ hosts:
     networks:
       management:
         interfaces: [ens3]
+  teleport:
+    style: virtual
+    enabled: True
+    count: 1
+    ram: 8192
+    cpu: 2
+    os: ubuntu2004
+    disk: 128G
+    networks:
+      management:
+        interfaces: [ens3]
