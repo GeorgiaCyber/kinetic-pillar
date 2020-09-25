@@ -6,4 +6,5 @@
 ##    "identity:list_projects_for_user": "role:somerole"
 
 policies:
-  keystone: ~
+  keystone: |
+    "identity:list_projects_for_user": "role:somerole"
