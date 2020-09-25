@@ -9,6 +9,7 @@
 
 base:
   '*':
+    - environment/policies
     - environment/answers
     - environment/hosts
     - environment/mine_configs/mine_functions
