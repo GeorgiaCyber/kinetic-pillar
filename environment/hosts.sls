@@ -485,7 +485,7 @@ hosts:
     networks:
       management:
         interfaces: [ens3]
-  teleport:
+  guacamole:
     style: virtual
     enabled: True
     count: 1
