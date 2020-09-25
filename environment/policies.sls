@@ -5,3 +5,8 @@
 ##  keystone: |
 ##    "identity:list_projects_for_user": "role:somerole"
 ##    "identity:get_service_provider": "role:somerole2 and system_scope:all"
+
+policies:
+  keystone: |
+    "identity:list_projects_for_user": "role:somerole"
+    "identity:get_service_provider": "role:somerole2 and system_scope:all"
