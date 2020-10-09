@@ -219,19 +219,11 @@ master-config:
     reactor:
       - salt/minion/*/start:
         - salt://reactor/update_mine.sls
-        - salt://reactor/highstate_haproxy.sls
-        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_notification.sls
         - salt://reactor/update_ceph_conf.sls
-        - salt://reactor/highstate_pxe.sls
-        - salt://reactor/highstate_dns.sls
-        - salt://reactor/highstate_manila.sls
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls
-        - salt://reactor/highstate_haproxy.sls
-        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_notification.sls
         - salt://reactor/update_ceph_conf.sls
-        - salt://reactor/highstate_pxe.sls
-        - salt://reactor/highstate_dns.sls
-        - salt://reactor/highstate_manila.sls
       - salt/beacon/*/inotify//var/log/apt-cacher-ng/apt-cacher.err:
         - salt://reactor/acng_maintenance.sls
