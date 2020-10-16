@@ -24,18 +24,19 @@ openstack_services:
     configuration:
       dbs:
         - glance
-      internal_endpoint:
-        protocol: "https://"
-        port: ":9292"
-        path: /
-      admin_endpoint:
-        protocol: "https://"
-        port: ":9292"
-        path: /
-      public_endpoint:
-        protocol: "https://"
-        port: ":9292"
-        path: /
+      endpoints:
+        internal:
+          protocol: "https://"
+          port: ":9292"
+          path: /
+        admin:
+          protocol: "https://"
+          port: ":9292"
+          path: /
+        public:
+          protocol: "https://"
+          port: ":9292"
+          path: /
   barbican:
     configuration:
       dbs:
