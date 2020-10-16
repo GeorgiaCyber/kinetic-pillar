@@ -69,6 +69,7 @@ common_ldap_configuration:
 ## of.  Keystone_domain is the domain you want to use to access your LDAP accounts on
 ## the horizon login page
 keystone:
+  ldap_enabled: False
   ldap_configuration:
     user_filter: (memberOf=cn=foo_user_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
     group_filter: (memberOf=cn=foo_group_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
