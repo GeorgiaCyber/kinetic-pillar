@@ -226,6 +226,7 @@ openstack_services:
         swift:
           type: object-store
           description: OpenStack Object Storage Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":7480"
@@ -246,6 +247,7 @@ openstack_services:
         zun:
           type: container
           description: OpenStack Container Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":9517"
@@ -266,6 +268,7 @@ openstack_services:
         magnum:
           type: container-infra
           description: OpenStack Container Infrastructure Management Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":9511"
@@ -286,6 +289,7 @@ openstack_services:
         sahara:
           type: data-processing
           description: OpenStack Data Processing Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":8386"
@@ -306,6 +310,7 @@ openstack_services:
         manila:
           type: share
           description: OpenStack Shared File Systems Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":8786"
@@ -321,6 +326,7 @@ openstack_services:
         manilav2:
           type: sharev2
           description: OpenStack Shared File Systems Service v2
+          endpoints:
             internal:
               protocol: "https://"
               port: ":8786"
