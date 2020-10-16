@@ -7,9 +7,11 @@ openstack_services:
     configuration:
       dbs:
         - keystone
-      endpoints:
-        api_version:
-          v3:
+      services:
+        keystone:
+          type: identity
+          description: OpenStack Identity Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":5000"
@@ -26,9 +28,11 @@ openstack_services:
     configuration:
       dbs:
         - glance
-      endpoints:
-        api_version:
-          v2:
+      services:
+        glance:
+          type: image
+          description: OpenStack Image Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":9292"
@@ -45,9 +49,11 @@ openstack_services:
     configuration:
       dbs:
         - barbican
-      endpoints:
-        api_version:
-          v1:
+      services:
+        barbican:
+          type: key-manager
+          description: OpenStack Key Manager Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":9311"
@@ -66,9 +72,11 @@ openstack_services:
         - nova
         - nova_api
         - nova_cell0
-      endpoints:
-        api_version:
-          v2:
+      services:
+        nova:
+          type: compute
+          description: OpenStack Compute Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":8774"
@@ -85,9 +93,11 @@ openstack_services:
     configuration:
       dbs:
         - placement
-      endpoints:
-        api_version:
-          v1:
+      services:
+        placement:
+          type: placement
+          description: OpenStack Placement Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":8778"
@@ -104,9 +114,11 @@ openstack_services:
     configuration:
       dbs:
         - neutron
-      endpoints:
-        api_version:
-          v2:
+      services:
+        neutron:
+          type: network
+          description: OpenStack Networking Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":9696"
@@ -123,9 +135,11 @@ openstack_services:
     configuration:
       dbs:
         - heat
-      endpoints:
-        api_version:
-          heat_v1:
+      services:
+        heat:
+          type: orchestration
+          description: OpenStack Orchestration Service
+          endpoints:
             internal:
               protocol: "https://"
               port: ":8004"
@@ -138,16 +152,19 @@ openstack_services:
               protocol: "https://"
               port: ":8004"
               path: /v1/%\(tenant_id\)s
-          cfn_v1:
-            internal_cfn:
+        heat-cfn:
+          type: cloudformation
+          description: OpenStack Cloudformation Service
+          endpoints:
+            internal:
               protocol: "https://"
               port: ":8000"
               path: /v1
-            admin_cfn:
+            admin:
               protocol: "https://"
               port: ":8000"
               path: /v1
-            public_cfn:
+            public:
               protocol: "https://"
               port: ":8000"
               path: /v1
@@ -155,9 +172,11 @@ openstack_services:
     configuration:
       dbs:
         - cinder
-      endpoints:
-        api_version:
-          v2:
+      services:
+        cinderv2:
+          type: volumev2
+          description: OpenStack Block Storage Service v2
+          endpoints:
             internal:
               protocol: "https://"
               port: ":8776"
@@ -170,7 +189,10 @@ openstack_services:
               protocol: "https://"
               port: ":8776"
               path: /v2/%\(project_id\)s
-          v3:
+        cinderv3:
+          type: volumev3
+          description: OpenStack Block Storage Service v3
+          endpoints:
             internal:
               protocol: "https://"
               port: ":8776"
@@ -187,9 +209,11 @@ openstack_services:
     configuration:
       dbs:
         - designate
-      endpoints:
-        api_version:
-          v2:
+      services:
+        designate:
+          type: dns
+          description: OpenStack DNS Service
+          endpoints:
             public:
               protocol: "https://"
               port: ":9001"
@@ -198,9 +222,10 @@ openstack_services:
     configuration:
       dbs:
         - swift
-      endpoints:
-        api_version:
-          v1:
+      services:
+        swift:
+          type: object-store
+          description: OpenStack Object Storage Service
             internal:
               protocol: "https://"
               port: ":7480"
@@ -217,9 +242,10 @@ openstack_services:
     configuration:
       dbs:
         - zun
-      endpoints:
-        api_version:
-          v1:
+      services:
+        zun:
+          type: container
+          description: OpenStack Container Service
             internal:
               protocol: "https://"
               port: ":9517"
@@ -236,9 +262,10 @@ openstack_services:
     configuration:
       dbs:
         - magnum
-      endpoints:
-        api_version:
-          v1:
+      services:
+        magnum:
+          type: container-infra
+          description: OpenStack Container Infrastructure Management Service
             internal:
               protocol: "https://"
               port: ":9511"
@@ -255,9 +282,10 @@ openstack_services:
     configuration:
       dbs:
         - sahara
-      endpoints:
-        api_version:
-          v1:
+      services:
+        sahara:
+          type: data-processing
+          description: OpenStack Data Processing Service
             internal:
               protocol: "https://"
               port: ":8386"
@@ -274,9 +302,10 @@ openstack_services:
     configuration:
       dbs:
         - manila
-      endpoints:
-        api_version:
-          v1:
+      services:
+        manila:
+          type: share
+          description: OpenStack Shared File Systems Service
             internal:
               protocol: "https://"
               port: ":8786"
@@ -289,7 +318,9 @@ openstack_services:
               protocol: "https://"
               port: ":8786"
               path: /v1/%\(project_id\)s
-          v2:
+        manilav2:
+          type: sharev2
+          description: OpenStack Shared File Systems Service v2
             internal:
               protocol: "https://"
               port: ":8786"
