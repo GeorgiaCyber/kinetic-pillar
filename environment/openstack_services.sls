@@ -143,15 +143,15 @@ openstack_services:
             internal:
               protocol: "https://"
               port: ":8004"
-              path: /v1/%\(tenant_id\)s
+              path: /v1/%(tenant_id)s
             admin:
               protocol: "https://"
               port: ":8004"
-              path: /v1/%\(tenant_id\)s
+              path: /v1/%(tenant_id)s
             public:
               protocol: "https://"
               port: ":8004"
-              path: /v1/%\(tenant_id\)s
+              path: /v1/%(tenant_id)s
         heat-cfn:
           type: cloudformation
           description: OpenStack Cloudformation Service
@@ -180,15 +180,15 @@ openstack_services:
             internal:
               protocol: "https://"
               port: ":8776"
-              path: /v2/%\(project_id\)s
+              path: /v2/%(project_id)s
             admin:
               protocol: "https://"
               port: ":8776"
-              path: /v2/%\(project_id\)s
+              path: /v2/%(project_id)s
             public:
               protocol: "https://"
               port: ":8776"
-              path: /v2/%\(project_id\)s
+              path: /v2/%(project_id)s
         cinderv3:
           type: volumev3
           description: OpenStack Block Storage Service v3
@@ -196,15 +196,15 @@ openstack_services:
             internal:
               protocol: "https://"
               port: ":8776"
-              path: /v3/%\(project_id\)s
+              path: /v3/%(project_id)s
             admin:
               protocol: "https://"
               port: ":8776"
-              path: /v3/%\(project_id\)s
+              path: /v3/%(project_id)s
             public:
               protocol: "https://"
               port: ":8776"
-              path: /v3/%\(project_id\)s
+              path: /v3/%(project_id)s
   designate:
     configuration:
       dbs:
@@ -230,15 +230,15 @@ openstack_services:
             internal:
               protocol: "https://"
               port: ":7480"
-              path: /swift/v1/AUTH_%\(project_id\)s
+              path: /swift/v1/AUTH_%(project_id)s
             admin:
               protocol: "https://"
               port: ":7480"
-              path: /swift/v1/AUTH_%\(project_id\)s
+              path: /swift/v1/AUTH_%(project_id)s
             public:
               protocol: "https://"
               port: ":7480"
-              path: /swift/v1/AUTH_%\(project_id\)s
+              path: /swift/v1/AUTH_%(project_id)s
   zun:
     configuration:
       dbs:
@@ -293,15 +293,15 @@ openstack_services:
             internal:
               protocol: "https://"
               port: ":8386"
-              path: /v1.1/%\(project_id\)s
+              path: /v1.1/%(project_id)s
             admin:
               protocol: "https://"
               port: ":8386"
-              path: /v1.1/%\(project_id\)s
+              path: /v1.1/%(project_id)s
             public:
               protocol: "https://"
               port: ":8386"
-              path: /v1.1/%\(project_id\)s
+              path: /v1.1/%(project_id)s
   manila:
     configuration:
       dbs:
@@ -314,15 +314,15 @@ openstack_services:
             internal:
               protocol: "https://"
               port: ":8786"
-              path: /v1/%\(project_id\)s
+              path: /v1/%(project_id)s
             admin:
               protocol: "https://"
               port: ":8786"
-              path: /v1/%\(project_id\)s
+              path: /v1/%(project_id)s
             public:
               protocol: "https://"
               port: ":8786"
-              path: /v1/%\(project_id\)s
+              path: /v1/%(project_id)s
         manilav2:
           type: sharev2
           description: OpenStack Shared File Systems Service v2
@@ -330,12 +330,12 @@ openstack_services:
             internal:
               protocol: "https://"
               port: ":8786"
-              path: /v2/%\(project_id\)s
+              path: /v2/%(project_id)s
             admin:
               protocol: "https://"
               port: ":8786"
-              path: /v2/%\(project_id\)s
+              path: /v2/%(project_id)s
             public:
               protocol: "https://"
               port: ":8786"
-              path: /v2/%\(project_id\)s
+              path: /v2/%(project_id)s
