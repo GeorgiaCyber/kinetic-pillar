@@ -277,28 +277,28 @@ openstack_services:
       endpoints:
         api_version:
           v1:
-      internal:
-        protocol: "https://"
-        port: ":8786"
-        path: /v1/%\(project_id\)s
-      admin:
-        protocol: "https://"
-        port: ":8786"
-        path: /v1/%\(project_id\)s
-      public:
-        protocol: "https://"
-        port: ":8786"
-        path: /v1/%\(project_id\)s
+            internal:
+              protocol: "https://"
+              port: ":8786"
+              path: /v1/%\(project_id\)s
+            admin:
+              protocol: "https://"
+              port: ":8786"
+              path: /v1/%\(project_id\)s
+            public:
+              protocol: "https://"
+              port: ":8786"
+              path: /v1/%\(project_id\)s
           v2:
-      internal:
-        protocol: "https://"
-        port: ":8786"
-        path: /v2/%\(project_id\)s
-      admin:
-        protocol: "https://"
-        port: ":8786"
-        path: /v2/%\(project_id\)s
-      public:
-        protocol: "https://"
-        port: ":8786"
-        path: /v2/%\(project_id\)s
+            internal:
+              protocol: "https://"
+              port: ":8786"
+              path: /v2/%\(project_id\)s
+            admin:
+              protocol: "https://"
+              port: ":8786"
+              path: /v2/%\(project_id\)s
+            public:
+              protocol: "https://"
+              port: ":8786"
+              path: /v2/%\(project_id\)s
