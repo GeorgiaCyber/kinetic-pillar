@@ -8,18 +8,20 @@ openstack_services:
       dbs:
         - keystone
       endpoints:
-        internal:
-          protocol: "https://"
-          port: ":5000"
-          path: /v3
-        admin:
-          protocol: "https://"
-          port: ":5000"
-          path: /v3
-        public:
-          protocol: "https://"
-          port: ":5000"
-          path: /v3
+        api_version:
+          v3:
+            internal:
+              protocol: "https://"
+              port: ":5000"
+              path: /v3
+            admin:
+              protocol: "https://"
+              port: ":5000"
+              path: /v3
+            public:
+              protocol: "https://"
+              port: ":5000"
+              path: /v3
   glance:
     configuration:
       dbs:
