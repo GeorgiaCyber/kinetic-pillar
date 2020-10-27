@@ -485,3 +485,25 @@ hosts:
     networks:
       management:
         interfaces: [ens3]
+  guacamole:
+    style: virtual
+    enabled: True
+    count: 1
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]
+  webssh2:
+    style: virtual
+    enabled: True
+    count: 1
+    ram: 8192000
+    cpu: 2
+    os: ubuntu2004
+    disk: 32G
+    networks:
+      management:
+        interfaces: [ens3]

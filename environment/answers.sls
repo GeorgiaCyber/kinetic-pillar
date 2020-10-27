@@ -3,12 +3,12 @@
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
 kinetic_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: code-cleanup
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 kinetic_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: code-cleanup
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 ## Ex:
@@ -69,6 +69,7 @@ common_ldap_configuration:
 ## of.  Keystone_domain is the domain you want to use to access your LDAP accounts on
 ## the horizon login page
 keystone:
+  ldap_enabled: False
   ldap_configuration:
     user_filter: (memberOf=cn=foo_user_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
     group_filter: (memberOf=cn=foo_group_filter,cn=groups,cn=accounts,dc=bar,dc=baz)
@@ -81,6 +82,8 @@ haproxy:
   dashboard_domain: dashboard.gacyberrange.org
   console_domain: console.gacyberrange.org
   docs_domain: docs.gacyberrange.org
+  guacamole_domain: guacamole.gacyberrange.org
+  webssh2_domain: webssh2.gacyberrange.org
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
@@ -158,16 +161,6 @@ horizon:
 zun:
   cloud_shell_image: usacys/openstack-client:latest
 
-## Number of placement groups for your ceph pools
-## https://docs.ceph.com/docs/master/rados/operations/placement-groups/
-## deprecated - currently does nothing
-cephconf:
-  vms_pgs: 2048
-  volumes_pgs: 512
-  images_pgs: 512
-  fileshare_data_pgs: 512
-  fileshare_metadata_pgs: 128
-
 ## Assorted salt master configuration options.  Each entry will be written to a separate file in /etc/salt/master.d
 ## https://docs.saltstack.com/en/latest/ref/configuration/master.html
 master-config:
@@ -219,19 +212,11 @@ master-config:
     reactor:
       - salt/minion/*/start:
         - salt://reactor/update_mine.sls
-        - salt://reactor/highstate_haproxy.sls
-        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_notification.sls
         - salt://reactor/update_ceph_conf.sls
-        - salt://reactor/highstate_pxe.sls
-        - salt://reactor/highstate_dns.sls
-        - salt://reactor/highstate_manila.sls
       - salt/beacon/*/network_settings/result:
         - salt://reactor/update_mine.sls
-        - salt://reactor/highstate_haproxy.sls
-        - salt://reactor/highstate_mysql.sls
+        - salt://reactor/highstate_notification.sls
         - salt://reactor/update_ceph_conf.sls
-        - salt://reactor/highstate_pxe.sls
-        - salt://reactor/highstate_dns.sls
-        - salt://reactor/highstate_manila.sls
       - salt/beacon/*/inotify//var/log/apt-cacher-ng/apt-cacher.err:
         - salt://reactor/acng_maintenance.sls
