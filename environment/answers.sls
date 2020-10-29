@@ -1,11 +1,13 @@
 #!yaml|gpg
 
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
+## the branch key can be a branch, tag, or commit sha
 kinetic_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
   branch: master
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
+## the branch key can be a branch, tag, or commit sha
 kinetic_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
   branch: master
