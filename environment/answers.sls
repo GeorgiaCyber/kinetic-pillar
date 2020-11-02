@@ -38,7 +38,7 @@ salt:
 pxe:
   record: pxe.internal.georgiacyber.org
   conf:
-    cpus: 1
+    cpu: 1
     ram: 1024000
     disk: 16
     interface: eth0
