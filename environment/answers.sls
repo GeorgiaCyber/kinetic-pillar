@@ -30,7 +30,7 @@ salt:
   conf:
     cpu: 6
     ram: 8192000
-    disk: 16
+    disk: 16G
     interface: mgmt
 
 ## PXE configuration
@@ -40,7 +40,7 @@ pxe:
   conf:
     cpu: 1
     ram: 2048000
-    disk: 16
+    disk: 16G
     interface: mgmt
 
 ## Repository for your documentation site
