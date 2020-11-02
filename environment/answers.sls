@@ -31,7 +31,7 @@ salt:
     cpu: 6
     ram: 8192000
     disk: 16
-    interface: eth0
+    interface: lan
 
 ## PXE configuration
 ## record is DNS A record that points to your pxe host for this environment
@@ -41,7 +41,7 @@ pxe:
     cpu: 1
     ram: 1024000
     disk: 16
-    interface: eth0
+    interface: lan
 
 ## Repository for your documentation site
 antora:
