@@ -23,11 +23,23 @@ kinetic_pillar_configuration:
 #     branch: master
 gitfs_other_configurations: {}
 
+## salt configuration
 ## DNS A record that points to your salt master for this environment
-master_record: salt.internal.georgiacyber.org
+salt:
+  record: salt.internal.georgiacyber.org
+  conf:
+    cpus: 4
+    ram: 8192000
+    disk: 16
 
-## DNS A record that points to your pxe host for this environment
-pxe_record: pxe.internal.georgiacyber.org
+## PXE configuration
+## record is DNS A record that points to your pxe host for this environment
+pxe:
+  record: pxe.internal.georgiacyber.org
+  conf:
+    cpus: 4
+    ram: 8192000
+    disk: 16
 
 ## Repository for your documentation site
 antora:
