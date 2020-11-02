@@ -31,7 +31,7 @@ salt:
     cpu: 6
     ram: 8192000
     disk: 16
-    interface: lan
+    interface: mgmt
 
 ## PXE configuration
 ## record is DNS A record that points to your pxe host for this environment
@@ -39,9 +39,9 @@ pxe:
   record: pxe.internal.georgiacyber.org
   conf:
     cpu: 1
-    ram: 1024000
+    ram: 2048000
     disk: 16
-    interface: lan
+    interface: mgmt
 
 ## Repository for your documentation site
 antora:
