@@ -28,18 +28,20 @@ gitfs_other_configurations: {}
 salt:
   record: salt.internal.georgiacyber.org
   conf:
-    cpus: 4
+    cpu: 6
     ram: 8192000
     disk: 16
+    interface: eth0
 
 ## PXE configuration
 ## record is DNS A record that points to your pxe host for this environment
 pxe:
   record: pxe.internal.georgiacyber.org
   conf:
-    cpus: 4
-    ram: 8192000
+    cpus: 1
+    ram: 1024000
     disk: 16
+    interface: eth0
 
 ## Repository for your documentation site
 antora:
