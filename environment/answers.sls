@@ -1,14 +1,16 @@
 #!yaml|gpg
 
 ## URL to the primary kinetic repo (usually https://github.com/georgiacyber/kinetic.git).
+## the branch key can be a branch, tag, or commit sha
 kinetic_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: saltify
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
+## the branch key can be a branch, tag, or commit sha
 kinetic_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: saltify
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 ## Ex:
@@ -21,11 +23,25 @@ kinetic_pillar_configuration:
 #     branch: master
 gitfs_other_configurations: {}
 
+## salt configuration
 ## DNS A record that points to your salt master for this environment
-master_record: salt.internal.georgiacyber.org
+salt:
+  record: salt.internal.georgiacyber.org
+  conf:
+    cpu: 6
+    ram: 8192000
+    disk: 16G
+    interface: mgmt
 
-## DNS A record that points to your pxe host for this environment
-pxe_record: pxe.internal.georgiacyber.org
+## PXE configuration
+## record is DNS A record that points to your pxe host for this environment
+pxe:
+  record: pxe.internal.georgiacyber.org
+  conf:
+    cpu: 1
+    ram: 2048000
+    disk: 16G
+    interface: mgmt
 
 ## Repository for your documentation site
 antora:
