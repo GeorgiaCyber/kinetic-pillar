@@ -27,7 +27,7 @@ gitfs_other_configurations: {}
 ## DNS A record that points to your salt master for this environment
 ## Valid salt versions compatible with kinetic are 3000, 3001, 3002, latest, $MAJOR, or $MAJOR.$PATCH)
 salt:
-  version: 3002
+  version: latest
   record: salt.internal.georgiacyber.org
   conf:
     cpu: 6
