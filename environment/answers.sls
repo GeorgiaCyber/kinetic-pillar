@@ -26,6 +26,7 @@ gitfs_other_configurations: {}
 ## salt configuration
 ## DNS A record that points to your salt master for this environment
 salt:
+  version: 3001
   record: salt.internal.georgiacyber.org
   conf:
     cpu: 6
