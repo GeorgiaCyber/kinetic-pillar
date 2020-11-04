@@ -100,7 +100,6 @@ haproxy:
   dashboard_domain: dashboard.gacyberrange.org
   console_domain: console.gacyberrange.org
   docs_domain: docs.gacyberrange.org
-  guacamole_domain: guacamole.gacyberrange.org
   webssh2_domain: webssh2.gacyberrange.org
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
