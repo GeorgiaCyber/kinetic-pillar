@@ -4,13 +4,13 @@
 ## the branch key can be a branch, tag, or commit sha
 kinetic_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: victoria
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 ## the branch key can be a branch, tag, or commit sha
 kinetic_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: victoria
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 ## Ex:
@@ -100,7 +100,6 @@ haproxy:
   dashboard_domain: dashboard.gacyberrange.org
   console_domain: console.gacyberrange.org
   docs_domain: docs.gacyberrange.org
-  guacamole_domain: guacamole.gacyberrange.org
   webssh2_domain: webssh2.gacyberrange.org
 
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
