@@ -8,7 +8,7 @@
 ## local_url: URL if cache present (generally pull_from_mine unless external cache being used)
 ## local_hash: hash file for tarball (generally pull_from_mine unless external cache being used)
 
-images:
+glance_images:
   centos8.2:
     image_name: centos-8.2
     method: virt-builder
