@@ -52,7 +52,7 @@ glance_images:
         update-grub
   debian10:
     image_name: debian10
-    image_url: https://cloud.debian.org/images/cloud/Openstack/current-10-openstack-amd64.qcow2
+    image_url: https://cloud.debian.org/images/cloud/OpenStack/current/debian-10-openstack-amd64.qcow2
     method: virt-customize
     size: 4G
     conversion: true
@@ -64,7 +64,7 @@ glance_images:
         echo "customization completed via virt-builder" > ./custom.txt
   debian10_lxqt:
     image_name: debian10_lxqt
-    image_url: https://cloud.debian.org/images/cloud/OpenStack/current-10/debian-10-openstack-amd64.qcow2
+    image_url: https://cloud.debian.org/images/cloud/OpenStack/current/debian-10-openstack-amd64.qcow2
     method: virt-customize
     image_size: 8G
     conversion: true
@@ -81,7 +81,7 @@ glance_images:
         echo "customization completed via virt-customize" > ./custom.txt
   debian10_kali:
     image_name: debian10_kali
-    image_url: https://cloud.debian.org/images/cloud/OpenStack/current-10/debian-10-openstack-amd64.qcow2
+    image_url: https://cloud.debian.org/images/cloud/OpenStack/current/debian-10-openstack-amd64.qcow2
     method: virt-customize
     image_size: 10G
     conversion: true
