@@ -249,7 +249,7 @@ hosts:
     ram: 8192000
     cpu: 4
     os: centos8
-    disk: 64G
+    disk: 256G
     networks:
       management:
         interfaces: [ens3]
