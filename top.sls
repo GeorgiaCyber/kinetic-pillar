@@ -22,6 +22,7 @@ base:
     - environment/beacon_configs/cache_errors
   'controller*':
     - environment/controller_images
+    - environment/glance_images
   'storage*':
     - environment/osd_mappings
   'haproxy*':
