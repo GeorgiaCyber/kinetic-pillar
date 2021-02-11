@@ -153,7 +153,7 @@ networking:
     float_dns: 10.101.255.254
 
 ## neutron networking backend.  Valid values are networking-ovn
-## or linuxbridge
+## or linuxbridge or openvswitch
 neutron:
   backend: networking-ovn
 
