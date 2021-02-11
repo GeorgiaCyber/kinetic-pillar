@@ -18,10 +18,11 @@ base:
   'salt*':
     - environment/bmc_password
   'cache*':
-    - environment/images
+    - environment/controller_images
     - environment/beacon_configs/cache_errors
   'controller*':
-    - environment/images
+    - environment/controller_images
+    - environment/glance_images
   'storage*':
     - environment/osd_mappings
   'haproxy*':
@@ -32,6 +33,6 @@ base:
     - environment/bind_password
     - environment/ldap_ca
   'glance*':
-    - environment/images
+    - environment/glance_images
   'nova*':
     - environment/flavors
