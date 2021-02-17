@@ -4,13 +4,13 @@
 ## the branch key can be a branch, tag, or commit sha
 kinetic_remote_configuration:
   url: https://github.com/georgiacyber/kinetic.git
-  branch: master
+  branch: multiarch
 
 ## URL to your external pillar (can be on any publicly-accessible version control system)
 ## the branch key can be a branch, tag, or commit sha
 kinetic_pillar_configuration:
   url: https://github.com/georgiacyber/kinetic-pillar.git
-  branch: master
+  branch: multiarch
 
 ## Other remotes that you need on top of the default (security configuration, etc.)
 ## Ex:
@@ -155,7 +155,7 @@ networking:
 ## neutron networking backend.  Valid values are networking-ovn
 ## or linuxbridge or openvswitch
 neutron:
-  backend: networking-ovn
+  backend: openvswitch
 
 ## nova configuration options.  Ref: https://docs.openstack.org/nova/latest/configuration/config.html
 nova:
