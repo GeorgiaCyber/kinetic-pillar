@@ -105,8 +105,8 @@ haproxy:
 ## Specify which keys you would like to be added to authorized_keys for the root user on ALL machines
 ## https://docs.saltstack.com/en/latest/ref/states/all/salt.states.ssh_auth.html
 authorized_keys:
-  AAAAC3NzaC1lZDI1NTE5AAAAIIKw+cBx9BBKcoXKLxMLVoGCD7znZqBjnMkaIipAikQJ:
-    encoding: ed25519
+  AAAAB3NzaC1yc2EAAAADAQABAAABgQDGPLCFieVKbIHsxDDMsG4vOyGyz6UE0sz2xWbwQpsqRwhbVTGYGBzkMRA29TkxJvfgqZcGE5JYXsc8WSZAegdVMJzBuuGwNa1Q2lAhlvjT0QIO690vzfwEokb20l01IgRKvCXRq4MJzk03NPzkJQxxbGu9GwesBd5ffzwF+UGvzyCKOnlLs2PCsSS8rchK8BC7Pcfp1dJwaw8PCgnalVjK5tesv4XV1/YPw8fb08L88KUdymC94V3nndUOPa1BVpO6zLE0LYCo5lw326SOIrKCCu0ydOARB3FpS5DVja2nkvgxP0fi/VYPoGXgvCHGliinrVZAt8oZsqMM5DwfUjdkwvfrg5yc63uCfjo7bCJg5WaKJZ63TC6iz/aIrQ6IZF6XWmnPK8cmpPwc19C40V38wkXv0V9fahnlxHyVlW9c71dkxM31bRHTE2IxqEZu0Am37GUEDBuROusKpt5ruSuaIwzGeWq7HKUhemqS3ZJrfp9voaeqFYQKLTTCAYhLGA0=:
+    encoding: ssh-rsa
 
 ## Specify the perma-URL to your syslog server
 ## This is *not* the built-in server, but rather an upstream one
@@ -155,7 +155,7 @@ networking:
 ## neutron networking backend.  Valid values are networking-ovn
 ## or linuxbridge or openvswitch
 neutron:
-  backend: networking-ovn
+  backend: openvswitch
 
 ## nova configuration options.  Ref: https://docs.openstack.org/nova/latest/configuration/config.html
 nova:
