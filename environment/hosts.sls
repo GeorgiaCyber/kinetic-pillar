@@ -145,7 +145,7 @@ hosts:
     count: 1
     ram: 8192000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 512G
     networks:
       management:
