@@ -55,7 +55,7 @@ hosts:
     style: physical
     role: storage
     enabled: True
-    os: centos8
+    os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-AC1F6BB6DF3A
       - 00000000-0000-0000-0000-AC1F6BB6DF29
@@ -88,7 +88,7 @@ hosts:
     style: physical
     role: compute
     enabled: True
-    os: centos8
+    os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF3D0
       - 00000000-0000-0000-0000-0CC47AFBF280
@@ -121,7 +121,7 @@ hosts:
     style: physical
     role: container
     enabled: True
-    os: centos8
+    os: ubuntu2004
     uuids:
       - 00000000-0000-0000-0000-0CC47AFBF274
       - 00000000-0000-0000-0000-0CC47AFBF268
