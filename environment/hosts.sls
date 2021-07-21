@@ -169,7 +169,7 @@ hosts:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -204,7 +204,7 @@ hosts:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 128G
     networks:
       management:
@@ -215,7 +215,7 @@ hosts:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -226,7 +226,7 @@ hosts:
     count: 3
     ram: 8192000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -237,7 +237,7 @@ hosts:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -248,7 +248,7 @@ hosts:
     count: 2
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 64G
     networks:
       management:
@@ -261,7 +261,7 @@ hosts:
     count: 3
     ram: 8192000
     cpu: 8
-    os: centos8
+    os: ubuntu2004
     disk: 128G
     networks:
       management:
@@ -272,7 +272,7 @@ hosts:
     count: 5
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -283,7 +283,7 @@ hosts:
     count: 2
     ram: 8192000
     cpu: 8
-    os: centos8
+    os: ubuntu2004
     disk: 128G
     networks:
       management:
@@ -294,7 +294,7 @@ hosts:
     count: 2
     ram: 8192000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -305,7 +305,7 @@ hosts:
     count: 2
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -316,7 +316,7 @@ hosts:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -329,7 +329,7 @@ hosts:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -340,7 +340,7 @@ hosts:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -351,7 +351,7 @@ hosts:
     count: 2
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 64G
     networks:
       management:
@@ -364,7 +364,7 @@ hosts:
     count: 2
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 64G
     networks:
       management:
@@ -375,7 +375,7 @@ hosts:
     count: 2
     ram: 8192000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -397,7 +397,7 @@ hosts:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -412,7 +412,7 @@ hosts:
     count: 3
     ram: 8192000
     cpu: 4
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -423,7 +423,7 @@ hosts:
     count: 2
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -434,7 +434,7 @@ hosts:
     count: 2
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -445,7 +445,7 @@ hosts:
     count: 2
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -456,7 +456,7 @@ hosts:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -467,7 +467,7 @@ hosts:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -480,7 +480,7 @@ hosts:
     count: 3
     ram: 4096000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
@@ -491,7 +491,7 @@ hosts:
     count: 1
     ram: 8192000
     cpu: 2
-    os: centos8
+    os: ubuntu2004
     disk: 32G
     networks:
       management:
